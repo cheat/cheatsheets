@@ -29,4 +29,4 @@ necessary.
 
 
 [cheat]:  https://github.com/cheat/cheat
-[docopt]: https://docopt.org
+[docopt]: http://docopt.org
