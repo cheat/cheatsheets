@@ -1,11 +1,11 @@
-# Start a new named screen session:
-screen -S session_name
+# To start a new named screen session:
+screen -S <session-name>
 
-# Detach from the current session:
+# To detach from the current session:
 Press Ctrl+A then press d
 
-# Re-attach a detached session:
-screen -r session_name
+# To re-attach a detached session:
+screen -r <session-name>
 
-# List all screen sessions:
+# To list all screen sessions:
 screen -ls

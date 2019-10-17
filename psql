@@ -5,23 +5,23 @@
 # -h server hostname/address.
 
 # Connect to a specific database:
-psql -U postgres -h serverAddress -d dbName
+psql -U <username> -h <host> -d <database>
 
 # Get databases on a server:
-psql -U postgres -h serverAddress --list
+psql -U <username> -h <host> --list
 
 # Execute sql query and save output to file:
-psql -U postgres -d dbName -c 'select * from tableName;' -o fileName
+psql -U <username> -d <database> -c 'select * from tableName;' -o <outfile>
 
 # Execute query and get tabular html output:
-psql -U postgres -d dbName -H -c 'select * from tableName;'
+psql -U <username> -d <database> -H -c 'select * from tableName;'
 
-# Execute query and save resulting rows to csv file
-# (if column names in the first row are not needed, remove the word 'header'):
-psql -U postgres -d dbName -c 'copy (select * from tableName) to stdout with csv header;' -o fileName.csv
+# Execute query and save resulting rows to csv file:
+# (if column names in the first row are not needed, remove the word 'header')
+psql -U <username> -d <database> -c 'copy (select * from tableName) to stdout with csv header;' -o <outfile>
 
 # Read commands from file:
-psql -f fileName
+psql -f <outfile>
 
 # Restore databases from file:
-psql -f fileName.backup postgres
+psql -f <outfile> <username>

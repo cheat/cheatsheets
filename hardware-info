@@ -1,31 +1,31 @@
-# Display all hardware details
+# To display all hardware details:
 sudo lshw
 
-# List currently loaded kernel modules
+# To list currently loaded kernel modules:
 lsmod
 
-# List all modules available to the system
+# To list all available modules:
 find /lib/modules/$(uname -r) -type f -iname "*.ko"
 
-# Load a module into kernel
-modprobe modulename
+# To load a module:
+modprobe <module>
 
-# Remove a module from kernel 
-modprobe -r modulename
+# To remove a module:
+modprobe -r <module>
 
-# List devices connected via pci bus
+# To list devices connected via pci bus:
 lspci
 
-# Debug output for pci devices (hex)
+# To debug output for pci devices (hex):
 lspci -vvxxx
 
-# Display cpu hardware stats
+# To display cpu hardware stats:
 cat /proc/cpuinfo
 
-# Display memory hardware stats
+# To display memory hardware stats:
 cat /proc/meminfo
 
-# Output the kernel ring buffer
+# To output the kernel ring buffer:
 dmesg
 
 # Ouput kernel messages

@@ -1,17 +1,17 @@
-# To find the `foo` snap:
-snap find foo
+# To find <package>:
+snap find <package>
 
-# To view detailed information about snap `foo`:
-snap info foo
+# To view detailed information about <package>:
+snap info <package>
 
 # To view all private snaps (must be logged in):
 snap find --private
 
-# To install the `foo` snap:
-sudo snap install foo
+# To install the <package>:
+sudo snap install <package>
 
-# To install the `foo` snap from the "beta" channel:
-sudo snap install foo --channel=beta
+# To install the <package> from the "beta" channel:
+sudo snap install <package> --channel=beta
 
 # To view installed snaps:
 snap list
@@ -22,20 +22,20 @@ snap list --all
 # To (manually) update all snaps:
 sudo snap refresh
 
-# To (manually) update the `foo` snap:
-sudo snap refresh foo
+# To (manually) update <package>:
+sudo snap refresh <package>
 
-# To update the `foo` snap to the "beta" channel:
-sudo snap refresh foo --channel=beta
+# To update <package> to the "beta" channel:
+sudo snap refresh <package> --channel=beta
 
-# To revert the `foo` snap to a prior version:
-sudo snap revert foo
+# To revert <package> to a prior version:
+sudo snap revert <package>
 
-# To revert the `foo` snap to revision 5:
-snap revert foo --revision 5
+# To revert <package> to revision 5:
+snap revert <package> --revision 5
 
-# To remove the `foo` snap:
-sudo snap remove foo
+# To remove <package>:
+sudo snap remove <package>
 
 # To log in to snap (must first create account online):
 sudo snap login
@@ -55,8 +55,8 @@ snap watch 123
 # To abort transaction 123:
 snap abort 123
 
-# To download the `foo` snap (and its assertions) *without* installing it:
-snap download foo
+# To download <package> (and its assertions) *without* installing it:
+snap download <package>
 
 # To install the locally-downloaded `foo` snap with assertions:
 snap ack foo.assert

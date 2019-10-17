@@ -1,17 +1,17 @@
-# Move a file from one place to another
-mv ~/Desktop/foo.txt ~/Documents/foo.txt
+# To move a file from one place to another:
+mv <src> <dest>
 
-# Move a file from one place to another and automatically overwrite if the destination file exists
+# To move a file from one place to another and automatically overwrite if the destination file exists:
 # (This will override any previous -i or -n args)
-mv -f ~/Desktop/foo.txt ~/Documents/foo.txt
+mv -f <src> <dest>
 
-# Move a file from one place to another but ask before overwriting an existing file
+# To move a file from one place to another but ask before overwriting an existing file:
 # (This will override any previous -f or -n args)
-mv -i ~/Desktop/foo.txt ~/Documents/foo.txt
+mv -i <src> <dest>
 
-# Move a file from one place to another but never overwrite anything
+# To move a file from one place to another but never overwrite anything:
 # (This will override any previous -f or -i args)
-mv -n ~/Desktop/foo.txt ~/Documents/foo.txt
+mv -n <src> <dest>
 
-# Move listed files to a directory
-mv -t ~/Desktop/ file1 file2 file3
+# To move listed file(s) to a directory
+mv -t <dest> <file>...

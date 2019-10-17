@@ -1,56 +1,52 @@
-# Start tmux:
+# To start tmux:
 tmux
 
-# Detach from tmux:
+# To detach from tmux:
 Ctrl-b d
 
-# Restore tmux session:
+# To restore tmux session:
 tmux attach
 
-# Detach an already attached session (great if you are moving devices with different screen resolutions)
+# To detach an already attached session (great if you are moving devices with different screen resolutions):
 tmux attach -d 
 
-# Display session:
+# To display session:
 tmux ls
 
-# Rename session:
+# To rename session:
 Ctrl-b $
 
-# Switch session:
+# To switch session:
 Ctrl-b s
 
-# Start a shared session:
+# To start a shared session:
 tmux -S /tmp/your_shared_session
 chmod 777 /tmp/your_shared_session
 
-# Help screen (Q to quit):
+# To help screen (Q to quit):
 Ctrl-b ?
 
-# Scroll in window:
+# To scroll in window:
 Ctrl-b PageUp/PageDown
 
-# Reload configuation file
+# To reload configuation file
 Ctrl-b : source-file /path/to/file
 
-# Window management
-# =================
-
-# Create window:
+# To create a window:
 Ctrl-b c
 
-# Destroy window:
+# To destroy a window:
 Ctrl-b x
 
-# Switch between windows:
+# To switch between windows:
 Ctrl-b [0-9]
-or
 Ctrl-b Arrows
 
-# Split windows horizontally:
+# To split windows horizontally:
 Ctrl-b %
 
-# Split windows vertically:
+# To split windows vertically:
 Ctrl-b "
 
-# Swap windows
+# To swap windows:
 Ctrl-b :swap-window -s [0-9] -t [0-9]

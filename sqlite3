@@ -1,23 +1,23 @@
-# create database and launch interactive shell
-sqlite3 example.db
+# to create database and launch interactive shell:
+sqlite3 <database>
 
-# create table
-sqlite3 example.db "CREATE TABLE Os(ID INTEGER PRIMARY KEY, Name TEXT, Year INTEGER);"
+# to create table:
+sqlite3 <database> "create table os(id integer primary key, name text, year integer);"
 
-# insert data
-sqlite3 example.db "INSERT INTO 'Os' VALUES(1,'Linux',1991);"
+# to insert data:
+sqlite3 <database> "insert into 'os' values(1,'linux',1991);"
 
-# list tables
-sqlite3 example.db ".tables"
+# to list tables:
+sqlite3 <database> ".tables"
 
-# describe table
-sqlite3 example.db ".schema 'Os'"
+# to describe table:
+sqlite3 <database> ".schema 'os'"
 
-# view records in table
-sqlite3 example.db "SELECT * FROM 'Os';"
+# to view records in table:
+sqlite3 <database> "select * from 'os';"
 
-# view records in table conditionally
-sqlite example.db "SELECT * FROM 'Os' WHERE Year='1991';"
+# to view records in table conditionally:
+sqlite <database> "select * from 'os' where year='1991';"
 
-# view records with fuzzy matching
-sqlite3 ~/example.db "SELECT * FROM 'Os' WHERE Year like '19%';"
+# to view records with fuzzy matching:
+sqlite3 <database> "select * from 'os' where year like '19%';"

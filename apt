@@ -1,8 +1,8 @@
-# To search a package:
-apt search package
+# To find packages matching <phrase>:
+apt search <phrase>
 
-# To show package informations:
-apt show package
+# To show information on a package:
+apt show <package>
 
 # To fetch package list:
 apt update
@@ -13,11 +13,11 @@ apt upgrade
 # To download and install the updates AND install new necessary packages:
 apt dist-upgrade
 
-# Full command:
+# To perform a full system upgrade:
 apt update && apt dist-upgrade
 
-# To install a new package(s):
-apt install package(s)
+# To install package(s):
+apt install <package>...
 
-# To uninstall package(s)
-apt remove package(s)
+# To uninstall package(s):
+apt remove <package>...

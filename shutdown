@@ -1,8 +1,8 @@
-# Reboot the system immediately
+# To reboot the system immediately:
 shutdown -r now
 
-# Shut system down immediately
+# To shut system down immediately:
 shutdown -h now
 
-# Reboot system after 5 minutes
+# To reboot system after 5 minutes:
 shutdown -r +5

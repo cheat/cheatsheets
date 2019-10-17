@@ -1,22 +1,21 @@
-# Manage printers through CUPS:
+# To manage printers through CUPS:
 http://localhost:631 (in web browser)
 
-# Print file from command line
-lp myfile.txt
+# To print a file:
+lp <file>
 
-# Display print queue
+# To display the print queue:
 lpq
 
-# Remove print job from queue
-lprm 545
-or
+# Remove a print job from the queue:
+lprm 545 #or:
 lprm -
 
-# Print log location
+# To print log location:
 /var/log/cups
 
-# Reject new jobs
-cupsreject printername
+# To reject new jobs:
+cupsreject <printer-name>
 
-# Accept new jobs
-cupsaccept printername
+# To accept new jobs:
+cupsaccept <printer-name>

@@ -1,8 +1,8 @@
-# ping a host with a total count of 15 packets overall.    
-ping -c 15 www.example.com
+# To ping <host> with 15 packets:
+ping -c 15 <host>
 
-# ping a host with a total count of 15 packets overall, one every .5 seconds (faster ping). 
-ping -c 15 -i .5 www.example.com
+# To ping <host> with 15 packets, one every .5 seconds:
+ping -c 15 -i .5 <host>
 
-# test if a packet size of 1500 bytes is supported (to check the MTU for example)
-ping -s 1500 -c 10 -M do www.example.com
+# To test if a packet size of 1500 bytes is supported (to check the MTU for example):
+ping -s 1500 -c 10 -M do <host>

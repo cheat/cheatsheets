@@ -1,26 +1,26 @@
-# Install a package locally
-bower install <package-name>
+# To install a package:
+bower install <package>
 
-# Install a package locally directly from github
+# To install a package from github:
 bower install <user>/<repo>
 
-# Install a specific package locally
-bower install <package-name>#<version>
+# To install a specific package locally:
+bower install <package>#<version>
 
-# Install a package locally and save installed package into bower.json
-bower install <package-name> --save
+# To install a package locally and save installed package into bower.json:
+bower install <package> --save
 
-# Retrieve info of a particular package
-bower info <package-name>
+# To retrieve info of a particular package:
+bower info <package>
 
-# List local packages
+# To list local packages:
 bower list
 
-# Search for a package by name
-bower search <package-name>
+# To search for a package by name:
+bower search <package>
 
-# Update a package to their newest version
-bower update <package-name>
+# To update a package to their newest version:
+bower update <package>
 
-# Remove a local package
-bower uninstall <package-name>
+# To remove a local package:
+bower uninstall <package>

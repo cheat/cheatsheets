@@ -1,2 +1,2 @@
-# Printout disk free space in a human readable format
+# To print free disk space in a human-readable format:
 df -h

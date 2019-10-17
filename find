@@ -25,23 +25,23 @@ find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
 # To find files bigger than 2 Megabyte and list them:
 find . -type f -size +200000000c -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 
-# To find files modified more than 7 days ago and list file information
+# To find files modified more than 7 days ago and list file information:
 find . -type f -mtime +7d -ls
 
-# To find symlinks owned by a user and list file information
-find . -type l --user=username -ls
+# To find symlinks owned by a user and list file information:
+find . -type l --user=<username> -ls
 
-# To search for and delete empty directories
+# To search for and delete empty directories:
 find . -type d -empty -exec rmdir {} \;
 
-# To search for directories named build at a max depth of 2 directories
+# To search for directories named build at a max depth of 2 directories:
 find . -maxdepth 2 -name build -type d
 
-# To search all files who are not in .git directory
+# To search all files who are not in .git directory:
 find . ! -iwholename '*.git*' -type f
 
-# To find all files that have the same node (hard link) as MY_FILE_HERE
+# To find all files that have the same node (hard link) as MY_FILE_HERE:
 find . -type f -samefile MY_FILE_HERE 2>/dev/null
 
-# To find all files in the current directory and modify their permissions
+# To find all files in the current directory and modify their permissions:
 find . -type f -exec chmod 644 {} \;

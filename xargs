@@ -1,4 +1,4 @@
-# find all file name ending with .pdf and remove them
+# To Find all file name ending with .pdf and remove them
 find -name *.pdf | xargs rm -rf
 
 # if file name contains spaces you should use this instead

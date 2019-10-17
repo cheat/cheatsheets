@@ -1,33 +1,33 @@
-# To connect to an IRC server
-/connect <server domain name>
+# To connect to an IRC server:
+/connect <server>
 
-# To join a channel
-/join #<channel name>
+# To join a channel:
+/join #<channel>
 
-# To set a nickname
-/nick <my nickname>
+# To set a nickname:
+/nick <nickname>
 
-# To send a private message to a user
+# To send a private message to a user:
 /msg <nickname>
 
-# To close the current channel window
+# To close the current channel window:
 /wc
 
-# To switch between channel windows
+# To switch between channel windows:
 ALT+<number>, eg. ALT+1, ALT+2
 
-# To list the nicknames within the active channel
+# To list the nicknames within the active channel:
 /names
 
-# To change the channel topic
+# To change the channel topic:
 /topic <description>
 
-# To limit channel background noise (joins, parts, quits, etc.)
+# To limit channel background noise (joins, parts, quits, etc.):
 /ignore #foo,#bar JOINS PARTS QUITS NICKS   # Quieten only channels `#foo`, `#bar`
 /ignore * JOINS PARTS QUITS NICKS           # Quieten all channels
 
-# To save the current Irssi session config into the configuration file
+# To save the current Irssi session config into the configuration file:
 /save
 
-# To quit Irssi
+# To quit Irssi:
 /exit

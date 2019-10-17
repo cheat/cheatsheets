@@ -8,7 +8,7 @@ rpm -e <package>
 rpm -e --nodeps <package>
 
 # To find what package installs a file:
-rpm -qf </path/to/file>
+rpm -qf <file>
 
 # To find what files are installed by a package:
 rpm -ql <package>
@@ -21,11 +21,11 @@ rpm -q --whatrequires <file>
 # To list all installed packages:
 rpm -qa
 
-# To find a pkg's dependencies
+# To find a packages's dependencies:
 rpm -i --test <package>
 
-# Display checksum against source
+# To display checksum against a source:
 rpm -K <package>
 
-# Verify a package
+# To verify a package:
 rpm -V <package>

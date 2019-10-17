@@ -1,5 +1,5 @@
-# Split a file based on pattern
-csplit input.file '/PATTERN/'
+# To split a file based on a pattern:
+csplit <file> '/PATTERN/'
 
-# Use prefix/suffix to improve resulting file names
-csplit -f 'prefix-' -b '%d.extension' input.file '/PATTERN/' '{*}'
+# To use prefix/suffix to improve output file names:
+csplit -f 'prefix-' -b '%d.extension' <file> '/PATTERN/' '{*}'

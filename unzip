@@ -1,8 +1,8 @@
-# Extract archive
-unzip archive.zip
+# To extract an archive:
+unzip <archive>
 
-# Test integrity of archive
-unzip -tq archive.zip
+# To test integrity of archive:
+unzip -tq <archive>
 
-# List files and directories in a file
-unzip -l archive.zip
+# To list files and directories an archive:
+unzip -l <archive>

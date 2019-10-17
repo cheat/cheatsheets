@@ -1,9 +1,9 @@
 # To set your identity:
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+git config --global user.name <name>
+git config --global user.email <email>
 
 # To set your editor:
-git config --global core.editor emacs
+git config --global core.editor <editor>
 
 # To enable color:
 git config --global color.ui true
@@ -17,7 +17,7 @@ git add --all
 git stash
 
 # To stash changes with a message
-git stash save "message"
+git stash save <message>
 
 # To list all the stashed changes
 git stash list
@@ -30,7 +30,7 @@ git stash pop
 git stash apply stash@{6}
 
 # To commit staged changes
-git commit -m "Your commit message"
+git commit -m <message>
 
 # To edit previous commit message
 git commit --amend
@@ -64,30 +64,30 @@ git clean -f -d -x
 git push origin master
 
 # To push to a specified repository:
-git push git@github.com:username/project.git
+git push git@github.com:<username>/<repo>.git
 
 # To delete the branch "branch_name"
-git branch -D branch_name
+git branch -D <branch>
 
 # To make an exisiting branch track a remote branch
 git branch -u upstream/foo
 
 # To see who commited which line in a file
-git blame filename
+git blame <file>
 
 # To sync a fork with the master repo:
-git remote add upstream git@github.com:name/repo.git    # Set a new repo
-git remote -v                                           # Confirm new remote repo
-git fetch upstream                                      # Get branches
-git branch -va                                          # List local - remote branches
-git checkout master                                     # Checkout local master branch
-git checkout -b new_branch                              # Create and checkout a new branch
-git merge upstream/master                               # Merge remote into local repo
-git show 83fb499                                        # Show what a commit did.
-git show 83fb499:path/fo/file.ext                       # Shows the file as it appeared at 83fb499.
-git diff branch_1 branch_2                              # Check difference between branches
-git log                                                 # Show all the commits
-git status                                              # Show the changes from last commit
+git remote add upstream git@github.com:<username>/<repo>.git # Set a new repo
+git remote -v                                                # Confirm new remote repo
+git fetch upstream                                           # Get branches
+git branch -va                                               # List local - remote branches
+git checkout master                                          # Checkout local master branch
+git checkout -b new_branch                                   # Create and checkout a new branch
+git merge upstream/master                                    # Merge remote into local repo
+git show 83fb499                                             # Show what a commit did.
+git show 83fb499:path/fo/file.ext                            # Shows the file as it appeared at 83fb499.
+git diff branch_1 branch_2                                   # Check difference between branches
+git log                                                      # Show all the commits
+git status                                                   # Show the changes from last commit
 
 # Commit history of a set of files
 git log --pretty=email --patch-with-stat --reverse --full-index -- Admin\*.py > Sripts.patch

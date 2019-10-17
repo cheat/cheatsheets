@@ -1,21 +1,19 @@
-# Create new environment
+# To create a new environment:
 virtualenv /path/to/project/env_name
 
-# Create new environment and inherit already installed Python libraries
+# To create a new environment and inherit already installed Python libraries:
 virtualenv --system-site-package /path/to/project/env_name
 
-# Create new environment with a given Python interpreter
+# To create a new environment with a given Python interpreter:
 virtualenv /path/to/project/env_name -p /usr/bin/python/3.4
 
-# Activate environnment
+# To activate an environnment:
 source /path/to/project/env_name/bin/activate
 
-# Quit environment
+# To quit an environment:
 deactivate
 
-
-# virtualenvwrapper (wrapper for virtualenv)
-# installation
+# To Virtualenvwrapper (wrapper for virtualenv) installation:
 pip install --user virtualenvwrapper
 # configuration
 # add in ~/.bashrc or similar
@@ -23,16 +21,15 @@ export WORKON_HOME=~/.virtualenvs
 mkdir -p $WORKON_HOME
 source ~/.local/bin/virtualenvwrapper.sh
 
-# Create new environmment (with virtualenvwrapper)
+# To create a new environmment (with virtualenvwrapper)
 mkvirtualenv env_name
 # new environmment is stored in ~/.virtualenvs
 
-# Activate environmment (with virtualenvwrapper)
+# To activate environmment (with virtualenvwrapper)
 workon env_name
 
-# Quit environmment (with virtualenvwrapper)
+# To quit environmment (with virtualenvwrapper)
 deactivate
 
-# Delete environmment (with virtualenvwrapper)
+# To delete environmment (with virtualenvwrapper)
 rmvirtualenv env_name
-

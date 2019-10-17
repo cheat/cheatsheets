@@ -1,26 +1,31 @@
-# start the debugger
+# To start the debugger:
 gdb your-executable
 
-# set a breakpoint
+# To set a breakpoint:
 b some-method, break some-method
 
-# run the program
+# To run the program:
 r, run
 
-# when a breakpoint was reached:
+# when a breakpoint is reached:
 
-# run the current line, stepping over any invocations
+# To run the current line, stepping over any invocations:
 n, next
-# run the current line, stepping into any invocations
+
+# To run the current line, stepping into any invocations:
 s, step
-# print a stacktrace
+
+# To print a stacktrace:
 bt, backtrace
-# evaluate an expression and print the result
+
+# To evaluate an expression and print the result:
 p length=strlen(string)
-# list surrounding source code
+
+# To list surrounding source code:
 l, list
-# continue execution
+
+# To continue execution:
 c, continue
 
-# exit gdb (after program terminated)
+# To exit gdb (after program terminated):
 q, quit

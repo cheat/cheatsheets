@@ -1,33 +1,23 @@
-# Initate Vagrant
-mkdir vag-vm; cd vag-vm
+# To initate Vagrant:
 vagrant init
 
-# Add a box to vagrant repo
+# To add a box to a vagrant repo:
 vagrant box add hashicorp/precise32
 
-# Add a box  Vagrant file
-config.vm.box = "hashicorp/precise32"
-
-# Add vm to public network as host
-config.vm.network "public_network"
-
-# Add provision script to vagrant file
-config.vm.provision :shell, path: "provision.sh"
-
-# Start vm 
+# To start a vm:
 vagrant up
 
-# Connect to started instance
+# To connect to a running instance:
 vagrant ssh
 
-# Shutdown vm
+# To shut down a vm:
 vagrant halt
 
-# Hibernate vm
+# To hibernate a vm:
 vagrant suspend
 
-# Set vm to initial state by cleaning all data
+# To set a vm to its initial state by cleaning all data:
 vagrant destroy
 
-# Restart vm with new provision script
+# To restart a vm with a new provision script:
 vagrant reload --provision

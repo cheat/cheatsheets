@@ -1,16 +1,16 @@
-# To install the latest version of a package:
-dnf install <package name>
+# To install a package:
+dnf install <package>
 
-# To search package details for the given string
-dnf search <string>
+# To find packages matching <phrase>:
+dnf search <phrase>
 
-# To find which package provides a binary
-dnf provides <path to binary>
+# To find which package provides an executable:
+dnf provides <executable>
 
 # The following are available after installing "dnf-plugins-core"
 
-# Download a package
-dnf download <package name>
+# To download a package:
+dnf download <package>
 
-# install the build dependencies for a SRPM or from a .spec file
-dnf builddep <srpm/.spec file>
+# To install the build dependencies for a SRPM or from a .spec file:
+dnf builddep <file>

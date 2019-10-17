@@ -1,15 +1,15 @@
-# Submit a new job:
+# To submit a new job:
 sbatch job.sh
 
-# List all jobs for a user:
-squeue -u user_name
+# To list all jobs for a user:
+squeue -u <user>
 
-# Cancel a job by id or name:
-scancel job_id
-scancel --name job_name
+# To cancel a job by id or name:
+scancel <job-id>
+scancel --name <job-name>
 
-# List all information for a job:
-scontrol show jobid -dd job_id
+# To list all information for a job:
+scontrol show jobid -dd <job-id>
 
-# Status info for currently running job:
-sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j job_id --allsteps
+# To status info for currently running job:
+sstat --format=AveCPU,AvePages,AveRSS,AveVMSize,JobID -j <job-id> --allsteps

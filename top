@@ -1,26 +1,26 @@
-# Update every <interval> samples:
+# To update every <interval> samples:
 top -i <interval>
 
-# Set the delay between updates to <delay> seconds:
+# To set the delay between updates to <delay> seconds:
 top -s <delay>
 
-# Set event counting to accumulative mode:
+# To set event counting to accumulative mode:
 top -a
 
-# Set event counting to delta mode:
+# To set event counting to delta mode:
 top -d
 
-# Set event counting to absolute mode:
+# To set event counting to absolute mode:
 top -e
 
-# Do not calculate statistics on shared libraries, also known as frameworks:
+# To not calculate statistics on shared libraries, also known as frameworks:
 top -F
 
-# Calculate statistics on shared libraries, also known as frameworks (default):
+# To calculate statistics on shared libraries, also known as frameworks (default):
 top -f
 
-# Print command line usage information and exit:
+# To print command line usage information and exit:
 top -h
 
-# Order the display by sorting on <key> in descending order
+# To order the display by sorting on <key> in descending order:
 top -o <key>

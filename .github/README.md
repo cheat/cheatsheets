@@ -19,8 +19,14 @@ tags: [ vcs, development ]
 git add --all
 
 # To commit staged changes:
-git commit -m "chore: updated the README"
+git commit -m <message>
 ```
 
+As a guideline, it is preferred to use [docopt][] syntax when specifying
+parameter placeholders. In edge-cases where that syntax may cause confusion, it
+is permissible to use placeholder values (`foo.txt`, `example.com`, etc.) as
+necessary.
 
-[cheat]: https://github.com/cheat/cheat
+
+[cheat]:  https://github.com/cheat/cheat
+[docopt]: https://docopt.org

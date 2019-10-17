@@ -1,20 +1,20 @@
-# update working copy from repository
+# To Update working copy from repository:
 svn update "/path"
 
-# show changed files in working copy
+# To Show changed files in working copy:
 svn status
 
-# show what changed in local file
+# To Show what changed in local file:
 svn diff "/path/filename"
 
-# add files or folders
+# To Add files or folders:
 svn add "path/item"
 
-# revert local uncommited changes
+# To Revert local uncommited changes:
 svn revert "/path/file"
 
-# commit changes to repo
+# To Commit changes to repo:
 svn commit -m "message" "/path"
 
-# show help for 'svn diff'
+# To Show help for 'svn diff':
 svn help diff

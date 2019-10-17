@@ -1,11 +1,11 @@
-# Create a copy of a file
+# To copy a file:
 cp ~/Desktop/foo.txt ~/Downloads/foo.txt
 
-# Create a copy of a directory
+# To copy a directory:
 cp -r ~/Desktop/cruise_pics/ ~/Pictures/
 
-# Create a copy but ask to overwrite if the destination file already exists
+# To create a copy but ask to overwrite if the destination file already exists:
 cp -i ~/Desktop/foo.txt ~/Documents/foo.txt
 
-# Create a backup file with date
+# To create a backup file with date:
 cp foo.txt{,."$(date +%Y%m%d-%H%M%S)"}

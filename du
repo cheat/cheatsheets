@@ -1,5 +1,5 @@
-# To sort directories/files by size
+# To sort directories/files by size:
 du -sk *| sort -rn
 
-# To show cumulative humanreadable size
+# To show cumulative human-readable size:
 du -sh

@@ -1,14 +1,14 @@
 # To resize an image to a fixed width and proportional height:
-convert original-image.jpg -resize 100x converted-image.jpg
+convert original.jpg -resize 100x converted.jpg
 
 # To resize an image to a fixed height and proportional width:
-convert original-image.jpg -resize x100 converted-image.jpg
+convert original.jpg -resize x100 converted.jpg
 
 # To resize an image to a fixed width and height:
-convert original-image.jpg -resize 100x100 converted-image.jpg
+convert original.jpg -resize 100x100 converted.jpg
 
 # To resize an image and simultaneously change its file type:
-convert original-image.jpg -resize 100x converted-image.png
+convert original.jpg -resize 100x converted.png
 
 # To resize all of the images within a directory:
 # To implement a for loop:

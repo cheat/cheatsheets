@@ -1,32 +1,32 @@
-# Sync to newest SlackBuild.org tree
+# To sync to newest slackbuild.org tree:
 sport r
 
-# Search (fuzzy) SlackBuild tree for packages foo and BaR
+# to search (fuzzy) slackbuild tree for packages foo and bar:
 sport s foo bar
 
-# Operate from alternate build tree
+# To operate from alternate build tree:
 SBOPATH=/path/to/tree sport s foo
 
-# View info and README of BaR (not fuzzy)
+# to view info and readme of bar (not fuzzy):
 sport c foo BaR
 
-# Build a package
+# To build a package:
 sport i --build-only foo
 
-# Build and install package foo and BaR
+# to build and install package foo and bar:
 sport i foo BaR
 
-# Build and install package from current directory
+# To build and install package from current directory:
 sport i .
 
-# Upgrade instead of install
+# To upgrade instead of install:
 INSTALLER=upgradepkg sport i foo
 
-# Build dependency list for baz
-echo "foo BaR" >> /tmp/baz.list
+# To build dependency list for baz:
+echo "foo bar" >> /tmp/baz.list
 
-# Install list of packages from file
+# To install list of packages from file:
 sport i $(< /tmp/baz.list)
 
-# Check if package is installed
+# To check if package is installed:
 sport k foo

@@ -10,10 +10,10 @@ nova boot --nic net-id=<net_id> \
           --flavor <flavor> \
           --availability-zone nova:<host_name> <vm_name>
 
-# To stop a server
+# To stop a server:
 nova stop <server>
 
-# To start a server
+# To start a server:
 nova start <server>
 
 # To attach a network interface to a specific VM:

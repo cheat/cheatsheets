@@ -1,13 +1,13 @@
-# Pretty print the json
+# To pretty print the json:
 jq "." < filename.json
 
-# Access the value at key "foo"
+# To access the value at key "foo":
 jq '.foo'
 
-# Access first list item
+# To access first list item:
 jq '.[0]'
 
-# Slice & Dice
+# to slice and dice:
 jq '.[2:4]'
 jq '.[:3]'
 jq '.[-2:]'

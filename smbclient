@@ -1,5 +1,5 @@
 # To display public shares on the server:
-smbclient -L <hostname> -U%
+smbclient -L <host> -U%
 
 # To connect to a share:
-smbclient //<hostname>/<share> -U<username>%<password>
+smbclient //<host>/<share> -U<user>%<password>

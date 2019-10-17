@@ -1,25 +1,21 @@
-# Add entry to default jrnl (from your configured text editor)
+# To add entry to default jrnl (from your configured text editor):
 jrnl
 
-# Add entry to default jrnl
-jrnl Write entry here.
+# To add <entry> to default jrnl:
+jrnl <entry>
 
-# List of tags
+# To list of tags:
 jrnl --tags
 
-# Entries per tag
+# To entries per tag:
 jrnl @tag
 
-# Export jrnl as json
+# To export jrnl as json:
 jrnl --export json
 
-# Entries in a timeframe
+# To entries in a timeframe:
 jrnl -from 2009 -until may
 
-# Add Sublime text to .jrnl_config
-
-# Windows
-"editor": "F:\\Powerpack\\Sublime\\sublime_text.exe -w"
-
-# Linux
-"editor": "/usr/bin/sublime -w"
+# To add Sublime text to .jrnl_config:
+"editor": "F:\\Powerpack\\Sublime\\sublime_text.exe -w" # Windows
+"editor": "/usr/bin/sublime -w"                         # Linux

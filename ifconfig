@@ -1,14 +1,14 @@
-# Display network settings of the first ethernet adapter
-ifconfig wlan0
+# To display network settings of an interface:
+ifconfig <interface>
 
-# Display all interfaces, even if down
+# To display all interfaces, even if down:
 ifconfig -a
 
-# Take down / up the wireless adapter
+# To take down / up the wireless adapter:
 ifconfig wlan0 {up|down} 
 
-# Set a static IP and netmask
+# To set a static IP and netmask:
 ifconfig eth0 192.168.1.100 netmask 255.255.255.0
 
-# You may also need to add a gateway IP
+# You may also need to add a gateway IP:
 route add -net 192.168.1.0 netmask 255.255.255.0 gw 192.168.1.1

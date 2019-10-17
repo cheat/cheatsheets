@@ -1,16 +1,20 @@
-# Set unread marker on all windows
+# To set an unread marker on all windows:
 Ctrl-s Ctrl-u
 
-# Switch buffer left
+# To switch to the left buffer:
 Ctrl-p, Alt-left
-# Switch buffer right
+
+# To switch to the right buffer:
 Ctrl-n, Alt-right
-# Next buffer with activity
+
+# To switch to the next buffer with activity:
 Alt-a
-# Switch buffers
+
+# To switch buffers:
 Alt-0...9
 
-# Scroll buffer title
+# To scroll buffer title:
 F9/F10
-# Scroll nick list
+
+# To scroll nick list:
 F11/F12
