@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To install or upgrade a package:
 dpkg -i <deb-file>
 

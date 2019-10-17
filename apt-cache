@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To find packages matching <phrase>:
 apt-cache search <phrase>
 

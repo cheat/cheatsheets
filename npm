@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # Every command shown here can be used with the `-g` switch for global scope
 
 # To install a package in the current directory:

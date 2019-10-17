@@ -1,3 +1,6 @@
+---
+tags [ networking ]
+---
 # socat connect to http-server (port 80 on 'butzel.info')
 socat TCP4:butzel.info:80 -
 

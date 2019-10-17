@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To search (fuzzy) <package>:
 urpmq -Y <package>
 

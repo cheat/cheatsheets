@@ -1,3 +1,6 @@
+---
+tags [ networking ]
+---
 Args
 -4/-6 list ipv4/ipv6 sockets
 -n numeric addresses instead of hostnames

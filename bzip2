@@ -1,3 +1,6 @@
+---
+tags: [ compression ]
+---
 # To compress a file (foo -> foo.bz2):
 bzip2 -z foo
 

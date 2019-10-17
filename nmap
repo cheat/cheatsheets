@@ -1,3 +1,6 @@
+---
+tags [ networking ]
+---
 # Single target scan:
 nmap [target]
 

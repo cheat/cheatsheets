@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To install a package:
 bower install <package>
 

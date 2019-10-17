@@ -1,3 +1,6 @@
+---
+tags: [ database ]
+---
 # To dump a database to a file (Note that your password will appear in your command history!):
 mysqldump -u<username> -p<password> <database> > db.sql
 

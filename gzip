@@ -1,3 +1,6 @@
+---
+tags: [ compression ]
+---
 # To create a *.gz compressed file
 gzip test.txt
 

@@ -1,3 +1,6 @@
+---
+tags: [ compression ]
+---
 # To extract an uncompressed archive:
 tar -xvf /path/to/foo.tar
 

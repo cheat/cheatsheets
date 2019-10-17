@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To install a package:
 dnf install <package>
 

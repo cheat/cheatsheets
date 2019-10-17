@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # All pacman commands are working the same way with yaourt.
 # Just check the pacman cheatsheet.
 # For instance, to install a package: 

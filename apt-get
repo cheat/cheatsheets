@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To fetch package list:
 apt-get update
 

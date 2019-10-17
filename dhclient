@@ -1,3 +1,6 @@
+---
+tags: [ networking ]
+---
 # To release the current IP address:
 sudo dhclient -r
 

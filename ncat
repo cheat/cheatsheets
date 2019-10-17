@@ -1,3 +1,6 @@
+---
+tags [ networking ]
+---
 # Connect mode (ncat is client) | default port is 31337
 ncat <host> [<port>]
 

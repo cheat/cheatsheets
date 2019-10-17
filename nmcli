@@ -1,3 +1,6 @@
+---
+tags [ networking ]
+---
 # Connect to a wireless access point - Parameters:
 # 	<wiface> -- the name of your wireless interface
 #	<ssid> -- the SSID of the access point

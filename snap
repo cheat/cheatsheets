@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To find <package>:
 snap find <package>
 

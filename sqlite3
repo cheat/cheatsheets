@@ -1,3 +1,6 @@
+---
+tags: [ database ]
+---
 # to create database and launch interactive shell:
 sqlite3 <database>
 

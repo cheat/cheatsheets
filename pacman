@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To search for a package:
 pacman -Ss <package>...
 

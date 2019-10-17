@@ -1,3 +1,6 @@
+---
+tags: [ packaging ]
+---
 # To list contents of an RPM:
 rpm2cpio <rpm-file> | cpio -vt
 
