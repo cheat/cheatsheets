@@ -29,7 +29,7 @@ find . -type f -size +200000000c -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 find . -type f -mtime +7d -ls
 
 # To find symlinks owned by a user and list file information:
-find . -type l --user=<username> -ls
+find . -type l -user <username or user ID> -ls
 
 # To search for and delete empty directories:
 find . -type d -empty -exec rmdir {} \;
