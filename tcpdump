@@ -15,7 +15,7 @@ tcpdump -nn -i any host 173.194.40.120 and port 80
 # Make a grep on tcpdump (ASCII)
 # -A  => Show only ASCII in packets.
 # -s0 => By default, tcpdump only captures 68 bytes.
-tcpdump -i -A any host 173.194.40.120 and port 80 | grep 'User-Agent'
+tcpdump -i any -A host 173.194.40.120 and port 80 | grep 'User-Agent'
 
 # With ngrep
 # -d eth0 => To force eth0 (else ngrep work on all interfaces)
