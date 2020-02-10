@@ -4,14 +4,8 @@ systemctl
 # To check the status of a service:
 systemctl status foo.service
 
-# To start a service:
-systemctl start foo.service
-
-# To restart a service:
-systemctl restart foo.service
-
-# To stop a service:
-systemctl stop foo.service
+# To start/restart/stop a service:
+systemctl start/restart/stop foo.service
 
 # To reload a service's configuration:
 systemctl reload foo.service
@@ -27,6 +21,9 @@ systemctl enable foo.service
 
 # To disable a service to startup on boot:
 systemctl disable foo.service
+
+# To start/restart/stop per-user service
+systemctl --user start/restart/stop emacs.service
 
 # To see all active units, add --all for everything:
 systemctl list-units
