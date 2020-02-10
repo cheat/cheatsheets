@@ -22,7 +22,7 @@ systemctl enable foo.service
 # To disable a service to startup on boot:
 systemctl disable foo.service
 
-# To start/restart/stop per-user service
+# To start/restart/stop per-user service:
 systemctl --user start/restart/stop emacs.service
 
 # To see all active units, add --all for everything:
