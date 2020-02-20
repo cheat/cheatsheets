@@ -14,6 +14,18 @@ ffmpeg -r 18 -pattern_type glob -i '*.png' -b:v 21000k -s hd1080 -vcodec vp9 -an
 # To combine video and audio into one file
 ffmpeg -i video.ext -i audio.ext -c:v copy -c:a copy output.ext
 
+# To add ass subtitle to the video
+ffmpeg -i input_video.mp4 -vf ass=sub.ass output_video_subtitles.mp4
+
+# To convert webm to mp4
+ffmpeg -i input_video.webm output_video.mp4
+
+# To convert mp4 to mov
+ffmpeg -i input_video.mp4 -acodec copy -vcodec copy -f mov output_video.mov
+
+# To convert mov to mp4
+ffmpeg -i input_video.mov -vcodec copy -acodec copy output_video.mp4
+
 # Listen to 10 seconds of audio from a video file
 #
 # -ss : start time
