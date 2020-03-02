@@ -11,4 +11,4 @@ python -m http.server 8000
 python -m smtpd -n -c DebuggingServer localhost:1025
 
 # Pretty print a json
-python -mjson.tool
+python -m json.tool foo.json

@@ -35,6 +35,9 @@ Ctrl-b : source-file /path/to/file
 # To create a window:
 Ctrl-b c
 
+# To go next window:
+Ctrl-b n
+
 # To destroy a window:
 Ctrl-b x
 
