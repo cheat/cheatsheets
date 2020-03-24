@@ -25,6 +25,9 @@ docker ps
 # To list all containers:
 docker ps -a
 
+# To remove all stopped containers:
+docker rm $(docker ps -qa)
+
 # To list all images:
 docker images
 
