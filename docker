@@ -27,3 +27,6 @@ docker ps -a
 
 # To list all images:
 docker images
+
+# To remove all untagged images:
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
