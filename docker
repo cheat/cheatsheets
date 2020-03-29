@@ -25,5 +25,11 @@ docker ps
 # To list all containers:
 docker ps -a
 
+# To remove all stopped containers:
+docker rm $(docker ps -qa)
+
 # To list all images:
 docker images
+
+# To remove all untagged images:
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
