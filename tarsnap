@@ -1,3 +1,6 @@
+---
+tags: [ compression ]
+---
 # Perform a backup of two directories
 tarsnap -c -f <archive-name> /usr/home /other/stuff/to/backup
 
