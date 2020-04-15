@@ -1,0 +1,2 @@
+# Pretty-print a file (warnings to stdout):
+tidy -o output.html input.html
