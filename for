@@ -22,6 +22,9 @@ do
   echo $i
 done
 
+# same as above, but as one-liner
+for i in `seq 1 10`; do echo $i; done
+
 # loop specified number of times: the C/C++ style
 for ((i=1;i<=10;++i))
 do
