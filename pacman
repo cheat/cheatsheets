@@ -34,6 +34,9 @@ expac --timefmt='%Y-%m-%d %T' '%l\t%n' $(comm -23 <(pacman -Qeq|sort) <(pacman -
 # To list orphan packages (installed as dependencies and not required anymore):
 pacman -Qdt
 
+# To list installed packages sorted by size
+pacman -Qq | pacman -Qi - | egrep '(Size\s+:|Name\s+:[^s])' | sed -E 's/ ([KM])iB/\1/' | sed -z 's/\nInstalled/ /g' | perl -pe 's/(Name|Size) *: //g' | column -t | sort -hk2 -r | cat -n | tac
+
 
 # You can't directly install packages from the Arch User Database (AUR) with pacman.
 # You need yaourt to perform that. But considering yaourt itself is in the AUR, here is how to build a package from its tarball.
