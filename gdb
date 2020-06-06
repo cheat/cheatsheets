@@ -13,6 +13,12 @@ n, next
 # To run the current line, stepping into any invocations:
 s, step
 
+# To continue execution:
+c, continue
+
+# To exit gdb (after program terminated):
+q, quit
+
 # To print a stacktrace:
 bt, backtrace
 
@@ -22,8 +28,4 @@ p length=strlen(string)
 # To list surrounding source code:
 l, list
 
-# To continue execution:
-c, continue
 
-# To exit gdb (after program terminated):
-q, quit
