@@ -7,8 +7,6 @@ b some-method, break some-method
 # To run the program:
 r, run
 
-# when a breakpoint is reached:
-
 # To run the current line, stepping over any invocations:
 n, next
 
