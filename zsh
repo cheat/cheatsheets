@@ -80,3 +80,23 @@ echo ${(s._.)file}
 # Join expansion flag, opposite of the split flag.
 array=(a b c d)
 echo ${(j.-.)array} # a-b-c-d
+
+# Short if
+if [[ ... ]] command
+if [[ ... ]] { command ... }
+
+# Short for
+for i ( word ... ) command
+for i ( word ... ) { command ... }
+for i in word ... ; command
+
+# Short while/until
+while [[ ... ]] { command ... }
+until [[ ... ]] { command ... }
+
+# Use output of command, when using pipe is not possible
+<( command )
+
+# Similar to <( ), but creates temporary file (instead of FD or FIFO), when
+# program needs to seek in output.
+=( command )
