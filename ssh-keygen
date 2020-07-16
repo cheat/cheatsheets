@@ -1,7 +1,7 @@
 ---
 tags [ ssh ]
 ---
-# To generate a SSH key:
+# To generate an SSH key:
 ssh-keygen -t rsa
 
 # To generate a 4096-bit SSH key:
