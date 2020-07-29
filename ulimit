@@ -1,0 +1,5 @@
+# Show help
+ulimit -a
+
+# Unlimited file descriptors
+ulimit -n unlimited
