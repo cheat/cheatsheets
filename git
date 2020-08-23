@@ -20,7 +20,7 @@ git add --all
 git stash
 
 # To stash changes with a message
-git stash save <message>
+git stash push -m <message>
 
 # To list all the stashed changes
 git stash list
