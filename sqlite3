@@ -20,7 +20,7 @@ sqlite3 <database> ".schema 'os'"
 sqlite3 <database> "select * from 'os';"
 
 # to view records in table conditionally:
-sqlite <database> "select * from 'os' where year='1991';"
+sqlite3 <database> "select * from 'os' where year='1991';"
 
 # to view records with fuzzy matching:
 sqlite3 <database> "select * from 'os' where year like '19%';"
