@@ -1,5 +1,14 @@
+---
+tags: [ job, scheduler, periodic ]
+---
 # set a shell
 SHELL=/bin/bash
+
+# set a PATH
+PATH=/usr/bin:/usr/sbin:/usr/local/bin
+
+# incorrect way of seeting PATH
+PATH=$PATH:/do/not/do/this
 
 # crontab format
 * * * * *  command_to_execute
@@ -20,3 +29,9 @@ SHELL=/bin/bash
 
 # every Saturday at 8:05 AM
 5 8 * * 6 /home/user/command.sh
+
+# compute your crontab periodicity format online
+https://crontab.guru/
+
+# be careful with % sign (percent), it has special meaning, see https://crontab.guru/ for explanation
+% signs must be escaped such as \%
