@@ -20,7 +20,7 @@ git add --all
 git stash
 
 # To stash changes with a message
-git stash save <message>
+git stash push -m <message>
 
 # To list all the stashed changes
 git stash list
@@ -56,6 +56,11 @@ git reset --hard
 
 # To go 2 commits back
 git reset --hard HEAD~2
+
+# To revert first/initial commit on a branch
+# Running git reset --hard HEAD~1 will give error:
+# fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+git update-ref -d HEAD
 
 # To remove untracked files
 git clean -f -d
