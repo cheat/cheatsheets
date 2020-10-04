@@ -32,5 +32,8 @@ java -classpath <classpath> -jar <filename.jar>
 java -classpath "my/example/path/one:my/example/path/two" -jar myfile.zip
 
 # To execute a java class
+# Say you have a java class of name HelloWorld in a file called HelloWorld.java
+# Say you want to execute your class HelloWorld and pass it the argument "hello"
+# Say the file is the local directory we use the options "-cp ."
 java -cp <path> <class> <arg>
-java -cp . Echo "hello"
+java -cp . HelloWorld "hello"
