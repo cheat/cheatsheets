@@ -74,6 +74,12 @@ git push origin master
 # To push to a specified repository:
 git push git@github.com:<username>/<repo>.git
 
+# To push a tag to remote
+git push origin <tagname>
+
+# To force a push
+git push -f
+
 # To delete the branch "branch_name"
 git branch -D <branch>
 
