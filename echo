@@ -1,0 +1,26 @@
+# To print any string
+echo <string>
+
+# To print the current user
+echo $USER
+
+# To print your home directory
+echo $HOME
+
+# To print the path searched for matching commands when the user types something on the command line.
+echo $PATH
+
+# To print the date
+date +%D
+
+# To echo output to a file and not standard output. in below example output is redirected to test file.
+echo "Hello World!" > test
+cat test // Hello World!
+
+# To print all the files in your directory
+echo *
+
+# To print a specific type of file
+echo *<search>
+echo *.jpeg 
+
