@@ -1,0 +1,14 @@
+# start with virtualbox driver
+minikube start --vm-driver=virtualbox
+
+# Global variables required to start docker daemon
+minikube docker-env
+
+# Start Dashboard in a browser
+minikube dashboard
+
+# List all services
+minikube service list
+
+# Start service in browser
+minikube service <<service_name>>
