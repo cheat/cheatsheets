@@ -1,5 +1,10 @@
-# To sort directories/files by size:
-du -sk *| sort -rn
+# Disk usage (du): Defaults to show the size of every file in every folder, infinitely deep, in bytes.
 
-# To show cumulative human-readable size:
+# Shows summary of everything, in human-readable format:
 du -sh
+
+# Shows summary of everything, listed by folder, in human-readable format:
+du -d 1 -hc
+
+# To sort folder/files by size, in MB (-B MB), one folder deep (-d 1):
+du -c -d 1 -B MB | sort -rn
