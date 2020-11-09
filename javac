@@ -1,35 +1,35 @@
-# Compile a simple source file
+# To compile a simple source file:
 javac HelloWorld.java
 
-# Compile several source files
+# To compile several source files:
 javac *.java
 
-# Specify another destination directory
+# To specify another destination directory:
 javac -d build HelloWorld.java
 
-# Use another source directory for source dependencies
+# To use another source directory for source dependencies:
 javac -sourcepath src/dependencies/java Main.java
 
-# Define where compiled dependencies should be searched
+# To define where compiled dependencies should be searched:
 javac -classpath lib/commons-cli-1.4.jar:lib/log4j-1.2.12.jar HelloWorld.java
 
-# Consider warnings as errors
+# To consider warnings as errors:
 javac -Werror NoWarning.java
 
-# Compile Java 7 code
+# To compile Java 7 code:
 javac -source 1.7 Java7.java
 
-# Make the compiler more verbose
+# To make the compiler more verbose:
 javac -verbose *.java
 
-# Display usage of deprecated APIs
+# To display usage of deprecated APIs:
 javac -deprecation App.java
 
-# Include debugging info in class files
+# To include debugging info in class files:
 javac -g HelloWorld.java
 
-# Display version
+# To display version:
 javac -version
 
-# Getting help
+# To get help:
 javac -help
