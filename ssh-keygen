@@ -30,3 +30,7 @@ ssh-keygen -E md5 -lf <keyfile>
 
 # To download resident keys from a FIDO2 authenticator to the current directory:
 ssh-keygen -K
+
+# To view the public key associated with a private key:
+ssh-keygen -y -f <private-key-file> > <public-key-file>
+ssh-keygen -y -f ~/.ssh/private-key > ~/.ssh/public-key.pub
