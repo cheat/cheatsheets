@@ -9,4 +9,3 @@ shutdown -r +5
 
 # To cancel a scheduled shutdown:
 shutdown -c
-
