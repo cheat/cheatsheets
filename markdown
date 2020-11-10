@@ -1,8 +1,7 @@
 # headers
-h1 header
-=========
-h2 header
----------
+# (without double qutation marks("))
+"# h1 header"
+"###### h6 header"
 
 # blockquotes
 > first level and paragraph
@@ -27,7 +26,7 @@ regular text
 or:
 Use the `printf()` function
 
-# hr's - three or more of the following
+# hr's (horizontal rules) - three or more of the following
 ***
 ---
 ___
