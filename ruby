@@ -2,18 +2,18 @@
 # Main page: https://www.ruby-lang.org/
 # Help and documentation: https://ruby-doc.org/
 
-# Serve the current directory
-ruby -run -e httpd . -p 5000
+# To serve the current directory:
+ruby -run -e httpd . -p <port>
 
-# Execute script file
-ruby script.rb
+# To execute a script file:
+ruby <file>
 
-# Execute one line of script
+# To execute one line of script:
 ruby -e 'command'
 
-# Check script file syntax
-ruby -c script.rb
+# To check script file syntax:
+ruby -c <file>
 
-# Specify $LOAD_PATH directory
+# To specify $LOAD_PATH directory:
 ruby -Idirectory
 ruby -Ispec spec/test_spec.rb
