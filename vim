@@ -1,3 +1,7 @@
+---
+tags [ vim ]
+---
+
 # File management
 
 :e              reload file
@@ -77,4 +81,28 @@ ctrl-w=          - make all equal size
 :hide            - close current window
 :only            - keep only this window open
 :ls              - show current buffers
+:.! <command>    - shell out
+
+# Buffers
+# move to N, next, previous, first last buffers
+:bn              - goes to next buffer
+:bp              - goes to prev buffer
+:bf              - goes to first buffer
+:bl              - goes to last buffer
 :b 2             - open buffer #2 in this window
+:new             - open a new buffer
+:vnew            - open a new vertical buffer
+:bd 2            - deletes buffer 2
+:wall            - writes al buffers
+:ball            - open a window for all buffers
+:bunload         - removes buffer from window
+:taball          - open a tab for all buffers
+
+# Pointers back
+ctrl-o
+
+# Pointers forward
+ctrl-o
+
+# Super search
+ctrl-p
