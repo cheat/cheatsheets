@@ -29,7 +29,7 @@ Ctrl-b ?
 # To scroll in window:
 Ctrl-b PageUp/PageDown
 
-# To reload configuation file
+# To reload configuration file
 Ctrl-b : source-file /path/to/file
 
 # To create a window:
