@@ -17,7 +17,7 @@ kubectl explain resource_name.field_name
 kubectl options
 
 # Setup Kubectl autocomplete in bash(to use press Tab)
-source <(kubectl completion bash
+source <(kubectl completion bash)
 
 # Display all resources in all namespaces
 kubectl get all -A
