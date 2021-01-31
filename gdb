@@ -12,6 +12,9 @@ b, break <loc> [if <condition>]
 clear, clear <loc>
   with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
 
+# To disable a breakpoint:
+dis, disable <num>
+
 # To run the program, optionally with arguments for the program:
 r, run [<args>]
 
@@ -20,6 +23,20 @@ n, next
 
 # To run the current line, stepping into any invocations:
 s, step
+
+# To run until the next line below, i.e., without new loop iteration:
+u, until
+
+# To step or go to next line by a machine instruction
+si, stepi
+ni, nexti
+
+# To run until given location is reached
+advance <loc>
+  with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
+
+# To run until function ends:
+fin, finish
 
 # To continue execution:
 c, continue
@@ -33,11 +50,23 @@ bt, backtrace
 # To print a stacktrace with local variables:
 bt, backtrace full
 
+# Move to stack frame of given number:
+frame <num>
+
+# To show all breakpoints:
+info breakpoints
+
+# To show summary info on selected frame:
+info frame
+
 # To print the arguments to the function of the current stack frame:
 info args
 
 # To print the local variables in the currently selected stack frame:
 info locals
+
+# To print the registers:
+info registers
 
 # To print a list of all the threads:
 info threads
@@ -47,6 +76,9 @@ info sharedlibrary
 
 # To evaluate an expression and print the result:
 p length=strlen(string)
+
+# To print an array of given length:
+p *<array>@<len>
 
 # To list surrounding source code:
 l, list
@@ -73,3 +105,9 @@ x/<count><fmt><size> <address>
     f | Float
     c | Char
     s | String
+
+# To specify a given register, program counter, frame pointer, stack pointer
+$reg, $pc, $fp, $sp
+
+# To enable pretty print of arrays and more:
+set pretty print on
