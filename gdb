@@ -70,6 +70,9 @@ info args, info locals
 # To print the registers:
 info registers
 
+# To print the registers:
+info registers
+
 # To print a list of all the threads:
 info threads
 
