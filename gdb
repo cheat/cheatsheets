@@ -1,8 +1,8 @@
 # To start the debugger:
-gdb your-executable
+gdb <executable>
 
 # To set a breakpoint:
-b some-method, break some-method
+b <method>, break <method>
 
 # To delete all breakpoints
 clear
@@ -48,10 +48,10 @@ l, list
 
 # Disassemble the current function or given location
 disassemble
-disassemble {LOCATION}
+disassemble <LOCATION>
 
 # Examine content at address with a format and letter size:
-x/{COUNT}{FMT}{SIZE} {ADDRESS}
+x/<COUNT><FMT><SIZE> <ADDRESS>
 # Formats:
 a # Address
 i # Instruction
