@@ -1,8 +1,8 @@
 # To start the debugger:
 gdb <executable>
 
-# To set a breakpoint:
-b <method>, break <method>
+# To set a breakpoint at a function:
+b <function>, break <function>
 
 # To delete all breakpoints
 clear
@@ -28,7 +28,7 @@ bt, backtrace
 # To print a stacktrace with local variables:
 backtrace full
 
-# To print the arguments to the funtion of the current stack frame:
+# To print the arguments to the function of the current stack frame:
 info args
 
 # To print the local variables in the currently selected stack frame:
