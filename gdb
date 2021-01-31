@@ -11,11 +11,16 @@ b, break <function>
 b, break <loc> [if <condition>]
   with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
 
-# To show all breakpoints:
-info breakpoints
+# To set a watchpoint, i.e., stop when expression changes its value:
+watch <expr>
 
-# To delete all breakpoints or breakpoint at a given location:
-clear, clear <loc>
+# To show all breakpoints and watchpoints:
+info breakpoints, info watchpoints
+
+# To delete all or given breakpoints and watchpoints:
+clear, delete
+delete <num>
+clear <loc>
   with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
 
 # To disable a breakpoint:
