@@ -1,12 +1,18 @@
 # To start the debugger:
 gdb <executable>, gdb --args <executable> [<args>...], gdb -p <pid>
 
+# To exit gdb (after program terminated):
+q, quit
+
 # To set a breakpoint at a function:
 b, break <function>
 
 # To set a (conditional) breakpoint at a general location:
 b, break <loc> [if <condition>]
   with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
+
+# To show all breakpoints:
+info breakpoints
 
 # To delete all breakpoints or breakpoint at a given location:
 clear, clear <loc>
@@ -35,35 +41,23 @@ ni, nexti
 advance <loc>
   with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
 
-# To run until function ends:
+# To run until function ends, i.e., jump out of a function:
 fin, finish
 
 # To continue execution:
 c, continue
 
-# To exit gdb (after program terminated):
-q, quit
+# To print a stacktrace, optionally with local variables:
+bt, backtrace [full]
 
-# To print a stacktrace:
-bt, backtrace
-
-# To print a stacktrace with local variables:
-bt, backtrace full
-
-# Move to stack frame of given number:
-frame <num>
-
-# To show all breakpoints:
-info breakpoints
+# Move to stack frame of given number or a frame up or down:
+frame <num>, up, down
 
 # To show summary info on selected frame:
 info frame
 
-# To print the arguments to the function of the current stack frame:
-info args
-
-# To print the local variables in the currently selected stack frame:
-info locals
+# To print the arguments or local variables to the current function:
+info args, info locals
 
 # To print the registers:
 info registers
@@ -80,17 +74,6 @@ p length=strlen(string)
 # To print an array of given length:
 p *<array>@<len>
 
-# To list surrounding source code:
-l, list
-
-# Disassemble the current or given function:
-disas, disassemble [/m] [<func>]
-  with /m to show mixed source
-
-# Disassemble the given address range:
-disas <start>,<end>
-disas <start>,+<length>
-
 # Examine content at address with a format and letter size:
 x/<count><fmt><size> <address>
     ------- <fmt> ------    ------- <size> -------
@@ -105,6 +88,17 @@ x/<count><fmt><size> <address>
     f | Float
     c | Char
     s | String
+
+# To list surrounding source code:
+l, list
+
+# Disassemble the current or given function:
+disas, disassemble [/m] [<func>]
+  with /m to show mixed source
+
+# Disassemble the given address range:
+disas <start>,<end>
+disas <start>,+<length>
 
 # To specify a given register, program counter, frame pointer, stack pointer
 $reg, $pc, $fp, $sp
