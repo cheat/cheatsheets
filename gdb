@@ -38,6 +38,9 @@ s, step
 # To run until the next line below, i.e., without new loop iteration:
 u, until
 
+# Like run, but stop at the first machine instruction:
+starti
+
 # To step or go to next line by a machine instruction
 si, stepi
 ni, nexti
