@@ -1,0 +1,18 @@
+---
+syntax: bash
+tags: [networking] 
+---
+# Show statistics for the selected interfacee
+ethtool -S <interface>
+
+# Show interface permanent address
+ethotool -P <interface>
+
+# Set interface speed
+ethtool -s <interface> [ speed %d ]
+
+# Set interface autonegotiation
+ethtool -s <interface> [ autoneg on|off ]
+
+# Get interface errors
+ethtool -S <interface> | grep error
