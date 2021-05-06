@@ -1,5 +1,5 @@
 ---
-tags [ ssh ]
+tags: [ ssh ]
 ---
 # To copy a key to a remote host:
 ssh-copy-id <user>@<host>

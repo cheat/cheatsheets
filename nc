@@ -1,5 +1,5 @@
 ---
-tags [ networking ]
+tags: [ networking ]
 ---
 # To open a TCP connection from <src-port> to <dest-port> of <dest-host>, with a timeout of <seconds>
 nc -p <src-port> -w <seconds> <dest-host> <dest-port>
