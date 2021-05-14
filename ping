@@ -1,5 +1,5 @@
 ---
-tags [ networking ]
+tags: [ networking ]
 ---
 # To ping <host> with 15 packets:
 ping -c 15 <host>
