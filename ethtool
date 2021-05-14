@@ -2,17 +2,17 @@
 syntax: bash
 tags: [networking] 
 ---
-# Show statistics for the selected interfacee
+# To show statistics for the selected interface:
 ethtool -S <interface>
 
-# Show interface permanent address
+# To show interface permanent address:
 ethotool -P <interface>
 
-# Set interface speed
+# To set interface speed:
 ethtool -s <interface> [ speed %d ]
 
-# Set interface autonegotiation
+# To set interface autonegotiation:
 ethtool -s <interface> [ autoneg on|off ]
 
-# Get interface errors
+# To get interface errors:
 ethtool -S <interface> | grep error
