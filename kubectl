@@ -21,3 +21,6 @@ source <(kubectl completion bash)
 
 # Display all resources in all namespaces
 kubectl get all -A
+
+# Order events by `creationTimestamp`
+kubectl get events --sort-by='.metadata.creationTimestamp'
