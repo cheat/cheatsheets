@@ -10,14 +10,15 @@ apt show <package>
 # To fetch package list:
 apt update
 
-# To download and install updates without installing new package:
+# To download and install the updates and (UNLIKE apt-get) install new necessary packages:
 apt upgrade
 
-# To download and install the updates AND install new necessary packages:
+# To download and install the updates AND install new necessary packages
+# AND removing whatever stands in the way of the upgrade - use with caution!
 apt dist-upgrade
 
 # To perform a full system upgrade:
-apt update && apt dist-upgrade
+apt update && apt upgrade # use dist-upgrade carefully if needed
 
 # To install package(s):
 apt install <package>...
