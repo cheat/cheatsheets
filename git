@@ -55,7 +55,7 @@ git filter-branch --env-filter \
 git reset --hard
 
 # To go 2 commits back:
-git reset --hard HEAD~
+git reset --hard HEAD~2
 
 # Checkout the fb branch, and rebase from <remote>
 git reset --hard <remote>/<branch>
