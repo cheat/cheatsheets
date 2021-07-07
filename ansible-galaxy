@@ -1,26 +1,20 @@
 ---
-tags: [ orchestrating ]
+tags: [ orchestration ]
 ---
-# Install a role:
+# To install a role:
+ansible-galaxy install <user>.<role>
 
-`ansible-galaxy install {{username}}.{{role_name}}`
+# To remove a role:
+ansible-galaxy remove <user>.<role>
 
-# Remove a role:
+# To list installed roles:
+ansible-galaxy list
 
-`ansible-galaxy remove {{username}}.{{role_name}}`
+# To search for a given role:
+ansible-galaxy search <role>
 
-# List installed roles:
+# To create a new role:
+ansible-galaxy init <role>
 
-`ansible-galaxy list`
-
-# Search for a given role:
-
-`ansible-galaxy search {{role_name}}`
-
-# Create a new role:
-
-`ansible-galaxy init {{role_name}}`
-
-# Get the information for the role # or a collection if you replace `role` with `collection`:
-
-`ansible-galaxy role info {{username}}.{{role_name}}`
+# To get the information for the role # or a collection if you replace `role` with `collection`:
+ansible-galaxy role info <user>.<role>
