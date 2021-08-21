@@ -57,6 +57,9 @@ git reset --hard
 # To go 2 commits back:
 git reset --hard HEAD~2
 
+# Checkout the fb branch, and rebase from <remote>
+git reset --hard <remote>/<branch>
+
 # To revert first/initial commit on a branch:
 # Running git reset --hard HEAD~1 will give error:
 # fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
@@ -74,16 +77,34 @@ git push origin master
 # To push to a specified repository:
 git push git@github.com:<username>/<repo>.git
 
-# To push a tag to remote:
+# Tags: Tag a commit
+git tag -a <tag> <commit> -m "<commit message>"
+
+# Tags: To push a tag to remote:
 git push origin <tagname>
+
+# Tags: To delete a tag <tagname> on remote
+git push --delete origin <tagname>
+
+# Tags: To delete a tag locally
+git tag -d <tagname>
 
 # To force a push:
 git push -f
 
-# To delete the branch <branch>:
+# Branches: To delete the branch <branch>:
 git branch -D <branch>
 
-# To make an exisiting branch track a remote branch:
+# Branches: To delete a local <branch>:
+git branch -d <branch>
+
+# Branches: To delete a remote branch <branch>:
+git push --delete origin <branch>
+
+# Branches: To delete all branches on remote that are already merged:
+git branch –merged | egrep -v “(^*|main|dev)” | xargs git branch -d
+
+# Branches: To make an exisiting branch track a remote branch:
 git branch -u upstream/foo
 
 # To see who commited which line in a file:
@@ -163,3 +184,24 @@ git revert <commit SHA>
 # To pick a commit from a branch to current branch. This is different than merge as
 # this just applies a single commit from a branch to current branch:
 git cherry-pick <commit SHA1>
+
+# Change author of a commit 
+git commit --amend --author="Author Name <email@address.com>"
+
+# The GPG key used for signing your commits
+git config --global user.signingkey 0A46826A
+
+# Sign new tags
+git tag -s v1.5 -m 'my signed 1.5 tag'
+
+# Sign a commit
+git commit -a -S -m 'Signed commit'
+
+# check any signatures it finds and list them in its output
+git log --pretty="format:%h %G? %aN %s"
+
+# Defined the key to use for signing commits
+git config user.signingkey [KEYID]
+
+# Set signing of commits globally
+git config --global commit.gpgsign true
