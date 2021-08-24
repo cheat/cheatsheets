@@ -37,23 +37,20 @@ pacman -Qdt
 # To list installed packages sorted by size
 pacman -Qi | awk '/^Name/ {name=$3} /^Installed Size/ {print name, $4 substr($5,1,1)}' | column -t | sort -rhk2 | cat -n | tac
 
-# You can't directly install packages from the Arch User Database (AUR) with
-# pacman. You need an AUR helper program such as `yay` or `paru` to do that.
-# But considering that all of those are themselves in the AUR, here is how to
-# do that manualy.
-#
+# You can't directly install packages from the Arch User Database (AUR) with pacman.
+# You need an AUR helper program such as yay or paru to do that. But considering all of those are themselves in the AUR, here is how to do that manualy.
 # Installing a package from AUR is a relatively simple process:
-# - Make sure that you have the `base-devel` and `git` packages installed
+# - Make sure you have the base-devel and git packages installed
 # - Retrieve the repository corresponding to the package from the AUR website
-# - Run `makepkg` in the cloned repository
-# - Use `pacman` to install the created package
-#
-# Ensure that have `base-devel` and `git`:
+# - Run makepkg in the cloned repository
+# - Use pacman to install the created package
+# Assuming $pkgname contains the package name.
+# Making sure we have base-devel and git
 pacman -S --needed base-devel git
-# Retrieve the repository:
-git clone https://aur.archlinux.org/<package>.git
-cd <package>
-# Build the package:
+# Retrieving the repository
+git clone https://aur.archlinux.org/$pkgname.git
+cd $pkgname
+# Build the package
 makepkg -s
-# Install:
-sudo pacman -U <package (.pkg.tar.zst)>
+# Install
+sudo pacman -U <package file (.pkg.tar.zst)>
