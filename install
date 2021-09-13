@@ -1,0 +1,5 @@
+# To create a directory with some permissions:
+install -m 700 /path/to/file
+
+# To create a directory for a user:
+install -o username /path/to/file
