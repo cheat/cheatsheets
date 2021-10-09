@@ -1,0 +1,14 @@
+---
+tags [ vim,vim-plugins ]
+---
+
+# https://github.com/junegunn/limelight.vim
+
+#Turn Limelight on
+Limelight [0.0 ~ 1.0]
+
+#Turn Limelight off
+Limelight!
+
+#Toggle Limelight
+Limelight!! [0.0 ~ 1.0]
