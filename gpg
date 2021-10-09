@@ -73,7 +73,7 @@
 
 # Signing and Verifying files
 
-  If you're uploading files to launchpad you may also want to include
+  If you are uploading files to launchpad you may also want to include
   a GPG signature file.
 
     gpg -ba filename
