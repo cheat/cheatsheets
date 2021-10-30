@@ -1,3 +1,6 @@
+# To convert a file from jpg to pdf
+convert original.jpg converted.pdf
+
 # To resize an image to a fixed width and proportional height:
 convert original.jpg -resize 100x converted.jpg
 
