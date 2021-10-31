@@ -1,0 +1,40 @@
+---
+tags: [ compression ]
+---
+# To extract an uncompressed archive:
+tar -xvf /path/to/foo.tar
+
+# To extract a .tar in specified Directory:
+tar -xvf /path/to/foo.tar -C /path/to/destination/
+
+# To create an uncompressed archive:
+tar -cvf /path/to/foo.tar /path/to/foo/
+
+# To extract a .tgz or .tar.gz archive:
+tar -xzvf /path/to/foo.tgz
+tar -xzvf /path/to/foo.tar.gz
+
+# To create a .tgz or .tar.gz archive:
+tar -czvf /path/to/foo.tgz /path/to/foo/
+tar -czvf /path/to/foo.tar.gz /path/to/foo/
+
+# To list the content of an .tgz or .tar.gz archive:
+tar -tzvf /path/to/foo.tgz
+tar -tzvf /path/to/foo.tar.gz
+
+# To extract a .tar.bz2 archive:
+tar -xjvf /path/to/foo.tar.bz2
+
+# To create a .tar.bz2 archive:
+tar -cjvf /path/to/foo.tar.bz2 /path/to/foo/
+
+# To list the content of an .tar.bz2 archive:
+tar -tjvf /path/to/foo.tar.bz2
+
+# To create a .tgz archive and exclude all jpg,gif,... from the tgz
+tar -czvf /path/to/foo.tgz --exclude=\*.{jpg,gif,png,wmv,flv,tar.gz,zip} /path/to/foo/
+
+# To use parallel (multi-threaded) implementation of compression algorithms:
+tar -z ... -> tar -Ipigz ...
+tar -j ... -> tar -Ipbzip2 ...
+tar -J ... -> tar -Ipixz ...
