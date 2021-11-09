@@ -1,0 +1,8 @@
+---
+tags: [ environment ]
+---
+# Download/Build the desired packages in the store and make their executables available in the current interactive shell
+guix shell <package-name> <package-name> ...
+
+# Download/Build the desired packages in the store and invoke a `command` in the environment with package executables
+guix shell <package-name> -- <command>
