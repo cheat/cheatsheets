@@ -35,7 +35,7 @@ expac --timefmt='%Y-%m-%d %T' '%l\t%n' $(comm -23 <(pacman -Qeq|sort) <(pacman -
 pacman -Qdt
 
 # To list installed packages sorted by size
-pacman -Qq | pacman -Qi - | egrep '(Size\s+:|Name\s+:[^s])' | sed -E 's/ ([KM])iB/\1/' | sed -z 's/\nInstalled/ /g' | perl -pe 's/(Name|Size) *: //g' | column -t | sort -hk2 -r | cat -n | tac
+pacman -Qi | awk '/^Name/ {name=$3} /^Installed Size/ {print name, $4 substr($5,1,1)}' | column -t | sort -rhk2 | cat -n | tac
 
 # You can't directly install packages from the Arch User Database (AUR) with pacman.
 # You need an AUR helper program such as yay or paru to do that. But considering all of those are themselves in the AUR, here is how to do that manualy.
