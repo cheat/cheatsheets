@@ -113,3 +113,18 @@ $reg, $pc, $fp, $sp
 
 # To enable pretty print of arrays and more:
 set pretty print on
+
+# To toggle TUI mode:
+C-x C-a, C-x a, C-x A
+
+# To use a TUI layout with only one window:
+C-x 1
+
+# To use a TUI layout with two windows:
+C-x 2
+
+# To change active window:
+C-x o
+
+# To Switch in and out of the TUI SingleKey mode:
+C-x s
