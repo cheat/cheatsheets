@@ -1,13 +1,13 @@
 ---
 syntax: bash
-tags: [ vcs ]
+tags: [ git, github, vcs ]
 ---
 
 # View README.md
 gh repo view
 
 # View issue list
-# gh issue list
+gh issue list
 
 # View specific issue (e.g., the first being #1)
 gh issue view 1
