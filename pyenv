@@ -1,0 +1,24 @@
+---
+syntax: bash
+tags: [ python, environments ]
+---
+# Install the specified version of Python:
+pyenv install <version>
+
+# Set the specified version of Python as system's default:
+pyenv global <version>
+
+# Set the specified version of Python to be used in the current directory:
+pyenv local <version>
+
+# Create a virtual environment based on the specified Python version (requires `pyenv-virtualenv` plugin):
+pyenv virtualenv <version> <virtualenv_name>
+
+# Uninstall the specified version of Python:
+pyenv uninstall <version>
+
+# List the versions installed:
+pyenv versions
+
+# Check the version of python currently in use:
+pyenv version
