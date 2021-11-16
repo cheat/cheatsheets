@@ -1,0 +1,12 @@
+---
+syntax: bash
+tags: [ audio, pulseaudio ]
+---
+# INCREASE the volume of default sink by 2.5%
+pactl set-sink-volume @DEFAULT_SINK@ +2.5%
+
+# DECREASE the volume of default sink by 2.5%
+pactl set-sink-volume @DEFAULT_SINK@ -2.5%
+
+# Toggle mute the default sink
+pactl set-sink-mute @DEFAULT_SINK@ toggle
