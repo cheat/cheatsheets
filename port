@@ -1,0 +1,92 @@
+---
+syntax: bash
+tags: [ mac, deps ]
+---
+# Update to the latest version of MacPorts, and sync the latest ports definitions:
+sudo port selfupdate
+
+# List all ports that are currently considered outdated:
+port echo outdated
+
+# Upgrade all currently outdated ports:
+sudo port upgrade outdated
+
+# List all ports that are currently *inactive*:
+# (A port is usually deactivated when a newer version of it gets installed.)
+port echo inactive
+
+# Completely remove and uninstall all *deactivated* ports:
+# This is very useful to do after upgrading all your outdated ports.
+sudo port uninstall inactive
+
+# Install a particular port:
+sudo port install <name>
+
+# Install a particular port with full debug output:
+sudo port -d install <name>
+
+# Uninstall a particular port:
+sudo port uninstall <name>
+
+# Completely clean out all temporary assets of a port, such as build files,
+# the working directory and any downloaded archives:
+sudo port clean -f --all <name>
+
+# Upgrade a particular port
+sudo port upgrade <name>
+
+# Deactivate a currently active port:
+sudo port deactivate <name>
+
+# Activate a currently deactive port:
+sudo port activate <name>
+
+# Search for a port
+port search <name>
+
+# View information about a particular port
+port info <name>
+
+# List the ports that have been explicitly requested by the user to be installed:
+port echo requested
+
+# List all ports that are currently installed:
+port echo installed
+
+# List the ports that this port depends on:
+port deps <name>
+
+# List the ports that this port depends on, then recursively list the ports
+# that THOSE ports depend on as well:
+port rdeps <name>
+
+# List the ports that depend on this port:
+port dependents <name>
+
+# List the ports that depend on this port, then recursively list the ports
+# that depend on THOSE:
+port rdependents <name>
+
+# List the files installed by a particular port:
+# (Only works for currently installed ports.)
+port contents <name>
+
+# View a ports' notes, if any (these are usually displayed right after a port 
+# is installed):
+port notes <name>
+
+# Print the path to a port within the ports tree:
+port dir <name>
+
+# Print the path to the archive used to activate a given port: 
+# (Only works for currently installed ports)
+port location <name>
+
+# Print the path to a ports' Portfile:
+port file <name>
+
+# Print the path to the working directory for a port, if it exists:
+port work <name>
+
+# View help on a sub-command:
+port help <command>
