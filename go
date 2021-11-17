@@ -1,4 +1,5 @@
 ---
+syntax: bash
 tags: [ golang, go ]
 ---
 # To run the package in the current directory
