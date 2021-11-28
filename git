@@ -95,6 +95,9 @@ git push -f
 # Branches: To delete the branch <branch>:
 git branch -D <branch>
 
+# Branches: To change the actual <branch>:
+git branch -m [branch]
+
 # Branches: To delete a local <branch>:
 git branch -d <branch>
 
