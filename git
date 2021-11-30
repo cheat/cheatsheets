@@ -148,6 +148,10 @@ git diff --no-index path/to/file/A path/to/file/B
 git fetch --all
 git reset --hard origin/master
 
+# To pull down a remote branch, but rebase any locally differing commits onto
+# the top of the incoming commits:
+git pull <remote> <branch> --rebase
+
 # To update all submodules:
 git submodule update --init --recursive
 
