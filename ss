@@ -8,7 +8,7 @@ Args
 -u/-t/-x list udp/tcp/unix sockets
 -p Show process(es) that using socket
 
-# show all listing tcp sockets including the corresponding process
+# show all listening tcp sockets including the corresponding process
 ss -tlp
 
 # show all sockets connecting to 192.168.2.1 on port 80
