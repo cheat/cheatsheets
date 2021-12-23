@@ -171,32 +171,8 @@
     gpg -K
 
   Should show sec# instead of just sec.
-  
-# High-quality options for gpg for symmetric (secret key) encryption
-  
-  This is what knowledgable people consider a good set of options for 
-  symmetric encryption with gpg to give you a high-quality result.
-  
-  gpg \
-    --symmetric \
-    --cipher-algo aes256 \
-    --digest-algo sha512 \
-    --cert-digest-algo sha512 \
-    --compress-algo none -z 0 \
-    --s2k-mode 3 \
-    --s2k-digest-algo sha512 \
-    --s2k-count 65011712 \
-    --force-mdc \
-    --pinentry-mode loopback \
-    --armor \
-    --no-symkey-cache \
-    --output somefile.gpg \
-    somefile # to encrypt
-    
-  gpg \
-    --decrypt \
-    --pinentry-mode loopback \
-    --armor \
-    --output somefile.gpg \
-    somefile # to decrypt
-    
+
+  Find what public key was used to encrypt a message
+
+     gpg --pinentry-mode cancel --list-packets themessage
+

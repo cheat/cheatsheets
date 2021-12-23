@@ -21,3 +21,8 @@ sed '/Once upon a time/i\Chapter 1'
 
 # To add a line after a matching pattern:
 sed '/happily ever after/a\The end.'
+
+See also
+---
+https://gist.github.com/ssstonebraker/6140154
+

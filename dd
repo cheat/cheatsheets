@@ -20,3 +20,6 @@ dcfldd if=/dev/zero of=/dev/null bs=500K
 
 # This will output the sound from your microphone port to the ssh target computer's speaker port. The sound quality is very bad, so you will hear a lot of hissing.
 dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
+
+#create a 1meg file with zero allocated blocks.
+dd if=/dev/zero of=foo1 seek=1 bs=1M count=0
