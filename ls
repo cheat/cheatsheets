@@ -15,3 +15,9 @@ ls -d */ <dir>
 
 # To display directories only, include hidden:
 ls -d .*/ */ <dir>
+
+# To display all files sorted by changed date, most recent first
+ls -ltc 
+# or by more recent create time
+ls -lt
+

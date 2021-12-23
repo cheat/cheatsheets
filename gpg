@@ -171,3 +171,8 @@
     gpg -K
 
   Should show sec# instead of just sec.
+
+  Find what public key was used to encrypt a message
+
+     gpg --pinentry-mode cancel --list-packets themessage
+

@@ -25,3 +25,6 @@ openssl x509 -noout -enddate
 
 # To generate Diffie-Hellman parameters:
 openssl dhparam -outform PEM -out dhparams.pem 2048
+
+# To test an https server
+openssl s_client -connect 10.240.2.130:433

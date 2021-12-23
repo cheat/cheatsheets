@@ -6,3 +6,16 @@ date -d @1440359821
 
 # To convert a Unix timestamp to Date (OSX)
 date -r 1440359821
+
+# To show the current timezone
+date +%Z
+
+# date in RFC format showing TZ offset
+date -R
+
+# date in UTC (aka GMT)
+date -u
+
+#date in CET timezone
+TZ=CET date
+
