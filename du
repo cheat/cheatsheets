@@ -7,3 +7,5 @@ du -shL
 # Show apparent size instead of disk usage. So sparse files will show greater than zero
 du -h --apparent-size
 
+# To sort directories/files by size(human-readable):
+du -sh * | sort -rh 

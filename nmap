@@ -1,5 +1,5 @@
 ---
-tags [ networking ]
+tags: [ networking ]
 ---
 # Single target scan:
 nmap [target]
@@ -70,6 +70,9 @@ nmap -T5 --min-parallelism=50 -n --script "ssl-heartbleed" -pT:443 127.0.0.1
 
 # Show all informations (debug mode)
 nmap -d ...
+
+# Scan for available SSH connections (use root for additional output)
+nmap -p 22 192.168.0.0/24
 
 ## Port Status Information
 - Open: This indicates that an application is listening for connections on this port.

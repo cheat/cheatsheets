@@ -1,5 +1,5 @@
 ---
-tags [ networking ]
+tags: [ networking ]
 ---
 # To show hit for rules with auto refresh:
 watch --interval 0 'iptables -nvL | grep -v "0     0"'

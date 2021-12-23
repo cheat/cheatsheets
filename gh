@@ -1,0 +1,19 @@
+---
+syntax: bash
+tags: [ git, github, vcs ]
+---
+
+# View README.md
+gh repo view
+
+# View issue list
+gh issue list
+
+# View specific issue (e.g., the first being #1)
+gh issue view 1
+
+# Create issue (start an interactive CLI)
+gh issue create
+
+# Create pull request from a feature branch (start an interactive CLI)
+gh pr create

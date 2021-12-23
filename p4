@@ -1,3 +1,5 @@
+tags: [ vcs ]
+
 # To print details related to client and server configuration:
 p4 info 
 

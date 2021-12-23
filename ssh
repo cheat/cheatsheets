@@ -1,5 +1,5 @@
 ---
-tags [ ssh ]
+tags: [ ssh ]
 ---
 # To ssh via pem file (which normally needs 0600 permissions):
 ssh -i <pemfile> <user>@<host>
@@ -12,6 +12,10 @@ ssh -A <user>@<host>
 
 # To execute a command on a remote server:
 ssh -t <user>@<host> 'the-remote-command'
+
+# To connect to a host with a specific key exchange algorithm:
+# Full list of available algorithms : man ssh_config
+ssh -oKeXAlgorithms=+diffie-hellman-group-exchange-sha1 <user>@<server>
 
 # To tunnel an x session over SSH:
 ssh -X <user>@<host>

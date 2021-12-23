@@ -28,3 +28,30 @@ openssl dhparam -outform PEM -out dhparams.pem 2048
 
 # To test an https server
 openssl s_client -connect 10.240.2.130:433
+
+# High-quality options for openssl for symmetric (secret key) encryption
+  
+This is what knowledgable people consider a good set of options for 
+symmetric encryption with openssl to give you a high-quality result.
+Also, always remember that the result is only as good as the password
+you use. You must use a strong password otherwise encryption is meaningless.
+  
+openssl enc -e -aes-256-cbc \
+  -salt \
+  -pbkdf2 \
+  -iter 1000000 \
+  -md sha512 \
+  -base64 \
+  -in somefile \
+  -out somefile.enc # to encrypt
+
+openssl enc -d -aes-256-cbc \
+  -salt \
+  -pbkdf2 \
+  -iter 1000000 \
+  -md sha512 \
+  -base64 \
+  -in somefile.enc \
+  -out somefile # to decrypt
+
+  

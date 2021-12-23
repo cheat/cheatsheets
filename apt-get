@@ -7,7 +7,8 @@ apt-get update
 # To download and install package updates:
 apt-get upgrade
 
-# To download and install the updates AND install new necessary packages:
+# To download and install the updates AND install new necessary packages
+# AND remove any packages that stand in the way of the upgrade:
 apt-get dist-upgrade
 
 # Full command:

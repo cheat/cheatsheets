@@ -1,5 +1,5 @@
 ---
-tags [ networking ]
+tags: [ networking ]
 ---
 # To display all interfaces with addresses:
 ip addr
@@ -27,6 +27,9 @@ ip route add default via 192.168.1.1
 
 # To add route via interface:
 ip route add 192.168.0.0/24 dev eth0
+
+# To get the route used for an destination
+ip route get to 8.8.8.8
 
 # To change your mac address :
 ip link set dev eth0 address aa:bb:cc:dd:ee:ff
