@@ -102,7 +102,7 @@ git branch -d <branch>
 git push --delete origin <branch>
 
 # Branches: To delete all branches on remote that are already merged:
-git branch --merged | egrep -v "(^*|main|dev)" | xargs git branch -d
+git branch --merged | egrep -v “(^*|main|dev)” | xargs git branch -d
 
 # Branches: To make an exisiting branch track a remote branch:
 git branch -u upstream/foo
