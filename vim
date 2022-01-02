@@ -59,7 +59,7 @@ d{motion}       delete text that {motion} moves over
 :s/foo/bar/	replace the first match of 'foo' with 'bar' on the current line only
 :s/foo/bar/g	replace all matches (`g` flag) of 'foo' with 'bar' on the current line only
 :%s/foo/bar/g	replace all matches of 'foo' with 'bar' in the entire file (`:%s`)
-:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement 
+:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement
 
 # Preceding a motion or edition with a number repeats it 'n' times
 # Examples:
@@ -106,3 +106,23 @@ ctrl-o
 
 # Super search
 ctrl-p
+
+# Text Objects
+
+ci"              - change inside double quotes
+ca"              - change around double quotes
+ci'              - change inside single quotes
+ca'              - change around single quotes
+ca)              - change around paranthesis
+ci)              - change inside paranthesis
+cit              - change inside a tag(Example an html)
+cat              - change around a tag
+
+di"              - delete inside double quotes
+da"              - delete around double quotes
+di'              - delete inside single quotes
+da'              - delete around single quotes
+da)              - delete around paranthesis
+di)              - delete inside paranthesis
+dit              - delete inside a tag(Example an html)
+dat              - delete around a tag
