@@ -4,11 +4,8 @@ chown <user> <file>
 # Change a file's owner and group:
 chown <user>:<group> <file>
 
-# Set user to match group value
+# Change a file's owner and set group to user value
 chown <user>: <file>
-
-# Set group to match user value
-chown :<group> <file>
 
 # Change a directory's owner recursively:
 chown -R <user> <directory>
