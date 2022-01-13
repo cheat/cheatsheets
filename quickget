@@ -1,0 +1,14 @@
+---
+tags: [ virtualization ]
+---
+# to download a release image and prepare a Qemu vm config
+quickget <OS> <Release> [<Type>|<DM Option>|<Windows Language>]
+
+# to print list of all supported OS shortnames
+quickget <OS> <Release>
+
+# to print list of supported releases for <OS>
+quickget <OS>
+
+# to print a csv of all supported OS variants
+quickget list
