@@ -1,5 +1,5 @@
 # To print free disk space in a human-readable format:
 df -h
 
-# To list the file systems space used/available shown in gigabytes:
-df -BG
+# to print the disk for a given path
+df -d /path/to/something
