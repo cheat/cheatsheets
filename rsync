@@ -26,3 +26,7 @@ rsync -avz -e "ssh -i ~/.ssh/id_rsa" <src> <dest>
 
 # Log into remote as a user, but promote to root, to access privileged files
 rsync -avz --rsync-path="sudo rsync" user@<src> <dest>
+
+# rsync only symlinks and preeserve them as symlinks (dont follow them)
+find /path/to/files -type l -print | \
+  rsync -av --files-from=- /path/to/files user@targethost:/dest_path
