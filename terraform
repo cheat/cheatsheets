@@ -5,6 +5,14 @@ tags: [ orchestration, iac ]
 
 terraform init
 
+# Reformat configuration in the standard style
+
+terraform fmt
+
+# Check whether the configuration is valid
+
+terraform validate
+
 # Apply terraform configuration
 
 terraform apply
