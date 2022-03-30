@@ -58,9 +58,20 @@ find . -type f -samefile MY_FILE_HERE 2>/dev/null
 # To find all files in the current directory and modify their permissions:
 find . -type f -exec chmod 644 {} \;
 
-# find all files created in last 2 days
+# find all files changed in last 2 days
 find . -type f -ctime -48h
 find . -type f -ctime -2
+# or created in last 2 days
+find . -type f -Btime -2
+# or access in last 2 days
+find . -type f -atime -2
+
 
 #find and rename (imperfect) all files and dirs that have a comma in the name (dry-run)
 find . -name '*,*' | while read f; do echo mv "$f" "${f//,/}"; done
+
+#find all broken links. Note -L returns a file unless it is a broken link
+find -L /usr/ports/packages -type l
+
+# find and run multiple shell commands (without multiple execs), See https://stackoverflow.com/questions/5119946/find-exec-with-multiple-commands
+find . -type f -exec sh -c "echo '{}'; cat '{}';" \;

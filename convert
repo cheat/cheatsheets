@@ -20,3 +20,14 @@ for file in `ls original/image/path/`;
     new_file=`basename $new_path`;
     convert $file -resize 150 converted/image/path/$new_file.png;
 done
+
+# to convert an N page pdf to N images (will autonumber)
+convert -density 150 arch1.pdf -quality 80 'output.jpg'
+
+# to convert an N page pdf to N images with explicit filename formatting
+convert -density 150 arch1.pdf -quality 80 'output-%d.jpg'
+  
+#doesnt work as expected.  %d and %[...] do not work together
+#And leaving out the %d doesnt work bc files are not autonumbered.  Use bash loop instead
+convert -density 150 arch1.pdf -quality 80 -set filename:mysize '%wx%h' 'output-%d%[filename:mysize].jpg'
+
