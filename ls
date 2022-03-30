@@ -21,3 +21,8 @@ ls -ltc
 # or by more recent create time
 ls -lt
 
+# single column
+ls -1
+
+# to show ACLs (MacOS) 
+/bin/ls -le

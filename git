@@ -209,3 +209,6 @@ git config user.signingkey [KEYID]
 
 # Set signing of commits globally
 git config --global commit.gpgsign true
+
+# List unstracked files
+git ls-files --others --exclude-standard
