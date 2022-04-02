@@ -32,7 +32,7 @@ docker rm $(docker ps -qa)
 docker images
 
 # To remove all untagged images:
-docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 
 # To remove all volumes not used by at least one container:
 docker volume prune
