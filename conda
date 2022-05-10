@@ -1,9 +1,6 @@
 ---
 tags: [ packaging ]
 ---
-# To list environments
-conda env list
-
 # To initialise an environment
 conda create --name 'ENVNAME'
 
@@ -14,9 +11,4 @@ conda create --name 'ENVNAME' python=3.10
 conda install --file requirements.txt
 
 # To activate a virtual environment
-conda activate 'ENVNAME'
-
-# To remove and environment
-conda env remove --name 'ENVNAME'
-# or
-conda env remove --prefix /path/to/env
+condat activate 'ENVNAME'
