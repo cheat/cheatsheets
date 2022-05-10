@@ -1,6 +1,9 @@
 ---
 tags: [ packaging ]
 ---
+# To list environments
+conda env list
+
 # To initialise an environment
 conda create --name 'ENVNAME'
 
@@ -12,6 +15,3 @@ conda install --file requirements.txt
 
 # To activate a virtual environment
 conda activate 'ENVNAME'
-
-# To list environments
-conda env list
