@@ -1,0 +1,14 @@
+---
+tags: [ packaging ]
+---
+# To initialise an environment
+conda create --name 'ENVNAME'
+
+# To initialise an environment with python 
+conda create --name 'ENVNAME' python=3.10
+
+# To install from requirements.txt
+conda install --file requirements.txt
+
+# To activate a virtual environment
+condat activate 'ENVNAME'
