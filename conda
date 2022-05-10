@@ -11,4 +11,7 @@ conda create --name 'ENVNAME' python=3.10
 conda install --file requirements.txt
 
 # To activate a virtual environment
-condat activate 'ENVNAME'
+conda activate 'ENVNAME'
+
+# To list environments
+conda env list
