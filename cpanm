@@ -1,0 +1,35 @@
+---
+tags: [ perl ]
+---
+see https://github.com/miyagawa/cpanminus
+
+# install Some::Module
+cpanm <Some::Module>
+
+# install from CPAN distribution path, like AUTHOR/Some-Module-1.00.tar.gz
+cpanm <cpan-repo-path>
+
+# install from URL
+cpanm <URL-to-distro-file>
+
+# install from a local file
+cpanm <path-to-distro-file>
+
+# Configure interactively
+cpanm --interactive <Some::Module>
+
+# install from local directory
+cpanm .
+
+# install all the deps for the current directory
+cpanm --installdeps .
+
+# install Some::Module and all non-core deps into extlib
+cpanm -L extlib <Some::Module>
+
+# use the fast-syncing mirror
+cpanm --mirror <mirror-url> <Some::Module>
+
+# use only the HTTPS mirror
+cpanm --from https://some.mirror.host/ <Some::Module>
+
