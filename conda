@@ -15,3 +15,8 @@ conda install --file requirements.txt
 
 # To activate a virtual environment
 conda activate 'ENVNAME'
+
+# To remove and environment
+conda env remove --name 'ENVNAME'
+# or
+conda env remove --prefix /path/to/env
