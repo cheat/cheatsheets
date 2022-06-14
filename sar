@@ -1,0 +1,24 @@
+---
+tags: [ reporting ]
+---
+
+# Reports CPU utilization every 2 seconds, 5 times:
+sar -u 2 5
+
+# Report the CPU usage for a given core:
+sar -P 1 1 3
+
+# Reports the amount of memory used, amount of memory free, available cache, available buffers every 1 second, 3 times: 
+sar -r 1 3
+
+# Reports statistics on swapping:
+sar -S 1 3
+
+# Reports on the file systems mounted every 2 seconds 5 times:
+sar -F 2 5
+
+# Reports on the  block devices every 1 second, 3 times:
+sar -d 1 3
+
+# Reports on the network interface, network speed, IPV4, TCPV4, ICMP traffic and errors:
+sar -n DEV 1 3 | grep -v lo
