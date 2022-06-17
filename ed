@@ -1,0 +1,86 @@
+---
+tags [ ed ]
+---
+
+# File and buffer management
+
+:e {file}       load file to buffer
+:q              quit
+:Q              quit without saving changes
+:f {name}       change buffer name
+:w              write to file using current buffer name 
+:w {file}       write buffer to new file
+:wq             write buffer to existing file and exit
+
+# Line-oriented addressing and movement 
+#   `ed' uses line addresses to move around and operate within a buffer
+#   Move to or operate on single lines by entering the line number
+#   Move to or operate on ranges of lines using comma-separated values
+#   The active line is always set to the last number of the range entered
+
+. or p          display current line
+n               display current line with line number
+
+1,$ or ,        range indicating the entire buffer; displays final line
+
+3 or 3p         move to line 3 of the buffer and display
+3n              move to line 3 of the buffer and display with line number
+
+1,$p or ,p      display entire buffer without line numbers
+1,$n or ,n      display entire buffer with line numbers
+
+15,25p          display lines 15 through 25 of the buffer
+15,25n          display lines 15 through 25 of the buffer with line numbers
+
+# Line editing commands
+#   All commands can be prefixed with line addresses/ranges
+
+i               start editing by inserting new text before the current line
+a               start editing by inserting new text after the current line
+c               clear contents of current line and replace with new text
+.               a period [.] enterd alone on a new line ends the active edit
+
+d               delete current line
+1,3d            delete lines 1 through 3
+
+u               undo last edit
+
+r {file}        read contents of {file} into buffer after current line
+r !{command}    read output of {command} into buffer after current line
+
+# Example of a simple editing session
+
+e test.txt                      edit file "test.txt"
+45                              `ed' returns character count as confirmation
+1,3n                            display lines 1 through 3 with line numbers
+1    This is line 1           
+2    This is line 2
+3    This is line 3
+2c                              change line 2
+I am typing a new line 2
+.                               end active edit 
+1,3n                            display lines 1 thorugh 3 with line numbers
+1    This is line 1
+2    I am typing a new line 2
+3    This is line 3
+wq                              write file "test.txt" and exit
+
+# Search
+#   Accepts regexps in search strings
+
+g/foo/          search all lines for `foo' and display matching lines
+g/foo/n         search all lines for `foo'; display with line numbers
+
+4,9/foo/        search lines 1 through 5 for `foo' and display matches 
+4,9/foo/n       search lines 1 through 5 for `foo'; display with line numbers
+
+# Replace
+#   Accepts regexps in search and replace strings
+
+s/foo/bar       replace first instance of `foo' with `bar' on the current line
+s/foo/bar/{n}   replace {n}th instance of `foo' with `bar' on the current line
+s/foo/bar/g     replace all instances of `foo' with `bar' on the current line
+
+1,4/foo/bar/g   replace all instances of `foo' with `bar` in lines 1 through 4
+
+,s/foo/bar/g    replace all instances of `foo' with `bar' in the entire buffer
