@@ -1,0 +1,57 @@
+---
+tags [ kitty ]
+---
+
+# Scrolling
+ctrl+shift+up        - Line up
+ctrl+shift+down      - Line down
+ctrl+shift+page_up   - Page up
+ctrl+shift+page_down - Page down
+ctrl+shift+home      - Top
+ctrl+shift+end       - Bottom
+ctrl+shift+z         - Previous shell prompt
+ctrl+shift+x         - Next shell prompt
+ctrl+shift+h         - Browse scrollback in less
+ctrl+shift+g         - Browse last cmd output
+
+# Tabs
+ctrl+shift+t         - New tab
+ctrl+shift+q         - Close tab
+ctrl+shift+right     - Next tab
+ctrl+shift+left      - Previous tab
+ctrl+shift+l         - Next layout
+ctrl+shift+.         - Move tab forward
+ctrl+shift+,         - Move tab backward
+ctrl+shift+alt+t     - Set tab title
+
+# Fonts and clipboard
+ctrl+shift+c         - Copy to clipboard	    
+ctrl+shift+v         - Paste from clipboard	
+ctrl+shift+s         - Paste from selection	
+ctrl+shift+equal     - Increase font size	
+ctrl+shift+minus     - Decrease font size	
+ctrl+shift+backspace - Restore font size	    
+
+# Windows
+ctrl+shift+enter     - New window
+ctrl+shift+n         - New OS window
+ctrl+shift+w         - Close window
+ctrl+shift+]         - Next window
+ctrl+shift+[         - Previous window
+ctrl+shift+f         - Move window forward
+ctrl+shift+b         - Move window backward
+ctrl+shift+`         - Move window to top
+ctrl+shift+f7        - Visually focus window
+ctrl+shift+f8        - Visually swap window
+# Focus specific window
+ctrl+shift+1, ctrl+shift+2 … ctrl+shift+0 
+
+# Open/select
+ctrl+shift+e         - Open URL
+ctrl+shift+p>f       - Insert selected path
+ctrl+shift+p>shft+f  - Open selected path
+ctrl+shift+p>l       - Insert selected line
+ctrl+shift+p>w       - Insert selected word
+ctrl+shift+p>h       - Insert selected hash
+ctrl+shift+p>n       - Open the selected file at the selected line
+ctrl+shift+p>y       - Open the selected hyperlink
