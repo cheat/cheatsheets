@@ -36,3 +36,9 @@ docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 
 # To remove all volumes not used by at least one container:
 docker volume prune
+
+# To save image as tar archive:
+docker save -o <archive-name>.tar <image-name>
+
+# To restore image from a saved tar archive:
+docker load -i <archive-name>.tar
