@@ -1,0 +1,34 @@
+---
+tags: [ perl ]
+---
+See https://github.com/tokuhirom/plenv
+
+# list available perl versions
+plenv install --list
+
+# install perl5 binary
+plenv install <version> [Configure options]
+
+# execute command on current perl
+plenv exec <command>
+
+# change global default perl to a particular version
+plenv global <version>
+
+# change local perl to a particular version
+plenv local <version>
+
+# run this command after install cpan module, contains executable script.
+plenv rehash
+
+# install cpanm to current perl
+plenv install-cpanm
+
+# migrate modules from one version to another
+plenv migrate-modules <from-version> <to-version>
+
+# locate a program file in the plenv's path
+plenv which <program>
+
+# display version
+plenv --version
