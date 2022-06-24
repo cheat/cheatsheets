@@ -6,3 +6,6 @@ du -sh
 
 # To sort directories/files by size(human-readable):
 du -sh * | sort -rh 
+
+#  List the 20 largest files and folders under the current working directory.
+du -ma | sort -nr | head -n 20 
