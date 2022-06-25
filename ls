@@ -25,4 +25,5 @@ ls -lt
 ls -1
 
 # to show ACLs (MacOS) 
+# see also cheat chmod for /bin/chmod options for ACLs
 /bin/ls -le
