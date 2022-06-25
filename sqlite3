@@ -24,3 +24,6 @@ sqlite3 <database> "select * from 'os' where year='1991';"
 
 # to view records with fuzzy matching:
 sqlite3 <database> "select * from 'os' where year like '19%';"
+
+# Create a table named cities and import a csv into it
+sqlite3 <db> ".import /path/to/city.csv cities"

@@ -13,3 +13,6 @@ cp foo.txt{,."$(date +%Y%m%d-%H%M%S)"}
 # To copy a symlink that points to a directory (and thus which is soft) and not 'expand' the symlink (aka, preserve its nature as a symlink)
 # Note this does NOT work (not trailing '/'):  cp -P /path/to/symlink-dir/
 cp -P /path/to/symlink-dir
+
+#copy sparsely
+cp -sparse=always foo bar

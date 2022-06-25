@@ -1,6 +1,7 @@
 # General Tips
 # - Always single or double quote arguments to predicates to avoid shell glob expansion
-# Example: find . -name 'myfile' 
+# --- Example: find . -name 'myfile' 
+# Consider using locate (for MacOS) instead for faster lookups
 
 # to find files following symlinks (otherwise the symlinks are not followed)
 find -L . -type f 
