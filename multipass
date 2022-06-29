@@ -1,0 +1,11 @@
+# List all options
+multipass 
+
+# List existing VMs on your device
+multiplass list
+
+# Find what VMs can be downloaded
+multipass find
+
+# Download and start a temp VM
+multipass launch -v --name todelete
