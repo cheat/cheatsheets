@@ -1,0 +1,26 @@
+---
+tags: [ system reporting ]
+---
+
+# syntax of the command
+uptime [option]
+
+# single use, with output example
+uptime
+
+<current time>, <system state>, <running time>, <number of current logged in users>, <system load averages>
+
+14:05:11        up              6:05,           1 user,                              load average: 0.46, 0.54, 0.55
+
+# Filter the result to only show running time
+uptime -p
+
+# Filter the result to only show the date/time from when the system has been running
+uptime -s
+
+# Show the version of uptime
+uptime -V
+
+# Show the help page
+uptime -h
+
