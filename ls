@@ -16,14 +16,15 @@ ls -d */ <dir>
 # To display directories only, include hidden:
 ls -d .*/ */ <dir>
 
-# To display all files sorted by changed date, most recent first
+# To display all files sorted by changed date, most recent first:
 ls -ltc 
-# or by more recent create time
+
+# To display files sorted by create time:
 ls -lt
 
-# single column
+# To display files in a single column:
 ls -1
 
-# to show ACLs (MacOS) 
-# see also cheat chmod for /bin/chmod options for ACLs
+# To show ACLs (MacOS):
+# see also `cheat chmod` for `/bin/chmod` options for ACLs
 /bin/ls -le

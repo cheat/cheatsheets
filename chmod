@@ -35,6 +35,6 @@ a - all (all 3 roles above)
 1 - execute only (--x)
 0 - none (---)
 
-# delete ACL number 0 (MacOS) 
-# see man -M /usr/share/man chmod
-/bin/chmod -a# 0 /path/to/something
+# Delete ACL number 0 (MacOS):
+# See: `man -M /usr/share/man chmod`
+/bin/chmod -a# 0 /path/to/file

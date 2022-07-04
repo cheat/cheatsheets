@@ -1,5 +1,5 @@
 # To print free disk space in a human-readable format:
 df -h
 
-# to print the disk for a given path
-df -d /path/to/something
+# To print the disk for a given path:
+df -d <path>

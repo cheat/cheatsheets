@@ -107,14 +107,14 @@ ctrl-o
 # Super search
 ctrl-p
 
-# To sort  a visual range on column 1 as a number
+# To sort  a visual range on column 1 as a number:
 :'<,'>!sort -gk 1 -t ,
 
-# Map (in normal mode) the F2 key to a bash call uuidgen, then trim the \n from the result,
-# and put that in the expression register "= 
-# Then Put that before the cursor
+# Map (in normal mode) the F2 key to a bash call `uuidgen`, then trim the `\n`
+# from the result, and put that in the expression register `"=`, then put that
+# before the cursor:
 nmap <F2> "= system("uuidgen")[:-2]<C-M>P
 
-# Delete every line that has a FOO in it. See :help Global
+# Delete every line that has a FOO in it. See `:help global`.
 # The _ in the d _ command ensures registers and clipboards are not changed.
 :g/FOO/d _

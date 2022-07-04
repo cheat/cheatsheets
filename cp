@@ -10,9 +10,10 @@ cp -i ~/Desktop/foo.txt ~/Documents/foo.txt
 # To create a backup file with date:
 cp foo.txt{,."$(date +%Y%m%d-%H%M%S)"}
 
-# To copy a symlink that points to a directory (and thus which is soft) and not 'expand' the symlink (aka, preserve its nature as a symlink)
-# Note this does NOT work (not trailing '/'):  cp -P /path/to/symlink-dir/
-cp -P /path/to/symlink-dir
+# To copy a symlink that points to a directory (and is thus soft) and not
+# 'expand' the symlink (aka, preserve its nature as a symlink):
+# Note this does NOT work (note trailing '/'):  cp -P /path/to/symlink-dir/
+cp -P <symlink-dir> <dest-dir>
 
-#copy sparsely
-cp -sparse=always foo bar
+# To copy sparsely:
+cp --sparse=always <src> <dest>

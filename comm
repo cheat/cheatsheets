@@ -4,6 +4,5 @@ comm -12 <(sort file1.csv) <(sort file2.csv)
 # Print lines appearing only in <file-1>:
 comm -23 <file-1> <file-2>
 
-
-#For diffing csvs from a database, consider https://aswinkarthik.github.io/csvdiff/
-
+# For diffing CSVs from a database, consider:
+# https://aswinkarthik.github.io/csvdiff/
