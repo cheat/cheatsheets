@@ -1,0 +1,11 @@
+# To exclude a directory from a search:
+ag <phrase> --ignore-dir=<dir>
+
+# To exclude a file from a search:
+ag <phrase> --ignore=<file>
+
+# To force colorization:
+ag <phrase> --color | less -R
+
+# To search for <phrase> in files whose names match <pattern>:
+ag <phrase> -G <pattern>
