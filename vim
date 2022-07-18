@@ -93,7 +93,7 @@ ctrl-w=          - make all equal size
 :new             - open a new buffer
 :vnew            - open a new vertical buffer
 :bd 2            - deletes buffer 2
-:wall            - writes al buffers
+:wall            - writes all buffers
 :ball            - open a window for all buffers
 :bunload         - removes buffer from window
 :taball          - open a tab for all buffers
