@@ -31,5 +31,5 @@ journalctl --list-boots
 # To filter by specific User ID e.g., user id 1000:
 journalctl _UID=1000
 
-# To display the current disk usage of all journal files:
-journalctl --disk-usage
+# To filter by specific SYSLOG_INDENTIFIER:
+journalctl -t systemd-resolved

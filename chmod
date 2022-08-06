@@ -34,3 +34,7 @@ a - all (all 3 roles above)
 2 - write only (-w-)
 1 - execute only (--x)
 0 - none (---)
+
+# Delete ACL number 0 (MacOS):
+# See: `man -M /usr/share/man chmod`
+/bin/chmod -a# 0 /path/to/file

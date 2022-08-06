@@ -1,0 +1,28 @@
+---
+tags: [ perl ]
+---
+See https://github.com/gugod/App-perlbrew
+
+# setup perlbrew
+perlbrew init
+
+# list perls available to install
+perlbrew available
+
+# install a particular perl version (see `perlbrew available`)
+perlbrew install <version>
+
+# list perls installed
+perlbrew list
+
+# switch to a particular perl version
+perlbrew switch <version>
+
+# run a program against all installed versions
+perlbrew exec perl <myprogram.pl>
+
+# get list of installed modules in the current perl
+perlbrew list-modules
+
+# clone modules from one version to another
+perlbrew clone-modules <from-version> <to-version>

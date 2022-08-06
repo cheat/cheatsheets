@@ -33,3 +33,11 @@ ffmpeg -i input_video.mov -vcodec copy -acodec copy output_video.mp4
 # -autoexit : closes ffplay as soon as the audio finishes
 ffmpeg -ss 00:34:24.85 -t 10 -i path/to/file.mp4 -f mp3 pipe:play | ffplay -i pipe:play -autoexit
 
+# To combine audio and video from N files:
+# See also https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg
+cat mylist.txt
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+    
+ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4

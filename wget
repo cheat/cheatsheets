@@ -33,3 +33,6 @@ wget -S --spider -O - <url>
 
 # To change the User-Agent to 'User-Agent: toto':
 wget -U 'toto' <url>
+
+# To download a file with specific speed EX:500kb/sec:
+wget --limit-rate=500k <url>

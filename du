@@ -4,5 +4,15 @@ du -sk *| sort -rn
 # To show cumulative human-readable size:
 du -sh
 
-# To sort directories/files by size(human-readable):
+# To show cumulative human-readable size and dereference symlinks:
+du -shL
+
+# Show apparent size instead of disk usage (so sparse files will show greater
+# than zero):
+du -h --apparent-size
+
+# To sort directories/files by size (human-readable):
 du -sh * | sort -rh 
+
+# To list the 20 largest files and folders under the current working directory:
+du -ma | sort -nr | head -n 20

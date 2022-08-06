@@ -4,6 +4,9 @@ tags: [ packaging ]
 # To install a package:
 rpm -ivh <rpm>
 
+# To update a package:
+rpm -Uv <rpm>
+
 # To remove a package:
 rpm -e <package>
 

@@ -102,7 +102,7 @@ git branch -d <branch>
 git push --delete origin <branch>
 
 # Branches: To delete all branches on remote that are already merged:
-git branch –merged | egrep -v “(^*|main|dev)” | xargs git branch -d
+git branch --merged | egrep -v "(^*|main|dev)" | xargs git branch -d
 
 # Branches: To make an exisiting branch track a remote branch:
 git branch -u upstream/foo
@@ -168,8 +168,8 @@ git checkout --orphan branch_name
 # To checkout a new branch from a different starting point:
 git checkout -b master upstream/master
 
-# To remove all stale branches (ones that have been deleted on remote):
-# So if you have a lot of useless branches, delete them on Github and then run this
+# To remove all stale branches (ones that have been deleted on remote): So if
+# you have a lot of useless branches, delete them on Github and then run this:
 git remote prune origin
 
 # To prune all remotes at once:
@@ -179,33 +179,36 @@ git remote prune $(git remote | tr '\n' ' ')
 # So, this will show the first commit that has "cool" in their message body
 git show :/cool
 
-# To undo parts of last commit in a specific file
+# To undo parts of last commit in a specific file:
 git checkout -p HEAD^ -- /path/to/file
 
 # To revert a commit and keep the history of the reverted change as a separate revert commit:
 git revert <commit SHA>
 
-# To pick a commit from a branch to current branch. This is different than merge as
-# this just applies a single commit from a branch to current branch:
+# To pick a commit from a branch to current branch. This is different than
+# merge as this just applies a single commit from a branch to current branch:
 git cherry-pick <commit SHA1>
 
-# Change author of a commit 
+# Change author of a commit:
 git commit --amend --author="Author Name <email@address.com>"
 
 # The GPG key used for signing your commits
 git config --global user.signingkey 0A46826A
 
-# Sign new tags
+# Sign new tags:
 git tag -s v1.5 -m 'my signed 1.5 tag'
 
-# Sign a commit
+# Sign a commit:
 git commit -a -S -m 'Signed commit'
 
-# check any signatures it finds and list them in its output
+# check any signatures it finds and list them in its output:
 git log --pretty="format:%h %G? %aN %s"
 
-# Defined the key to use for signing commits
+# Defined the key to use for signing commits:
 git config user.signingkey [KEYID]
 
-# Set signing of commits globally
+# Set signing of commits globally:
 git config --global commit.gpgsign true
+
+# To list unstracked files:
+git ls-files --others --exclude-standard
