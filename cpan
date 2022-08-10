@@ -1,0 +1,42 @@
+---
+tags: [ perl ]
+---
+# install one or more modules
+cpan <Some::Module> [Another::Module]
+
+# force install a module
+cpan -fi <Some::Module>
+
+# install a module in local::lib
+cpan -I <Some::Module>
+
+# install a module while skipping all tests
+cpan -T <Some::Module>
+
+# see a module changes, without installing it
+cpan -C <Some::Module>
+
+# see a module's details, without installing it
+cpan -D <Some::Module>
+
+# list close matches to a module's name
+cpan -x <Some::Mdule>
+
+# download a distro, without installing it
+cpan -g <Some::Module>
+
+# list all installed modules with their versions
+cpan -l <Some::Module>
+
+# create a CPAN Autobundle
+cpan -a
+
+# install the module in the current distro directory
+cpan .
+
+# start the CPAN shell
+cpan
+cpan -s
+
+# read the complete cpan docs
+perldoc cpan

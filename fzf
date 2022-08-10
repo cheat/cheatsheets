@@ -1,0 +1,26 @@
+# To fuzzy find files in current directory
+fzf
+
+# To fuzzy find a file and cat it
+cat $(fzf)
+
+# Case sensitive search
+fzf +i
+
+# Case insensitve search
+fzf -i
+
+# Select multiple files (TAB to select, Shift+TAB to un-select) to delete
+rm -rf $(fzf --multi)
+
+# Run a preview command with fzf, specifiy a command inside the double quotes.
+fzf --preview "file {}"
+
+# Find files from find command and preview it with fzf
+find . -type f -name "*.txt" | fzf --preview "head {}"
+
+# Display border around fzf output 
+fzf --border sharp
+
+# Output only selected files and pipe it to a file
+find . -type f "*.txt" | fzf --multi > output.txt

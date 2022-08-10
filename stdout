@@ -1,5 +1,13 @@
 # To redirect stderr to stdout:
 some-command 2>&1
 
+# To redirect stdout to <file>:
+some-command > <file>
+
 # To redirect stderr to <file>:
 some-command 2> <file>
+
+# To redirect all output (stderr and stdout) to file:
+some-command > <file> 2>&1
+
+# Replace <file> with `/dev/null` to silence output

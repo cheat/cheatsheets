@@ -17,3 +17,6 @@ echo $PATH | tr -cs "[:alpha:]" "\n"
 
 # To convert an ordered list to an unordered list:
 echo "1. /usr/bin\n2. /bin" | tr -cs " /[:alpha:]\n" "+"
+
+# To remove all NULLs:
+tr < file-with-nulls -d '\000' > file-without-nulls

@@ -1,6 +1,9 @@
 # To start the docker daemon:
 docker -d
 
+# To build a docker image:
+docker build -t <image-tag-name> <path-of-Dockerfile>
+
 # To start a container with an interactive shell:
 docker run -ti <image-name> /bin/bash
 
@@ -32,7 +35,25 @@ docker rm $(docker ps -qa)
 docker images
 
 # To remove all untagged images:
-docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 
 # To remove all volumes not used by at least one container:
 docker volume prune
+
+# To save image as tar archive:
+docker save -o <archive-name>.tar <image-name>
+
+# To restore image from a saved tar archive:
+docker load -i <archive-name>.tar
+
+# To remove an image image:
+docker image rm <image-name-or-id>
+
+# To tag an image:
+docker image tag <image-name>:<tag-name> <image-name>:<new-tag-name>
+
+# To login into hub.docker.com:
+docker login
+
+# To push a docker image into dockerhub repository:
+docker push <image-name>:<image-tag-name>

@@ -1,10 +1,8 @@
 # Create a key
-
  gpg --gen-key
 
 
 # Show keys
-
   To list a summary of all keys
 
     gpg --list-keys
@@ -18,22 +16,18 @@
     gpg --fingerprint KEY_ID
 
 # Search for keys
-
   gpg --search-keys 'user@emailaddress.com'
 
 
 # To Encrypt a File
-
   gpg --encrypt --recipient 'user@emailaddress.com' example.txt
 
 
 # To Decrypt a File
-
   gpg --output example.txt --decrypt example.txt.gpg
 
 
 # Export keys
-
   gpg --output ~/public_key.txt --armor --export KEY_ID
   gpg --output ~/private_key.txt --armor --export-secret-key KEY_ID
 
@@ -45,7 +39,6 @@
     shred -zu ~/private_key.txt
 
 # Import keys
-
   Retrieve the key files which you previously exported.
 
     gpg --import ~/public_key.txt
@@ -56,7 +49,6 @@
     shred -zu ~/private_key.txt
 
 # Revoke a key
-
   Create a revocation certificate.
 
     gpg --output ~/revoke.asc --gen-revoke KEY_ID
@@ -72,7 +64,6 @@
     gpg --send-keys KEY_ID
 
 # Signing and Verifying files
-
   If you are uploading files to launchpad you may also want to include
   a GPG signature file.
 
@@ -91,7 +82,6 @@
   gpg --verify filename.asc
 
 # Signing Public Keys
-
   Import the public key or retrieve it from a server.
 
     gpg --keyserver <keyserver> --recv-keys <Key_ID>
@@ -109,7 +99,6 @@
     gpg --keyserver <keyserver> --send-key <Key_ID>
 
 # Change the email address associated with a GPG key
-
   gpg --edit-key <key ID>
   adduid
 
@@ -134,7 +123,6 @@
     gpg --send-keys <key ID>
 
 # Creating Subkeys
-
   Subkeys can be useful if you don't wish to have your main GPG key
   installed on multiple machines. In this way you can keep your
   master key safe and have subkeys with expiry periods or which may be
@@ -173,7 +161,6 @@
   Should show sec# instead of just sec.
   
 # High-quality options for gpg for symmetric (secret key) encryption
-  
   This is what knowledgable people consider a good set of options for 
   symmetric encryption with gpg to give you a high-quality result.
   
@@ -199,4 +186,3 @@
     --armor \
     --output somefile.gpg \
     somefile # to decrypt
-    

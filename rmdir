@@ -1,0 +1,14 @@
+# Command syntax:
+rmdir [option] directory_name 
+
+# Outputs a message that the directory is being removed:
+rmdir -v directory_name
+
+# adding the -p option deletes the child directory then its parent directory:
+rmdir-p directory_name
+
+# Shows the syntax of the command:
+rmdir --help
+
+# Get the command version:
+rmdir --version

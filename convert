@@ -14,9 +14,14 @@ convert original.jpg -resize 100x100 converted.jpg
 convert original.jpg -resize 100x converted.png
 
 # To resize all of the images within a directory:
-# To implement a for loop:
 for file in `ls original/image/path/`;
     do new_path=${file%.*};
     new_file=`basename $new_path`;
     convert $file -resize 150 converted/image/path/$new_file.png;
 done
+
+# To convert an N page pdf to N images (will autonumber):
+convert -density 150 arch1.pdf -quality 80 'output.jpg'
+
+# To convert an N page pdf to N images with explicit filename formatting:
+convert -density 150 arch1.pdf -quality 80 'output-%d.jpg'

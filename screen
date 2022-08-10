@@ -9,3 +9,6 @@ screen -r <session-name>
 
 # To list all screen sessions:
 screen -ls
+
+# To quit a session:
+screen -XS <session-name> quit

@@ -1,3 +1,6 @@
+# To find files following symlinks (otherwise the symlinks are not followed):
+find -L . -type f
+
 # To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
 find . -iname "*.jpg"
 
@@ -13,8 +16,19 @@ find . -type f -perm 777
 # To find files with setuid bit set:
 find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
 
-# To find files with extension '.txt' and remove them:
-find ./path/ -name '*.txt' -exec rm '{}' \;
+# To find files newer than 1 day old and copy elsewhere (remove -p flag in xargs to not be asked):
+find . -type f -ctime -1 -print0 | xargs -0 -p cp -t <dir>
+# or:
+find . -type f -ctime -1 -print0 | xargs -0 -p -J % cp % <dir>
+
+# To find files with extension '.txt' and remove them:
+find ./path/ -name '*.txt' -delete
+
+# To find files with tilde as postfix and remove them:
+find ./path/ -name '*~' -delete
+
+# To find files with extension '.txt' and dump their contents:
+find ./path/ -name '*.txt' -exec cat '{}' \;
 
 # To find files with extension '.txt' and look for a string into them:
 find ./path/ -name '*.txt' | xargs grep 'string'
@@ -45,3 +59,22 @@ find . -type f -samefile MY_FILE_HERE 2>/dev/null
 
 # To find all files in the current directory and modify their permissions:
 find . -type f -exec chmod 644 {} \;
+
+# To find all files changed in last 2 days:
+find . -type f -ctime -48h
+find . -type f -ctime -2
+# Or created in last 2 days:
+find . -type f -Btime -2
+# Or accessed in last 2 days:
+find . -type f -atime -2
+
+# To find and rename (imperfect) all files and dirs that have a comma in the
+# name (dry-run):
+find . -name '*,*' | while read f; do echo mv "$f" "${f//,/}"; done
+
+# To find all broken links. Note -L returns a file unless it is a broken link:
+find -L /usr/ports/packages -type l
+
+# To find and run multiple shell commands (without multiple execs):
+# See: https://stackoverflow.com/questions/5119946/find-exec-with-multiple-commands
+find . -type f -exec sh -c "echo '{}'; cat '{}';" \;

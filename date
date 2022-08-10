@@ -1,17 +1,52 @@
 ---
 tags: [ date, time ]
 ---
+# To print Abbreviated weekday name:
+date +"%a"
+
+# To print Full month name:
+date +"%B"
+
+# To print ISO date (same as %Y-%m-%d):
+date +"%F"
+
+# To print Time (same as %H:%M:%S):
+date +"%T"
+
+# To print Sunday week number (00 to 53):
+date +"%U"
+
+# To print Monday week number (00 to 53):
+date +"%W"
+
+# To print Time (localized):
+date +"%X"
+
+# To print 4-digit year:
+date +"%Y"
+
+# To print Timezone name:
+date +"%Z"
 # To print the date in a format suitable for affixing to file names:
 date +"%Y%m%d_%H%M%S"
 
-# To convert a Unix timestamp to Date (Linux)
+# To convert a Unix timestamp to Date (Linux):
 date -d @1440359821
 
-# To convert a Unix timestamp to Date (OSX)
+# To convert a Unix timestamp to Date (OSX):
 date -r 1440359821
 
-# To list UTC time
+# To show the current timezone:
+date +%Z
+
+# To show date in RFC format with TZ offset:
+date -R
+
+# To show date in UTC/GMT:
 date -u
 
-# Show the time on the west coast of the US (use tzselect(1) to find TZ)
+# To show date in CET:
+TZ=CET date
+
+# To show the time on the west coast of the US (use tzselect(1) to find TZ):
 TZ='America/Los_Angeles' date

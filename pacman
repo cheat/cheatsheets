@@ -37,19 +37,23 @@ pacman -Qdt
 # To list installed packages sorted by size
 pacman -Qi | awk '/^Name/ {name=$3} /^Installed Size/ {print name, $4 substr($5,1,1)}' | column -t | sort -rhk2 | cat -n | tac
 
-
-# You can't directly install packages from the Arch User Database (AUR) with pacman.
-# You need yaourt to perform that. But considering yaourt itself is in the AUR, here is how to build a package from its tarball.
+# You can't directly install packages from the Arch User Database (AUR) with
+# pacman. You need an AUR helper program such as `yay` or `paru` to do that.
+# But considering that all of those are themselves in the AUR, here is how to
+# do that manualy.
+#
 # Installing a package from AUR is a relatively simple process:
-# - Retrieve the archive corresponding to your package from AUR website
-# - Extract the archive (preferably in a folder for this purpose)
-# - Run makepkg in the extracted directory. (makepkg-s allows you to install any dependencies automatically from deposits.)
-# - Install the package created using pacman
-# Assuming $pkgname contains the package name.
-wget "https://aur.archlinux.org/packages/${pkgname::2}/$pkgname/$pkgname.tar.gz"
-tar zxvf "$pkgname.tar.gz"
-cd "$pkgname"
-# Build the package
+# - Make sure that you have the `base-devel` and `git` packages installed
+# - Retrieve the repository corresponding to the package from the AUR website
+# - Run `makepkg` in the cloned repository
+# - Use `pacman` to install the created package
+#
+# Ensure that have `base-devel` and `git`:
+pacman -S --needed base-devel git
+# Retrieve the repository:
+git clone https://aur.archlinux.org/<package>.git
+cd <package>
+# Build the package:
 makepkg -s
-# Install
-sudo pacman -U <package file (.pkg.tar.xz)>
+# Install:
+sudo pacman -U <package (.pkg.tar.zst)>

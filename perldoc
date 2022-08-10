@@ -1,0 +1,29 @@
+---
+tags: [ perl ]
+---
+# read about a perl builtin function
+perldoc -f <function>
+
+# read about a perl builtin variable (probably need to quote it)
+perldoc -v <variable>
+
+# list the various doc pages
+perldoc perltoc
+
+# see a perldoc page, such as the Data Structures Cookbook (perldsc)
+perldoc <page>
+perldoc perldsc
+
+# read an installed module's docs
+perldoc <Some::Module>
+
+# see the location of a module's docs
+# this is often the same file as the code
+perldoc -l <Some::Module>
+
+# see the raw source of the module docs
+# this is often the same file as the code, but sometimes not
+perldoc -m <Some::Module>
+
+# read the perldoc docs
+perldoc perldoc

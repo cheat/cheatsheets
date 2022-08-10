@@ -59,7 +59,7 @@ d{motion}       delete text that {motion} moves over
 :s/foo/bar/	replace the first match of 'foo' with 'bar' on the current line only
 :s/foo/bar/g	replace all matches (`g` flag) of 'foo' with 'bar' on the current line only
 :%s/foo/bar/g	replace all matches of 'foo' with 'bar' in the entire file (`:%s`)
-:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement 
+:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement
 
 # Preceding a motion or edition with a number repeats it 'n' times
 # Examples:
@@ -93,7 +93,7 @@ ctrl-w=          - make all equal size
 :new             - open a new buffer
 :vnew            - open a new vertical buffer
 :bd 2            - deletes buffer 2
-:wall            - writes al buffers
+:wall            - writes all buffers
 :ball            - open a window for all buffers
 :bunload         - removes buffer from window
 :taball          - open a tab for all buffers
@@ -106,3 +106,15 @@ ctrl-o
 
 # Super search
 ctrl-p
+
+# To sort  a visual range on column 1 as a number:
+:'<,'>!sort -gk 1 -t ,
+
+# Map (in normal mode) the F2 key to a bash call `uuidgen`, then trim the `\n`
+# from the result, and put that in the expression register `"=`, then put that
+# before the cursor:
+nmap <F2> "= system("uuidgen")[:-2]<C-M>P
+
+# Delete every line that has a FOO in it. See `:help global`.
+# The _ in the d _ command ensures registers and clipboards are not changed.
+:g/FOO/d _
