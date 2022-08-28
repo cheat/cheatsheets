@@ -20,3 +20,6 @@ gh pr create
 
 # Create a public gist and open web browser to it:
 gh gist create hello.py -d "my Hello-World program in Python" -w -p
+
+# Create a custom label for issues and prs
+gh label create do-not-merge
