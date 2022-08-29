@@ -11,4 +11,4 @@ bat -A <file>
 bat --list-languages
 
 # Set the language for syntax highlighting:
-bat --language <language> <file>
+bat --language <language> <file.<language extension>>
