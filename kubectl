@@ -24,3 +24,6 @@ kubectl get all -A
 
 # To order events by `creationTimestamp`:
 kubectl get events --sort-by='.metadata.creationTimestamp'
+
+# To switch context of a specific cluster:
+kubectl config use-context CONTEXT_NAME [options]

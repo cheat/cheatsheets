@@ -3,3 +3,6 @@ alias
 
 # To alias `ls -l` to `ll`:
 alias ll='ls -l'
+
+# To remove alias:
+unalias ll
