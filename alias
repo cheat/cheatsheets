@@ -5,4 +5,4 @@ alias
 alias ll='ls -l'
 
 # To remove alias:
-unalias ll='ls -l'
+unalias ll
