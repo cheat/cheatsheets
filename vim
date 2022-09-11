@@ -1,5 +1,5 @@
 ---
-tags [ vim ]
+tags: [ vim ]
 ---
 
 # File management
