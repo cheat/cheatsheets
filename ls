@@ -28,3 +28,7 @@ ls -1
 # To show ACLs (MacOS):
 # see also `cheat chmod` for `/bin/chmod` options for ACLs
 /bin/ls -le
+
+# To show all the subtree files (Recursive Mode)
+ls -R
+
