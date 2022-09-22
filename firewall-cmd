@@ -2,4 +2,4 @@
 firewall-cmd --reload
 
 # List rules
-sudo firewall-cmd --list-all
+firewall-cmd --list-all
