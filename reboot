@@ -1,0 +1,2 @@
+# reboot at 22:00
+shutdown -r 22:00
