@@ -2,27 +2,68 @@
 tags: [ security ]
 ---
 
-## auditd
-# To start/restart/stop auditd
-service auditd start/restart/stop
+## selinux standard
 
-# To list active audit rules
-auditctl -l
+# To get the status of selinux
+getenforce
+# or
+sestatus
+# or from the file
+cat /etc/selinux/config
 
-# To create a watch rule for a file for audit purposes temporarily
-auditctl -w <File to watch> -p <permission r/w/x/a> -k <Identifier>
+# To set the status to permissive
+setenforce 0
 
-# To make watch rules permanently
-vim /etc/audit/rules.d/audit.rules
-# and append with following syntax
--w <File to watch> -p <permission r/w/x/a> -k <Identifier>
-# Reload the service with
-service auditd reload
+# To get the context of files/processes/ports/users
+ls -Z
+ps -Z
+ss -Z
+id -Z
 
 
-## Filtering and Searching
-# To search after a identifier
-ausearch -i -k <Identifier>
+## Booleans
+# To get all booleans
+getsebool -a
 
-# To create a report and get the options
-aureport --help
+# To set a boolean permanently
+setsebool foo_bar 1 -P
+
+# To get all changed booleans
+sudo cat /var/lib/selinux/targeted/active/booleans.local
+
+
+## selinux file context management
+# To set a context the complicated way
+sudo chcon -t foo_bar_t /foo/bar/baz.txt
+# the lazy way, this sets all files to the right context in the directory
+sudo restorecon -vR /foo/bar/
+
+# To create a rule with semanage for /foo and for the httpd server
+sudo semanage fcontext -a -t httpd_sys_content_t "/foo(/.*)?"
+# or use
+sudo semanage -a -e /var/www/html /foo
+# and run restorecon
+sudo restorecon -vR /foo
+
+
+## selinux Troubleshoot
+# First install setroubleshoot and setroubleshoot-server
+sudo dnf install setroubleshoot
+# Next, check the journalctl
+sudo journalctl -t setroubleshoot
+
+
+## selinux modules
+# To create a module, you need to set selinux in permissive mode and test the application with all its features
+sudo setenforce 0
+# then check the journalctl log
+sudo journalctl
+# and search for sealert, then run sealert
+sudo sealert -l <uuid>
+# and run the following commands from the output
+grep foobar /var/log/audit/audit.log | audit2allow -M mypol
+sudo semodule -i mypol.pp
+
+
+## Graphical tools
+sudo dnf install policycoreutils-gui
