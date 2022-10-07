@@ -9,3 +9,9 @@ sort -r <file>
 
 # To sort a file randomly:
 sort -R <file>
+
+# To sort a file and store the output in another file:
+sort <inputFile> -o <outputFile>
+
+# Sort by default uses /var/tmp to store temp files but size of /var/tmp directory is limited. In order to sort huge use a directory with adequate size:
+sort -T <tempDirectory> <file>
