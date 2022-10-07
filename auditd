@@ -1,0 +1,28 @@
+---
+tags: [ security ]
+---
+
+## auditd
+# To start/restart/stop auditd
+service auditd start/restart/stop
+
+# To list active audit rules
+auditctl -l
+
+# To create a watch rule for a file for audit purposes temporarily
+auditctl -w <File to watch> -p <permission r/w/x/a> -k <Identifier>
+
+# To make watch rules permanently
+vim /etc/audit/rules.d/audit.rules
+# and append with following syntax
+-w <File to watch> -p <permission r/w/x/a> -k <Identifier>
+# Reload the service with
+service auditd reload
+
+
+## Filtering and Searching
+# To search after a identifier
+ausearch -i -k <Identifier>
+
+# To create a report and get the options
+aureport --help
