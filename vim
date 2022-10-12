@@ -1,87 +1,218 @@
----
+# ---
 tags: [ vim ]
 ---
 
+# File info & Status
+CTRL-g           Show file info and cursor position
+
 # File management
+:e               reload file
+:q               quit (fails if there are unsaved changes)
+:q! or ZQ        quit and throw away unsaved changes
+:w               write (save) the file, but don't exit
+:w newfile       write (save) to a new file named newfile
+:w !sudo tee %   write out the current file using sudo
+:wq or :x or ZZ  write (save) and quit
+:x               write file and exit
 
-:e              reload file
-:q              quit
-:q!             quit without saving changes
-:w              write file
-:w {file}       write new file
-:x              write file and exit
 
-# Movement
+# VIM Cursor Movements
+   k             move cursor up
+h                move cursor left
+      l          move cursor right
+   j             move cursor down
+H                move to top of screen
+M                move to middle of screen
+L                move to bottom of screen
+w                jump forwards to the start of a word
+W                jump forwards to the start of a word (words can contain punctuation)
+e                jump forwards to the end of a word
+E                jump forwards to the end of a word (words can contain punctuation)
+b                jump backwards to the start of a word
+B                jump backwards to the start of a word (words can contain punctuation)
+0                jump to the start of the line
+^                jump to the first non-blank character of the line
+$                jump to the end of the line
+g_               jump to the last non-blank character of the line
+gg               go to the first line of the document
+5gg		 go to line 5
+5G               go to line 5
+G                go to the last line of the document
+gk               move down one displayed line
+gj               move up one displayed line
+fx               jump to next occurrence of character x
+tx               jump to before next occurrence of character x
+}                jump to next paragraph (or function/block, when editing code)
+{                jump to previous paragraph (or function/block, when editing code)
+%                move cursor to corresponding pairs of brackets ( { [ ] } ) 
+zz               center cursor on screen
+CTRL-b           move back one full screen
+CTRL-f           move forward one full screen
+CTRL-d           move forward 1/2 a screen
+CTRL-u           move back 1/2 a screen
 
-    k
-  h   l         basic motion
-    j
+# VIM Text Manipulation
+# (use Esc or CTRL-C to exit from insert mode)
+i                insert before the cursor
+I                insert at the beginning of the line
+a                insert (append) after the cursor
+A                insert (append) at the end of the line
+o                append (open) a new line below the current line
+O                append (open) a new line above the current line
+r                replace (overwrite) a single character
+R                enter insert mode but replace (overwrite) instead of inserting chars
+ea               insert (append) at the end of the word
+Esc              exit insert mode
+J                join line below to the current line
+cc               change (replace) entire line
+cw               change (replace) to the end of the word
+c$               change (replace) to the end of the line
+s                delete character and substitute text
+S                delete line and substitute text (same as cc)
+xp               transpose two letters (delete and paste)
+u                undo
+CTRL-r           redo
+.                repeat last command
+:r {file}        insert content from file
 
-w               next start of word
-W               next start of whitespace-delimited word
-e               next end of word
-E               next end of whitespace-delimited word
-b               previous start of word
-B               previous start of whitespace-delimited word
-0               start of line
-$               end of line
-gg              go to first line in file
-G               go to end of file
-gk		move down one displayed line
-gj		move up one displayed line
+# VIM Cut and Paste
+yy               yank (copy to the clipbloard) a line
+2yy              yank (copy to the clipbloard) 2 lines 
+yw               yank (copy to the clipbloard) the characters of the word from the cursor position to the start of the next word
+y$               yank (copy to the clipbloard) from the cursor position to the end of the line
+y {motion}       yank (copy to the clipbloard) text that {motion} moves over
+p                put (paste) the clipboard after cursor
+P                put (paste) before cursor
+x or <DEL>       delete (cut) character
+dd               delete (cut) a line
+2dd              delete (cut) 2 lines
+dw               delete (cut) the characters of the word from the cursor position to the start of the next word
+d$ or D          delete (cut) to the end of the line
+d {motion}       delete text that {motion} moves over
 
-# Insertion
-#   To exit from insert mode use Esc or Ctrl-C
-#   Enter insertion mode and:
-
-a               append after the cursor
-A               append at the end of the line
-i               insert before the cursor
-I               insert at the beginning of the line
-o               create a new line under the cursor
-O               create a new line above the cursor
-R               enter insert mode but replace instead of inserting chars
-:r {file}       insert from file
-
-# Editing
-
-u               undo
-yy              yank (copy) a line
-y{motion}       yank text that {motion} moves over
-p               paste after cursor
-P               paste before cursor
-<Del> or x      delete a character
-dd              delete a line
-d{motion}       delete text that {motion} moves over
-
-# Search and replace with the `:substitute` (aka `:s`) command
-
-:s/foo/bar/	replace the first match of 'foo' with 'bar' on the current line only
-:s/foo/bar/g	replace all matches (`g` flag) of 'foo' with 'bar' on the current line only
-:%s/foo/bar/g	replace all matches of 'foo' with 'bar' in the entire file (`:%s`)
-:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement
-
-# Preceding a motion or edition with a number repeats it 'n' times
+# Preceding a motion or edition with a number 'n' repeats the action 'n' times
 # Examples:
 50k         moves 50 lines up
 2dw         deletes 2 words
 5yy         copies 5 lines
-42G         go to line 42
+42gg        go to line 42
+
+# VIM Search
+/pattern                  search for pattern
+?pattern                  search backward for pattern
+\vpattern                 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols
+n                         repeat search in same direction
+N                         repeat search in opposite direction
+
+# VIM options during search operations
+:set ic                   find both uppercase and lowercase search results (ignore case)
+:set noic                 enable the case sensitivity (set not ignore case)
+:set hls                  highlight the search results (set highlight search)
+:set nohls or :noh        remove highlighting of search matches (not highligt)
+:set is                   incrementally highlight results during search query input (set inc search)
+:set nois                 disable incrementally highlighting during search query input (set not inc search)
+
+# VIM Search and Replace (with the `:substitute` (aka `:s`) command)
+:s/old/new/               replace the first match of 'old' with 'new' on the current line only
+:s/old/new/g              replace all matches ('g' flag) of 'old' with 'new' on the current line only
+:#,#s/old/new/g           replace all matches ('g' flag) of 'old' with 'new' in every line between line nr '#' and line nr '#'
+:%s/old/new/g             replace all 'old' with 'new' throughout file ('%' flag)
+:%s/old/new/gc            replace all 'old' with 'new' throughout file with manual confirmations ('c' flag) 
+
+# VIM Visual Mode
+v                start visual mode, mark lines, then perform an operation (such as d-delete)
+V                start linewise visual mode
+CTRL-v           start blockwise visual mode
+o                move to the other end of marked area
+O                move to other corner of block
+aw               mark a word
+ab               a block with ()
+aB               a block with {}
+ib               inner block with ()
+iB               inner block with {}
+Esc              exit visual mode
+
+# Visual Commands
+>                shift text right
+<                shift text left
+y                yank (copy) marked text
+d                delete marked text
+~                switch case
+
+# VIM Registers
+:reg             show registers content
+"xy              yank into register x
+"xp              paste contents of register x
+
+# VIM Marks
+:marks           list of marks
+ma               set current position for mark A
+`a               jump to position of mark A
+y`a              yank text to position of mark A
+
+# VIM Macros
+qa               record macro a
+q                stop recording macro
+@a               run macro a
+@@               rerun last run macro
+
+# VIM Search in Multiple Files
+:vimgrep /pattern/{file}  search for pattern in multiple files
+                          e.g. :vimgrep /foo/ **/*
+:cn                       jump to the next match
+:cp                       jump to the previous match
+:copen                    open a window containing the list of matches
+
+# Working With Multiple Files
+:e filename              edit a file in a new buffer
+:bnext or :bn            go to the next buffer
+:bprev or :bp            go to the previous buffer
+:bd                      delete a buffer (close a file)
+:ls                      list all open buffers
+:sp filename             open a file in a new buffer and split window
+:split filename          open a file in a new buffer and split window
+:vsp filename            open a file in a new buffer and vertically split window
+:vsplit filename         open a file in a new buffer and vertically split window
+CTRL-w s                 split window
+CTRL-w w                 switch windows
+CTRL-w q                 quit a window
+CTRL-w v                 split window vertically
+CTRL-w h                 move cursor to the left window (vertical split)
+CTRL-w l                 move cursor to the right window (vertical split)
+CTRL-w j                 move cursor to the window below (horizontal split)
+CTRL-w k                 move cursor to the window above (horizontal split)
+CTRL-w _                 maximize current window
+CTRL-w =                 make all equal size
+10 CTRL-w +              increase window size by 10 lines
+:hide                    close current window
+:only                    keep only this window open
+
+# VIM Tabs
+:tabnew or :tabnew file       open a file in a new tab
+CTRL-w T                      move the current split window into its own tab
+gt or :tabnext or :tabn       move to the next tab
+gT or :tabprev or :tabp       move to the previous tab
+#gt                           move to tab number #
+:tabmove #                    move current tab to the #th position
+:tabclose or :tabc            close the current tab and all its windows
+:tabonly or :tabo             close all tabs except for the current one
+:tabdo command                run the command on all tabs
 
 # Multiple windows
-:e filename      - edit another file
-:split filename  - split window and load another file
-ctrl-w up arrow  - move cursor up a window
-ctrl-w ctrl-w    - move cursor to another window (cycle)
-ctrl-w_          - maximize current window
-ctrl-w=          - make all equal size
-10 ctrl-w+       - increase window size by 10 lines
-:vsplit file     - vertical split
-:sview file      - same as split, but readonly
-:hide            - close current window
-:only            - keep only this window open
-:ls              - show current buffers
-:.! <command>    - shell out
+:e filename          edit another file
+:split filename      split window and load another file
+CTRL-w up arrow      move cursor up a window
+CTRL-w CTRL-w        move cursor to another window (cycle)
+CTRL-w _             maximize current window
+CTRL-w =             make all equal size
+10 CTRL-w +          increase window size by 10 lines
+:vsplit file         vertical split
+:sview file          same as split, but readonly
+:hide                close current window
+:only                keep only this window open
+:ls                  show current buffers
+:b 2                 open buffer #2 in this window
+:! <shell command>   execute any shell command
 
 # Buffers
 # move to N, next, previous, first last buffers
