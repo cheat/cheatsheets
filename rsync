@@ -1,5 +1,5 @@
 # To copy files from remote to local, maintaining file properties and sym-links
-# (-a), zipping for faster transfer (-z), verbose (-v):
+# archive mode (-a), zipping for faster transfer (-z), verbose (-v):
 rsync -avz host:file1 :file1 /dest/
 rsync -avz /source host:/dest
 
@@ -7,13 +7,17 @@ rsync -avz /source host:/dest
 # changed. (Useful for validating backups):
 rsync -avc <src> <dest>
 
-# To copy /src/foo folder into destination:
-# This command will create /dest/foo if it does not already exist
-rsync -auv /src/foo /dest
+# To copy (update) the complete directory of /src/foo into destination /dest/foo:
+# This command will create /dest/foo if /foo does not already exist in /dest
+# archive mode (-a), update (-u), verbose (-v)
+rsync -auv <src> <dest>
 
-# To copy contents of /src/foo into destination:
-# This command will not create /foo_bak/foo folder
-rsync -auv /src/foo/ /foo_bak
+# To explicitly copy (update) the content of /src/foo> into /dest
+# Append a trailing slash on the <src> to avoid creating an additional directory level in /dest 
+rsync -auv <src>/ <dest>
+
+# To delete files on <dest>  during the transfer
+rsync -auv --del <src> <dest>
 
 # To copy file from local to remote over ssh with non standard port 1234 to
 # destination folder in remoteuser's home directory:
