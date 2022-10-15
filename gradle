@@ -1,0 +1,33 @@
+---
+syntax: bash
+tags: [ development, build ]
+---
+# To compile, test and package a project:
+gradle build
+
+# To skip a task from the build:
+gradle build -x <test>
+
+# To prevent Gradle from accessing the network during builds:
+gradle build --offline
+
+# To clear the build directory:
+gradle clean
+
+# To refresh the project dependencies:
+gradle clean build --refresh-dependencies
+
+# To list the project dependencies:
+gradle dependencies
+
+# To list the tasks you can run in your project:
+gradle tasks
+
+# To list all the tasks:
+gradle tasks --all
+
+# To create a Gradle build for a new project or convert a Maven build to Gradle:
+gradle init
+
+# To create a Gradle build for a new Java project:
+gradle init --type java-library
