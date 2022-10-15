@@ -1,0 +1,36 @@
+---
+syntax: bash
+tags: [ container, docker ]
+---
+# To start all containers defined in the docker-compose.yml file:
+docker-compose up
+
+# To start all containers defined in a given compose file:
+docker-compose -f <path/to/compose_file.yml> up
+
+# To start all containers in the background:
+docker-compose up -d
+
+# To rebuild the images before starting all containers:
+docker-compose up --build
+
+# To start only specific containers:
+docker-compose up <container_name_1> <container_name_2>
+
+# To list all running containers:
+docker-compose ps
+
+# To stop all running containers:
+docker-compose stop
+
+# To stop and remove all containers, networks, images, and volumes:
+docker-compose down --rmi all --volumes
+
+# To follow logs output from all containers:
+docker-compose logs --follow
+
+# To follow logs output from a specific container:
+docker-compose logs --follow <container_name>
+
+# To display the environment variables used by a running container:
+docker-compose run <container_name> env
