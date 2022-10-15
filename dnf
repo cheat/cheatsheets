@@ -17,3 +17,6 @@ dnf download <package>
 
 # To install the build dependencies for a SRPM or from a .spec file:
 dnf builddep <file>
+
+# List installed packages
+dnf list installed
