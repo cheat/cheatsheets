@@ -1,6 +1,6 @@
 ---
 syntax: bash
-tags: [ compression ]
+tags: [ java ]
 ---
 # To archive all files in the current directory into a jar file:
 jar cf <file.jar> *
