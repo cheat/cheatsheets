@@ -7,16 +7,16 @@ rsync -avz /source host:/dest
 # changed. (Useful for validating backups):
 rsync -avc <src> <dest>
 
-# To copy (update) the complete directory of /src/foo into destination /dest/foo:
+# To copy (update) the directory name and all the content of /src/foo into destination /dest
 # This command will create /dest/foo if /foo does not already exist in /dest
 # archive mode (-a), update (-u), verbose (-v)
-rsync -auv <src> <dest>
+rsync -auv /src/foo /dest
 
-# To explicitly copy (update) the content of /src/foo> into /dest
-# Append a trailing slash on the <src> to avoid creating an additional directory level in /dest 
-rsync -auv <src>/ <dest>
+# To explicitly copy (update) the content of /src/foo into /dest
+# Append a trailing slash on <src> (/src/foo/) to avoid creating an additional /foo directory level in /dest 
+rsync -auv /src/foo/ /dest
 
-# To delete files on <dest>  during the transfer
+# To delete files on <dest> during the transfer
 rsync -auv --del <src> <dest>
 
 # To copy file from local to remote over ssh with non standard port 1234 to
