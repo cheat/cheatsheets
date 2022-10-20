@@ -35,6 +35,7 @@ ffmpeg -ss 00:34:24.85 -t 10 -i path/to/file.mp4 -f mp3 pipe:play | ffplay -i pi
 
 # To combine audio and video from N files:
 # See also https://stackoverflow.com/questions/7333232/how-to-concatenate-two-mp4-files-using-ffmpeg
+# See also https://trac.ffmpeg.org/wiki/Concatenate
 cat mylist.txt
 file '/path/to/file1'
 file '/path/to/file2'
