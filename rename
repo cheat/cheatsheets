@@ -1,9 +1,5 @@
-# To replace 'sometext' with 'replacedby' in all file names in current directory:
-rename 'sometext' 'replacedby' *
+# To lowercase all files and folders in current directory:
+rename 'y/A-Z/a-z/' *
 
-# To replace spaces with underscores in all file names in current directory:
-rename ' ' '_' *
-
-# To delete a part of the file name in all file names in current directory:
-rename 'sometext' '' *
-
+# To replace 'sometext' with 'replacedby' in all files in current directory:
+rename 's/sometext/replacedby/' *
