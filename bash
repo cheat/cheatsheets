@@ -1,22 +1,38 @@
-# To implement a for loop:
-for file in *;
+# Print a specific string with a trailing new line:
+echo "Hello from Bash!"
+
+# Declare a variable with a specific value
+declare user_name="Emily Grace Seville"
+
+# Place file contents without trailing new lines to a specific variable:
+declare file_contents="$(cat "<file>")"
+
+# Check if file exists
+if [[ -f "<file>" ]]; then
+  echo "File exists"
+fi
+
+# Check if a file contains a string matching a specific pattern:
+if grep '<pattern>' "<file>"; then
+  echo "File contains such string"
+fi
+
+# Iterate over all files in the current directory:
+for file in ./*;
 do 
-    echo $file found;
+    echo "$file";
 done
 
-# To implement a case command:
-case "$1"
+# Chose on of alternatives:
+case "$some_variable"
 in
     0) echo "zero found";;
     1) echo "one found";;
-    2) echo "two found";;
-    3*) echo "something beginning with 3 found";;
+    *) echo "something else found";;
 esac
 
-# To turn on debugging:
+# To turn on/off debugging respectively:
 set -x
-
-# To turn off debugging:
 set +x
 
 # Retrieve N-th piped command exit status:
