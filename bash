@@ -3,7 +3,7 @@
 # Iterating over `.mp3` files in the current directory:
 shopt -s nullglob
 for file_name in ./*.mp3; do
-  some_command "$file_name"
+    some_command "$file_name"
 done
 
 # Copying file from one place to another:
@@ -43,9 +43,9 @@ echo 'There are several *.zip files in the current folder'
 # Chaining several commands:
 declare -i i=0
 if true; then
-  ((i++))
+    ((i++))
 else
-  ((i--))
+    ((i--))
 fi
 echo "$i"
 
@@ -62,7 +62,7 @@ printf '%s\n' "$message"
 
 # Iterating over [0..9] number range:
 for ((i=1; i<=n; i++)); do
-  some_command "$i"
+    some_command "$i"
 done
 
 # Retrieving N-th piped command exit status:
