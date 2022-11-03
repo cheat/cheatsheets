@@ -6,6 +6,8 @@ rsync -auv /src/foo /dest
 # To copy (update) all the content of /src/foo into /dest without creating the subdirectory '/foo'
 # Append a trailing slash on <src> (/src/foo/) to avoid creating an additional /foo directory in /dest 
 rsync -auv /src/foo/ /dest
+# Use --exclude=".*' to exclude all the hidden files, and use -n to 'DRY RUN' (test-run without file transfer) 
+rsync -auv -n --exclude='.*' /src/foo/ /dest/
 
 # To delete files on <dest> that don't exist in <source> during the update proces
 rsync -auv --del <src> <dest>

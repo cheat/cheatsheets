@@ -12,8 +12,8 @@ CTRL-g           Show file info and cursor position
 :w               write (save) the file, but don't exit
 :w newfile       write (save) to a new file named newfile
 :w !sudo tee %   write out the current file using sudo
-:wq or :x or ZZ  write (save) and quit
-:x               write file and exit
+:wq or ZZ        write (save) and quit
+:x               write (save) and quit
 
 
 # VIM Cursor Movements
