@@ -24,6 +24,7 @@ r	open file with
 z	toggle settings
 o	change sort order
 zh	view hidden files
+<backspace>	set view hidden files
 cw	rename current file
 yy	yank / copy
 dd	cut
@@ -31,6 +32,8 @@ pp	paste
 /	search for files :search
 n	next match
 N	prev match
+<space>		mark files 
+v	mark files all=True toggle=True
 <delete>	Delete
 
 # Commands
