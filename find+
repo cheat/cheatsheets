@@ -24,8 +24,8 @@ find -iname "*foo*"
 # To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
 find . -iname "*.jpg"
 
-# To exclude the directory ".snapshots" from the search
-find -path "./.snapshots" -prune -o -name "baz" -print
+# To search recursively in the root directory, but exclude the directory "/.snapshots" 
+sudo find / -path "/.snapshots" -prune -o -name "foo" -print
 
 # To exclude multiple elements from the search (e.g. exclude files "bazbaz" and directories ./foo1 and ./foo2) 
 find \( -name "bazbaz" -o -path "./foo1" -o -path "./foo2" \) -prune -o -name "baz*" -print
