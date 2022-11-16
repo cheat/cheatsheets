@@ -13,10 +13,28 @@ conda create --name 'ENVNAME' python=3.10
 # To install from requirements.txt
 conda install --file requirements.txt
 
+# To clone an environment
+conda create --clone 'ENVNAME' -n 'NEWENV'
+
 # To activate a virtual environment
 conda activate 'ENVNAME'
+
+# To deactivate a virtual environment
+conda deactivate
 
 # To remove and environment
 conda env remove --name 'ENVNAME'
 # or
 conda env remove --prefix /path/to/env
+
+# To list all packages in an environment
+conda list -n 'ENVNAME'
+
+# To list packages in an activated environment
+conda list
+
+# To export an activated environment
+conda env export > environment.yml
+
+# To export an activated environment, listing only manually installed packages (no dependencies)
+conda env export --from-history > environment.yml
