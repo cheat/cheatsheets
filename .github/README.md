@@ -111,6 +111,7 @@ some output
 - Input can be omitted with the corresponding comment just if the code example demonstrates how to use command without any options.
 - Output can me omitted with the corresponding comment and replaced with `No output.` comment just if no output is produced.
 - Code examples and their descriptions can span multiple lines.
+- Prefer imperative mood in code descriptions.
 
 ### Placeholders
 
@@ -135,6 +136,8 @@ For instance the following comment mentions some shells with `alias` command ava
 # - Zsh
 # - Fish
 ```
+
+Using imperative mood in such multiline comments between examples is not required.
 
 ## License
 Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
