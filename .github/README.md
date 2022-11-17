@@ -28,6 +28,14 @@ command <arg1 arg2 ...>
 command arg1
 # Output example:
 some output
+
+# Some
+# multiline
+# comment
+# between
+# examples
+
+...
 ```
 
 For instance the following cheatsheet describes `alias` shell builtin:
@@ -38,6 +46,11 @@ tags: [ builtin ]
 ---
 # See also:
 # - `unalias` for removing aliases
+
+# This command is available in:
+# - Bash
+# - Zsh
+# - Fish
 
 # List all aliases:
 alias
@@ -60,6 +73,8 @@ alias <alias_name1=alias_value1 alias_name2=alias_value2 ...>
 # Input example:
 alias egrep='egrep --color=auto' fgrep='fgrep --color=auto' grep='grep --color=auto'
 # No output.
+
+# Don't use aliases instead of functions. When possible prefer later ones.
 ```
 
 ### Links to other pages
@@ -106,6 +121,20 @@ input examples exist.
 
 Use `<path/to/file>` or `<path/to/directory>` just when relative paths are permitted. Otherwise prefer `</path/to/file>` or
 `</path/to/directory>`.
+
+### Multiline comments between examples
+
+Multiline comments between examples can be used to clarify how command work and be used as a note for several code examples. As
+all code examples such long comments should be delimited by one empty line.
+
+For instance the following comment mentions some shells with `alias` command available:
+
+```
+# This command is available in:
+# - Bash
+# - Zsh
+# - Fish
+```
 
 ## License
 Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
