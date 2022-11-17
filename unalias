@@ -1,0 +1,15 @@
+---
+tags: [ builtin ]
+---
+# See also:
+# - `alias` for listing or adding aliases
+
+# Remove all aliases:
+unalias -a
+# No output.
+
+# Remove alias with specific names:
+unalias <alias_name1 alias_name2 ...>
+# Input example:
+unalias egrep fgrep grep
+# No output.

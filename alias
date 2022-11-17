@@ -1,8 +1,27 @@
-# To show a list of your current shell aliases:
+---
+tags: [ builtin ]
+---
+# See also:
+# - `unalias` for removing aliases
+
+# List all aliases:
 alias
+# Output example:
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
 
-# To alias `ls -l` to `ll`:
-alias ll='ls -l'
+# List aliases with specific names:
+alias <alias_name1 alias_name2 ...>
+# Input example:
+alias egrep fgrep grep
+# Output example:
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
 
-# To remove alias:
-unalias ll
+# Create aliases with specific name and value:
+alias <alias_name1=alias_value1 alias_name2=alias_value2 ...>
+# Input example:
+alias egrep='egrep --color=auto' fgrep='fgrep --color=auto' grep='grep --color=auto'
+# No output.
