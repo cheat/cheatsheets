@@ -1,30 +1,30 @@
 # To convert a file from jpg to pdf
-convert original.jpg converted.pdf
+convert <path/to/original.jpg> <path/to/converted.pdf>
 
 # To rotate an image to 180 degrees
-convert original.jpg -rotate 180 converted.jpg
+convert <path/to/original.jpg> -rotate 180 <path/to/converted.jpg>
 
 # To resize an image to a fixed width and proportional height:
-convert original.jpg -resize 100x converted.jpg
+convert <path/to/original.jpg> -resize 100x <path/to/converted.jpg>
 
 # To resize an image to a fixed height and proportional width:
-convert original.jpg -resize x100 converted.jpg
+convert <path/to/original.jpg> -resize x100 <path/to/converted.jpg>
 
 # To resize an image to a fixed width and height:
-convert original.jpg -resize 100x100 converted.jpg
+convert <path/to/original.jpg> -resize 100x100 <path/to/converted.jpg>
 
 # To resize an image and simultaneously change its file type:
-convert original.jpg -resize 100x converted.png
+convert <path/to/original.jpg> -resize 100x <path/to/converted.png>
 
 # To resize all of the images within a directory:
 for file in `ls original/image/path/`;
     do new_path=${file%.*};
-    new_file=`basename $new_path`;
-    convert $file -resize 150 converted/image/path/$new_file.png;
+    $converted_file=`basename $new_path`;
+    convert $file -resize 150 path/to/$converted_file.png;
 done
 
 # To convert an N page pdf to N images (will autonumber):
-convert -density 150 arch1.pdf -quality 80 'output.jpg'
+convert -density 150 <path/to/original.pdf> -quality 80 'output.jpg'
 
 # To convert an N page pdf to N images with explicit filename formatting:
-convert -density 150 arch1.pdf -quality 80 'output-%d.jpg'
+convert -density 150 <path/to/original.pdf> -quality 80 'output-%d.jpg'
