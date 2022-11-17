@@ -108,6 +108,7 @@ some output
 
 - Code examples for specific shells should use specific shell syntax rules. Otherwise POSIX shell syntax should be preferred.
 - Quotes should be used just when without it shell will be confused or when it's a best practise.
+- Double quotes should be used instead of single ones until there are some expansions inside them.
 - Input can be omitted with the corresponding comment just if the code example demonstrates how to use command without any options.
 - Output can me omitted with the corresponding comment and replaced with `No output.` comment just if no output is produced.
 - Code examples and their descriptions can span multiple lines.
