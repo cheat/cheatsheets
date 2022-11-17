@@ -4,6 +4,10 @@ tags: [ builtin ]
 # See also:
 # - `alias` for listing or adding aliases
 
+# This command is available in:
+# - Bash
+# - Zsh
+
 # Remove all aliases:
 unalias -a
 # No output.
@@ -13,3 +17,5 @@ unalias <alias_name1 alias_name2 ...>
 # Input example:
 unalias egrep fgrep grep
 # No output.
+
+# Don't use aliases instead of functions. When possible prefer later ones.

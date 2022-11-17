@@ -4,6 +4,11 @@ tags: [ builtin ]
 # See also:
 # - `unalias` for removing aliases
 
+# This command is available in:
+# - Bash
+# - Zsh
+# - Fish
+
 # List all aliases:
 alias
 # Output example:
@@ -25,3 +30,5 @@ alias <alias_name1=alias_value1 alias_name2=alias_value2 ...>
 # Input example:
 alias egrep='egrep --color=auto' fgrep='fgrep --color=auto' grep='grep --color=auto'
 # No output.
+
+# Don't use aliases instead of functions. When possible prefer later ones.
