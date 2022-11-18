@@ -26,6 +26,8 @@ rsync -avz <user>@<host>:<src> <dest>
 rsync -avz <src> <user>@<host>:<dest>
 
 # how to rsync update current directory from a gnu-linux computer (<src>) to remote D:\tmp on a Windows-Cygwin computer (<dest>)
+# Files that are new or newer in <source> are updated in <dest>
+# Files in <dest> that not exist in <source> are deleted
 rsync -auzv ./ <user>@<host>:/cygdrive/d/tmp
 
 # To copy file from local to remote over ssh with non standard port 1234 to destination folder in remoteuser's home directory:
