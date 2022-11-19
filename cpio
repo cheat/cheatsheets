@@ -1,6 +1,6 @@
 # To create a cpio archive
 ls | cpio -o > <archive.cpio>
 
-# To extract a cpio archive
-cpio -id < <archive.cpio>
+# Extract a specific cpio archive:
+cpio --extract --make-directories < <path/to/archive.cpio>
 
