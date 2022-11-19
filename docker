@@ -61,8 +61,8 @@ docker push <image-name>:<image-tag-name>
 # To list all networks daemon knows
 docker network ls
 
-# To create a network
-docker network create <network name>
+# Create a specific network:
+docker network create "<network_name>"
 
 # Connect a specific container to a network:
 docker network connect "<network_id|name>" "<container_id|name>"
