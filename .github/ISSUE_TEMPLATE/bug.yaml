@@ -1,0 +1,23 @@
+name: Bug report
+title: "[Bug]: "
+description: A bug report template
+labels: [bug]
+body:
+  - type: input
+    attributes:
+      label: Page name
+      description: A page that contains a mistake
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Mistake description
+      description: What's wrong with this page?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Fix description
+      description: How to fix this page?
+    validations:
+      required: true
