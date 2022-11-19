@@ -64,8 +64,8 @@ docker network ls
 # To create a network
 docker network create <network name>
 
-# To connect a container to a network
-docker network connect <NETWORK ID>or<NAME> <CONTAINER ID>or<NAME>
+# Connect a specific container to a network:
+docker network connect "<network_id|name>" "<container_id|name>"
 
 # To disconnect a container from network
 docker network disconnect <NETWORK ID>or<NAME> <CONTAINER ID>or<NAME>
