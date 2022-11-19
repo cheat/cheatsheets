@@ -67,5 +67,5 @@ docker network create <network name>
 # Connect a specific container to a network:
 docker network connect "<network_id|name>" "<container_id|name>"
 
-# To disconnect a container from network
-docker network disconnect <NETWORK ID>or<NAME> <CONTAINER ID>or<NAME>
+# Disconnect a specific container from network:
+docker network disconnect "<network_id|name>" "<container_id|name>"
