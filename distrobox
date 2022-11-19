@@ -23,7 +23,7 @@ distrobox-host-exec <command>
 
 distrobox-export --app <atom> --extra-flags "--foreground"
 
-# Export a binary(ranger) from the container to the host:
+# Export a binary (ranger) from the container to the host:
 
 distrobox-export --bin </usr/bin/ranger> --export-path <$HOME/.local/bin>
 
