@@ -9,7 +9,7 @@ distrobox-create <container_name></container_name> --image <ubuntu:latest>
 
 # List all distrobox containers with verbose information:
 
-distrobox-list -v
+distrobox-list --verbose
 
 # Enter a distrobox:
 
