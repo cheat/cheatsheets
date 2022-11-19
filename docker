@@ -58,7 +58,7 @@ docker login
 # To push a docker image into dockerhub repository:
 docker push <image-name>:<image-tag-name>
 
-# To list all networks daemon knows
+# List all networks daemon knows about:
 docker network ls
 
 # Create a specific network:
