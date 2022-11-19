@@ -1,0 +1,11 @@
+name: Page request
+title: "[Page request]: "
+description: A page request report template
+labels: [enhancement]
+body:
+  - type: input
+    attributes:
+      label: Page name
+      description: A page that should be created
+    validations:
+      required: true
