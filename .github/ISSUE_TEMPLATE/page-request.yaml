@@ -9,3 +9,7 @@ body:
       description: A page that should be created
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Extra information
+      description: Any additional information you can provide for us

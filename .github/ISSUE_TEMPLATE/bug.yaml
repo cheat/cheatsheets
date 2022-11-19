@@ -21,3 +21,7 @@ body:
       description: How to fix this page?
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Extra information
+      description: Any additional information you can provide for us
