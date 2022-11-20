@@ -126,15 +126,17 @@ CTRL-v           start blockwise visual mode
 o                move to the other end of marked area
 O                move to other corner of block
 aw               mark a word
-ab               a block with ()
-aB               a block with {}
+ab               mark a block with ()
+aB               mark a block with {}
 ib               inner block with ()
 iB               inner block with {}
 Esc              exit visual mode
 
 # Visual Commands
->                shift text right
-<                shift text left
+>                shift textline right
+3>               shift 3 textlines right
+<                shift textline left
+3<               shift 3 textlines left
 y                yank (copy) marked text
 d                delete marked text
 ~                switch case

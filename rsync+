@@ -7,8 +7,11 @@ rsync -auv /src/foo /dest
 # Append a trailing slash on <src> (/src/foo/) to avoid creating an additional /foo directory in /dest 
 rsync -auv /src/foo/ /dest
 
-# Use --exclude=".*' to exclude all the hidden files, and use -n to 'DRY RUN' (test-run without file transfer) 
-rsync -auv -n --exclude='.*' /src/foo/ /dest
+# use -n to 'DRY RUN' (test-run without file transfer) 
+rsync -auv -n <src> <dest>
+
+# Use --exclude=".*' to exclude all the hidden files, (and use -n to 'DRY RUN' (test-run without file transfer)) 
+rsync -auv -n --exclude='.*' <src> <dest>
 
 # To delete files on <dest> that don't exist in <source> during the update proces
 rsync -auv --del <src> <dest>
