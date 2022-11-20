@@ -1,77 +1,88 @@
-# All pitfalls are taken from https://mywiki.wooledge.org/BashPitfalls
+---
+tags: [ shell ]
+---
+# Output specific strings:
+echo <arg1 arg2 ...>
+# Input example:
+echo Hello dear Emily
+# Output example:
+Hello dear Emily
 
-# Iterating over `.mp3` files in the current directory:
+# Create variables with specific names and values:
+declare <variable_name1=variable_value1 variable_name2=variable_value2 ...>
+# Input example:
+declare old_config_name=.bashrc.old new_config_name=.bashrc
+# No output.
+
+# Read variables with specific names:
+read <variable_name1 variable_name2 ...>
+# Input example:
+read old_config_name new_config_name
+# No output.
+
+# Check whether specific strings are equal/not equal:
+[[ <first_string> <==|!=> <second_string> ]]
+# Input example:
+[[ $user_name == Emily ]]
+# No output.
+
+# Check whether a specific number is equal to/not equal to/greater than/greater or equal than/less than/less or equal than a second one:
+(( <first_number> <==|!=|\>|\>=|\<|\<=> <second_number> ]]
+# Input example:
+(( user_age > 0 ))
+# No output.
+
+# ======================================
+# Below some common pitfalls are listed:
+# ======================================
+
+# Iterate over specific files in the current directory:
 shopt -s nullglob
-for file_name in ./*.mp3; do
-    some_command "$file_name"
+for file_name in ./<glob_pattern>; do
+    <command> "$file_name"
 done
 
-# Copying file from one place to another:
-cp "./.replit" "$HOME/Documents/.replit" || exit 1
+# Copy a file from a specific place to another:
+cp "<path/to/source_file>" "<path/to/destination_file>" || exit 1
 
-# Comparing plain string equality:
-[[ $variable == 'Emily Grace Seville' ]]
+# Jump to the directory where a specific file is located:
+cd "$(dirname "<path/to/file>")" || exit 1
 
-# Comparing extended globbing pattern equality:
-[[ $variable == [0-9]+ ]]
+# Join several conditions via or/and operator:
+[[ <first_condition> <||\|&&> <second_condition> ]]
 
-# Jumping to the directory where file is located:
-cd "$(dirname "$HOME/Documents/.replit")" || exit 1
-
-# Joining several conditions via `and` operator:
-[[ $first_variable == 'Emily' && $second_variable == 'Seville' ]]
-
-# Comparing numbers:
-((variable > 7))
-
-# Counting matching lines in a file:
+# Count matching lines in a specific file:
 declare -i line_count=0
 while IFS= read -r line
 do
     ((line_count++))
-done < <(grep '[0-9]' './.replit')
+done < <(grep "<regular_expression>" "<path/to/file>")
 
-# Reading an input from a keyboard:
-read variable
+# Replace all strings matching a specific pattern with a replacement in a file:
+sed -i "s/<regular_expression>/<replacement>/g" "<path/to/file>"
 
-# Replacing all `foo`s with `bar`s in a file:
-sed -i 's/foo/bar/g' "$file_name"
-
-# Echoing a message safely:
-echo 'There are several *.zip files in the current folder'
-
-# Chaining several commands:
-declare -i i=0
-if true; then
-    ((i++))
-else
-    ((i--))
-fi
-echo "$i"
-
-# Obtaining command exit status after an assignment:
+# Obtain command exit status after an assignment:
 declare variable
 variable="$(some_command)"
-echo "$?"
+echo $?
 
-# Lowering all letters:
-some_command | LC_COLLATE=C tr '[:upper:]' '[:lower:]'
+# Lower all letters:
+some_command | LC_COLLATE=C tr "[:upper:]" "[:lower:]"
 
-# Echoing a message safely:
-printf '%s\n' "$message"
+# Output a specific message safely:
+printf "%s\n" "$message"
 
-# Iterating over [0..9] number range:
-for ((i=1; i<=n; i++)); do
-    some_command "$i"
+# Iterate over a specific number range:
+for ((i=<minimum_value>; i<=<maximum_value>; i++)); do
+    <command> "$i"
 done
 
-# Retrieving N-th piped command exit status:
-printf 'foo' | fgrep 'foo' | sed 's/foo/bar/'
-echo ${PIPESTATUS[1]]}
+# Retrieve a specific piped command exit status:
+printf "<string_template>" "<arg1 arg2 ...>" | fgrep "<regular_expression1>" | sed "s/<regular_expression2>/<replacement>/"
+echo ${PIPESTATUS[<index>]]}
 
-# Creating a lockfile:
-( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
+# Create a lockfile:
+( set -o noclobber; echo > "<my.lock>" ) || echo 'Failed to create lock file'
 
-# Turining on/off debugging respectively:
-set -x
-set +x
+# Turin on or off debugging respectively:
+set <-|+>x
