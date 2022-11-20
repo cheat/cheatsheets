@@ -32,7 +32,9 @@ test <first_number> -<eq|ne|gt|ge|lt|le> <second_number>
 test $user_age -gt 0
 # No output.
 
-# All pitfalls are taken from https://fishshell.com/docs/current/faq.html
+# ======================================
+# Below some common pitfalls are listed:
+# ======================================
 
 # Creating a variable:
 set -x variable value # typically set -gx key value
