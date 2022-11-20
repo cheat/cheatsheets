@@ -37,19 +37,19 @@ test $user_age -gt 0
 # ======================================
 
 # Export specific variables:
-set -x <variable_name1 variable_name2 ...>
+set --export <variable_name1 variable_name2 ...>
 
 # Removing a variable:
-set -e variable
+set --erase <variable_name>
 
 # Checking whether variable is defined:
-if set -q variable
-    some_command
+if set --query <variable_name>
+    <command>
 end
 
 # Checking whether variable is not empty:
-if string length -q -- $variable
-   some_command
+if string length --quiet -- $<variable_name>
+   <command>
 end
 
 # Changing an interactive shell prompt:
