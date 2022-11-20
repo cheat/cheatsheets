@@ -100,6 +100,10 @@ zfs snapshot ${pool}/${fs_vol}@${snapshot}
 # Delete a snapshot
 zfs destroy ${pool}/${fs_vol}@${snapshot}
 
+# Delete a range of snapshots
+zfs destroy ${pool}/${fs_vol}@${first-snapshot}%${last-snapshot}
+
+
 # Full backup
 # Note: pipe (|) source to destination through netcat, SSH, etc.
 # ... on source:
