@@ -52,11 +52,6 @@ if string length -q -- $variable
    some_command
 end
 
-# Choosing `coolbeans` theme in an interactive shell:
-if status is-interactive
-    fish_config theme choose coolbeans
-end
-
 # Changing an interactive shell prompt:
 function fish_prompt
     set_color $fish_color_cwd
