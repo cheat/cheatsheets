@@ -1,3 +1,37 @@
+---
+tags: [ shell ]
+---
+# Output specific strings:
+echo <arg1 arg2 ...>
+# Input example:
+echo Hello dear Emily
+# Output example:
+Hello dear Emily
+
+# Create variable with a specific name and value:
+set <variable_name> <variable_value>
+# Input example:
+set old_config_name .bashrc.old
+# No output.
+
+# Read variables with specific names:
+read <variable_name1 variable_name2 ...>
+# Input example:
+read old_config_name new_config_name
+# No output.
+
+# Check whether specific strings are equal/not equal:
+[ <first_string> <==|!=> <second_string> ]
+# Input example:
+[ $user_name == Emily ]
+# No output.
+
+# Check whether a specific number is equal to/not equal to/greater than/greater or equal than/less than/less or equal than a second one:
+test <first_number> -<eq|ne|gt|ge|lt|le> <second_number>
+# Input example:
+test $user_age -gt 0
+# No output.
+
 # All pitfalls are taken from https://fishshell.com/docs/current/faq.html
 
 # Creating a variable:
