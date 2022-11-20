@@ -27,7 +27,7 @@ read old_config_name new_config_name
 # No output.
 
 # Check whether a specific number is equal to/not equal to/greater than/greater or equal than/less than/less or equal than a second one:
-(( <first_number> <==|!=|\>|\>=|\<|\<=> <second_number> ]]
+(( <first_number> <==|!=|\>|\>=|\<|\<=> <second_number> ))
 # Input example:
 (( user_age > 0 ))
 # No output.
