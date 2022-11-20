@@ -43,7 +43,7 @@ set --export <variable_name1 variable_name2 ...>
 set --erase <variable_name1 variable_name2 ...>
 
 # Checking whether variable is defined:
-if set --query <variable_name>
+if set --query <variable_name1 variable_name2 ...>
     <command>
 end
 
