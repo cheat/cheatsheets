@@ -36,8 +36,8 @@ test $user_age -gt 0
 # Below some common pitfalls are listed:
 # ======================================
 
-# Creating a variable:
-set -x variable value # typically set -gx key value
+# Export specific variables:
+set -x <variable_name1 variable_name2 ...>
 
 # Removing a variable:
 set -e variable
