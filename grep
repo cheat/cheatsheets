@@ -1,10 +1,13 @@
 # To search a file for a pattern:
 grep <pattern> <file>
 
-# To perform a case-insensitive search (with line numbers):
+# To perform a case-insensitive search (-i) (with line numbers (-n)):
 grep -in <pattern> <file>
 
-# To recursively grep for string <pattern> in <dir>:
+# To show only the filenames and show the number of matches (-c) in current directory (.)
+grep -inc <pattern> .
+
+# To recursively grep for string <pattern> in <dir> (-R recursive follow all symbolic links):
 grep -R <pattern> <dir>
 
 # Read search patterns from a file (one per line):
@@ -13,14 +16,16 @@ grep -f <pattern-file> <file>
 # Find lines NOT containing pattern:
 grep -v <pattern> <file>
 
-# Set how many lines to show before (-B) and after (-A) pattern:
+# Set how many lines to show before (-B) and after (-A) pattern (or use (-c) for both in once):
 grep -B 3 -A 2 <pattern> <file>
 
+# 
 # To grep with regular expressions:
 grep "^00" <file>                                               # Match lines starting with 00
 grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" <file> # Find IP add
+grep -P "\s{3}-\d{3}-\d{4}" <file> # Use Perl-style regular expression to find phone numbers like 123-456-7890 
 
-# To find all files that match <pattern> in <dir>
+# To find all files that exactly match <pattern> (-w) recursive (-r) in <dir> preceded by line numbers (-l)
 grep -rnw <dir> -e <pattern>
 
 # To exclude grep from your grepped output of ps:

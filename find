@@ -1,8 +1,34 @@
+#WIP
+#https://adamtheautomator.com/bash-find/
+
 # To find files following symlinks (otherwise the symlinks are not followed):
 find -L . -type f
 
+# To find all files with the exact name 'foo' only in current working directory
+find foo
+# To find all file names ending with 'foo' only in current working directory
+find *foo
+# To find all file names begining with 'foo' only in current working directory
+find foo*
+# To find all files with 'foo' in their name only in current working directory
+find *foo*
+
+# To find all files witch the exact name 'foo' in all directories
+find -name foo
+# To find all file names ending with 'foo' (case insensitive) in all directories
+find -iname '*foo'
+# To find all file names begining with 'foo' (case insensitive) in all directories
+find -iname 'foo*'
+# To find all directories and files with 'foo' (case insensitive) in their name
+find -iname "*foo*"
 # To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
 find . -iname "*.jpg"
+
+# To search recursively in the root directory, but exclude the directory "/.snapshots" 
+sudo find / -path "/.snapshots" -prune -o -name "foo" -print
+
+# To exclude multiple elements from the search (e.g. exclude files "bazbaz" and directories ./foo1 and ./foo2) 
+find \( -name "bazbaz" -o -path "./foo1" -o -path "./foo2" \) -prune -o -name "baz*" -print
 
 # To find directories:
 find . -type d
