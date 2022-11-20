@@ -1,9 +1,15 @@
-# To replace 'sometext' with 'replacedby' in all file names in current directory:
+# Replace the first occurence of 'sometext' with 'replacedby' in all file names in current directory:
 rename 'sometext' 'replacedby' *
 
-# To replace spaces with underscores in all file names in current directory:
-rename ' ' '_' *
+# Replace all occurences of 'sometext' with 'replacedby' in all file names in current directory:
+rename -a 'sometext' 'replacedby' *
 
-# To delete a part of the file name in all file names in current directory:
+# Only show which files should be renamed, if any (-n dry run) (-v verbose): 
+rename -vn 'sometext' 'replacedby' *
+
+# Replace all spaces with underscores in all file names in current directory:
+rename -a ' ' '_' *
+
+# Delete a part of the file name in all file names in current directory:
 rename 'sometext' '' *
 
