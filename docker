@@ -57,3 +57,15 @@ docker login
 
 # To push a docker image into dockerhub repository:
 docker push <image-name>:<image-tag-name>
+
+# List all networks daemon knows about:
+docker network ls
+
+# Create a specific network:
+docker network create "<network_name>"
+
+# Connect a specific container to a network:
+docker network connect "<network_id|name>" "<container_id|name>"
+
+# Disconnect a specific container from network:
+docker network disconnect "<network_id|name>" "<container_id|name>"

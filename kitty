@@ -1,5 +1,5 @@
 ---
-tags [ kitty ]
+tags: [ kitty ]
 ---
 
 # Scrolling
@@ -55,3 +55,8 @@ ctrl+shift+p>w       - Insert selected word
 ctrl+shift+p>h       - Insert selected hash
 ctrl+shift+p>n       - Open the selected file at the selected line
 ctrl+shift+p>y       - Open the selected hyperlink
+
+# Configuration
+ctrl+shift+f2        - Open kitty config file in $EDITOR
+ctrl+shift+f5        - Reload kitty config in current window
+ctrl+shift+f6        - Display current kitty configuration without editing

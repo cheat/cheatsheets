@@ -4,7 +4,7 @@ tags: [ compression ]
 # To extract an uncompressed archive:
 tar -xvf /path/to/foo.tar
 
-# To extract a .tar in specified Directory:
+# To extract a .tar in specified directory:
 tar -xvf /path/to/foo.tar -C /path/to/destination/
 
 # To create an uncompressed archive:

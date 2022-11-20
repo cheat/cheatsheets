@@ -1,0 +1,14 @@
+# List running container
+podman ps
+
+# List all containers created
+podman ps -a
+
+# Pull an image
+podman pull vaultwarden/server:latest
+
+# List images in local storage
+podman images
+
+# Delete a container
+podman rm <container-name>

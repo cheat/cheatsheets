@@ -1,0 +1,69 @@
+---
+tags: [ security ]
+---
+
+## selinux standard
+
+# To get the status of selinux
+getenforce
+# or
+sestatus
+# or from the file
+cat /etc/selinux/config
+
+# To set the status to permissive
+setenforce 0
+
+# To get the context of files/processes/ports/users
+ls -Z
+ps -Z
+ss -Z
+id -Z
+
+
+## Booleans
+# To get all booleans
+getsebool -a
+
+# To set a boolean permanently
+setsebool foo_bar 1 -P
+
+# To get all changed booleans
+sudo cat /var/lib/selinux/targeted/active/booleans.local
+
+
+## selinux file context management
+# To set a context the complicated way
+sudo chcon -t foo_bar_t /foo/bar/baz.txt
+# the lazy way, this sets all files to the right context in the directory
+sudo restorecon -vR /foo/bar/
+
+# To create a rule with semanage for /foo and for the httpd server
+sudo semanage fcontext -a -t httpd_sys_content_t "/foo(/.*)?"
+# or use
+sudo semanage -a -e /var/www/html /foo
+# and run restorecon
+sudo restorecon -vR /foo
+
+
+## selinux Troubleshoot
+# First install setroubleshoot and setroubleshoot-server
+sudo dnf install setroubleshoot
+# Next, check the journalctl
+sudo journalctl -t setroubleshoot
+
+
+## selinux modules
+# To create a module, you need to set selinux in permissive mode and test the application with all its features
+sudo setenforce 0
+# then check the journalctl log
+sudo journalctl
+# and search for sealert, then run sealert
+sudo sealert -l <uuid>
+# and run the following commands from the output
+grep foobar /var/log/audit/audit.log | audit2allow -M mypol
+sudo semodule -i mypol.pp
+
+
+## Graphical tools
+sudo dnf install policycoreutils-gui
