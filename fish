@@ -39,8 +39,8 @@ test $user_age -gt 0
 # Export specific variables:
 set --export <variable_name1 variable_name2 ...>
 
-# Removing a variable:
-set --erase <variable_name>
+# Removing specific variables:
+set --erase <variable_name1 variable_name2 ...>
 
 # Checking whether variable is defined:
 if set --query <variable_name>
