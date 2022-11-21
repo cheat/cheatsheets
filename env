@@ -1,0 +1,17 @@
+---
+syntax: bash
+---
+# To list the exported variables of the current environment along with their values:
+env
+
+# To set an environment variable and run a command:
+env <variable>=<value> <command>
+
+# To set multiple environment variables and run a command:
+env <variable_1>=<value> <variable_2>=<value> <command>
+
+# To remove an environment variable and run a command:
+env -u <variable> <command>
+
+# To clear the environment and run a command:
+env -i <command>

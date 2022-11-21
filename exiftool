@@ -1,0 +1,2 @@
+# Delete all metadata in a file
+exiftool -all= <file_name>

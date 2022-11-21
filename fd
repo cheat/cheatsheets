@@ -1,0 +1,17 @@
+# Simple search:
+fd <search query>
+
+# Specifying the root directory for the search:
+fd <search query> <directory>
+
+# Searching for a particular file extension:
+fd -e <file extension> <search query>
+
+# Searching for a particular file name:
+fd -g <file name>.<file extension>
+
+# Search for hidden and ignored files:
+fd -H <search query>
+
+# Excluding specific files or directories:
+fd -E <file or directories which should be excluded> <search query>

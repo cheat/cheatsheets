@@ -1,0 +1,20 @@
+---
+syntax: bash
+---
+# To output the byte and line number of the first difference found between two files:
+cmp <path/to/file_1> <path/to/file_2>
+
+# To output the first differing char between two files:
+cmp -b <path/to/file_1> <path/to/file_2>
+
+# To output every difference between two files:
+cmp -b --verbose <path/to/file_1> <path/to/file_2>
+
+# To compare two files starting after the first 100 bytes:
+cmp -i 100 <path/to/file_1> <path/to/file_2>
+
+# To limit to 200 the number of bytes to compare:
+cmp -n 200 <path/to/file_1> <path/to/file_2>
+
+# To compare two files with no output - only exit status:
+cmp --quiet <path/to/file_1> <path/to/file_2>

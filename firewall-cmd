@@ -1,0 +1,5 @@
+# Reload firewall
+firewall-cmd --reload
+
+# List rules
+firewall-cmd --list-all
