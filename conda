@@ -22,7 +22,7 @@ conda activate <environment_name>
 # To deactivate a virtual environment
 conda deactivate
 
-# To remove and environment
+# To remove an environment
 conda env remove --name <environment_name>
 # or
 conda env remove --prefix <path/to/env>
