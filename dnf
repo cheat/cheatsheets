@@ -10,6 +10,9 @@ dnf search "<phrase>"
 # Find which package provides a specific executable:
 dnf provides "<executable>"
 
+# List installed packages
+dnf list installed
+
 # The following are available after installing "dnf-plugins-core"
 
 # Download a specific package:
