@@ -1,0 +1,38 @@
+---
+tags: [ container ]
+---
+# Create a distrobox using the Ubuntu Linux image:
+distrobox-create <container_name></container_name> --image <ubuntu:latest>
+
+# List all distrobox containers with verbose information:
+distrobox-list --verbose
+
+# Enter a distrobox:
+distrobox-enter <container-name>
+
+# Execute command on the host, while inside of a container:
+distrobox-host-exec <command>
+
+# Export an app (atom) from the container to the host (will show up in your host system's application list):
+distrobox-export --app <atom> --extra-flags "--foreground"
+
+# Export a binary (ranger) from the container to the host:
+distrobox-export --bin </usr/bin/ranger> --export-path <$HOME/.local/bin>
+
+# Export a service (syncthing) from container to the host (`--sudo` will run the service as root inside the container):
+distrobox-export --service <syncthing> --extra-flags "--allow-newer-config" --sudo
+
+# Unexport/delete an exported app (atom):
+distrobox-export --app <atom> --delete
+
+# Upgrade a container using the container's package manager:
+distrobox-upgrade <container_name>
+
+# Clone a distrobox:
+distrobox-create --clone <container_name> <cloned_container_name>
+
+# Stop a distrobox container:
+distrobox-stop <container-name>
+
+# Remove a distrobox forcefully (to remove normally, don't include `--force`):
+distrobox-rm <container_name> --force
