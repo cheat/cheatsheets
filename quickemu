@@ -1,18 +1,18 @@
 ---
 tags: [ virtualization ]
 ---
-# To run a vm
-quickemu (--vm <path-to-vm.conf>)
+# Run a specific vm:
+quickemu --vm <path/to/vm.conf>
 
-# To run a vm with a spice display
-quickemu (--vm <path-to-vm.conf>) --display spice
+# Run a specific vm with a spice display:
+quickemu --vm <path/to/vm.conf> --display spice
 
-# To run a vm with a braille terminal display - Version > 3.11 and working brltty required
-quickemu (--vm <path-to-vm.conf> --accessible braille --display sdl)
-  #   or
-quickemu (--vm <path-to-vm.conf> --acc brl --display sdl)
+# Run a specific vm with a braille terminal display - Version > 3.11 and working brltty required:
+quickemu --vm <path/to/vm.conf> --accessible braille --display sdl
+# or:
+quickemu --vm <path/to/vm.conf> --acc brl --display sdl
 
-## All the optional parameters
+## All the optional parameters:
 
 
   --braille                         : Enable braille support. Requires SDL.
