@@ -118,6 +118,7 @@ N                         repeat search in opposite direction
 :#,#s/old/new/g           replace all matches ('g' flag) of 'old' with 'new' in every line between line nr '#' and line nr '#'
 :%s/old/new/g             replace all 'old' with 'new' throughout file ('%' flag)
 :%s/old/new/gc            replace all 'old' with 'new' throughout file with manual confirmations ('c' flag) 
+:s/^/#/					  insert '#' at the beginning of the line (eg. to comment out)
 
 # VIM Visual Mode
 v                start visual mode, mark lines, then perform an operation (such as d-delete)
