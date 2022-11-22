@@ -3,4 +3,3 @@ ls | cpio --create > <path/to/archive.cpio>
 
 # Extract a specific cpio archive:
 cpio --extract --make-directories < <path/to/archive.cpio>
-

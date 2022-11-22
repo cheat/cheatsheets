@@ -4,7 +4,7 @@ ls <dir>
 # To display everything in <dir>, including hidden files:
 ls -a <dir>
 
-# To display all files, along with the size (with unit suffixes) and timestamp
+# To display all files, along with the size (with unit suffixes) and timestamp:
 ls -lh <dir>
 
 # To display files, sorted by size:
@@ -29,6 +29,5 @@ ls -1
 # see also `cheat chmod` for `/bin/chmod` options for ACLs
 /bin/ls -le
 
-# To show all the subtree files (Recursive Mode)
+# To show all the subtree files (Recursive Mode):
 ls -R
-
