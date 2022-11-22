@@ -35,3 +35,6 @@ https://crontab.guru/
 
 # be careful with % sign (percent), it has special meaning, see https://crontab.guru/ for explanation
 % signs must be escaped such as \%
+
+# view log
+journalctl | grep CRON
