@@ -1,0 +1,14 @@
+---
+tags: [ virtualization ]
+---
+# Download a release image and prepare a Qemu vm config:
+quickget <OS> <Release> [<Edition>|<Type>|<DM Option>|<Windows Language>]
+
+# Print list of supported Releases and Editions for <OS>:
+quickget <OS>
+
+# Download an OS Release image and prepare a Qemu vm config - if Edition is not specified the default will be used:
+quickget <OS> <Release>
+
+# Print a csv list of all supported OS variants
+quickget list
