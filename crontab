@@ -38,4 +38,3 @@ https://crontab.guru/
 
 # view log
 journalctl | grep CRON
-
