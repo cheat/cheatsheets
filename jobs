@@ -1,0 +1,11 @@
+# To see the background running commands:
+jobs
+
+# To see the background running commands with PID:
+jobs -l
+
+# To see the running jobs only:
+jobs -r
+
+# To see stopped jobs only:
+jobs -s

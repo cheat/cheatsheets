@@ -78,3 +78,6 @@ find -L /usr/ports/packages -type l
 # To find and run multiple shell commands (without multiple execs):
 # See: https://stackoverflow.com/questions/5119946/find-exec-with-multiple-commands
 find . -type f -exec sh -c "echo '{}'; cat '{}';" \;
+
+# To find files that are newer than a file:
+find <path> -newer <target-file>

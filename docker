@@ -7,6 +7,9 @@ docker build -t <image-tag-name> <path-of-Dockerfile>
 # To start a container with an interactive shell:
 docker run -ti <image-name> /bin/bash
 
+# To run a docker container in the background:
+docker run -d <image-name>
+
 # To "shell" into a running container (docker-1.3+):
 docker exec -ti <container-name> bash
 
@@ -29,10 +32,16 @@ docker ps
 docker ps -a
 
 # To remove all stopped containers:
+docker container prune
+
+# To remove all stopped containers:
 docker rm $(docker ps -qa)
 
 # To list all images:
 docker images
+
+# To only see all images id:
+docker image ls -q
 
 # To remove all untagged images:
 docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
@@ -46,7 +55,7 @@ docker save -o <archive-name>.tar <image-name>
 # To restore image from a saved tar archive:
 docker load -i <archive-name>.tar
 
-# To remove an image image:
+# To remove an image:
 docker image rm <image-name-or-id>
 
 # To tag an image:
@@ -69,3 +78,27 @@ docker network connect "<network_id|name>" "<container_id|name>"
 
 # Disconnect a specific container from network:
 docker network disconnect "<network_id|name>" "<container_id|name>"
+
+# To see the logs of a background or stopped container:
+docker logs <container-id>
+
+# To publish a port of container on localhost:
+docker run -p <localhost-port>:<container-port> <image-name>
+
+# To create a docker volume:
+docker volume create <volume-name>
+
+# To see information of a docker volume:
+docker volume inspect <volume-name>
+
+# To use a volume in the container:
+docker run -v <volume-name>:<folder-path-in-container> <image>
+
+# To link current folder between host and container for development:
+docker run <image-name> -v $(pwd):<folder-path-in-container> <image>
+
+# To copy a file from the running container to host mechine:
+docker cp <container-id>:<path/to/file> <host/copy/path>
+
+# To copy a file from host mechine to the running container:
+docker cp <host/copy/path> <container-id>:<path/to/file>

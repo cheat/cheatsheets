@@ -1,0 +1,9 @@
+# To change a file's modification time:
+touch -d <time> <file>
+touch -d 12am <file>
+touch -d "yesterday 6am" <file>
+touch -d "2 days ago 10:00" <file>
+touch -d "tomorrow 04:00" <file>
+
+# To put the timestamp of a file on another:
+touch -r <refrence-file> <target-file>

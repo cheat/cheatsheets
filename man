@@ -6,3 +6,6 @@ man 7 ascii
 
 # To see config:
 cat /private/etc/man.conf
+
+# To check the existence of a keyword in all of man pages:
+man -k <keyword>

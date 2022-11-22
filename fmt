@@ -1,0 +1,2 @@
+# To format lines, 50 words in each line:
+cat <file> | fmt -w 50

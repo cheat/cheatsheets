@@ -31,10 +31,13 @@ tar -cjvf /path/to/foo.tar.bz2 /path/to/foo/
 # To list the content of an .tar.bz2 archive:
 tar -tjvf /path/to/foo.tar.bz2
 
-# To create a .tgz archive and exclude all jpg,gif,... from the tgz
+# To create a .tgz archive and exclude all jpg,gif,... from the tgz:
 tar -czvf /path/to/foo.tgz --exclude=\*.{jpg,gif,png,wmv,flv,tar.gz,zip} /path/to/foo/
 
 # To use parallel (multi-threaded) implementation of compression algorithms:
 tar -z ... -> tar -Ipigz ...
 tar -j ... -> tar -Ipbzip2 ...
 tar -J ... -> tar -Ipixz ...
+
+# To append a new file to an old tar archive:
+tar -rf <archive.tar> <new-file-to-append>
