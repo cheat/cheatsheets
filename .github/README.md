@@ -1,5 +1,4 @@
-cheatsheets
-===========
+# cheatsheets #
 This repository contains community-sourced cheatsheets to be used with
 [cheat][] and similar applications.
 
