@@ -32,6 +32,7 @@ To take a long story short here are our guidelines for cheatsheets:
 - Cheatsheets should end with a newline, but not a blank line.
 - Code blocks should be separated by a single blank line.
 - The comment line should end with a colon: `# To foo the bar:`, rather than `# To foo the bar`.
+  Note for users coming from `TlDr` project: it's preferred to use `To` at the beggining of the sentence.
 - Text should be reduced near to the minimum necessary to do the job. Avoid commentary and context where possible.
 - Where possible, cheatsheets should be consistent both internally, and with other sheets.
 - Excluding cases where it might cause confusion, commands should generally conform to [docopt][] syntax.
