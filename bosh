@@ -3,3 +3,6 @@ bosh deps --column=name
 
 # To list a BOSH deployment's VMs, showing vital resource usage
 bosh -d <deployment> vms --vitals
+
+# To SSH into a BOSH deployment VM
+bosh -d <deployment> ssh <instance-type>/<guid>
