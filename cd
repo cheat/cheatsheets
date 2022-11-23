@@ -10,7 +10,7 @@ cd ..
 # Go to the previously chosen directory:
 cd -
 
-# Go to a physical dir instead of default -L:
+# Go to a [P]hysical dir instead of default -L:
 cd -P "$path_to_directory"
 
 # Some people alias cd="cd -P" and pwd="pwd -P"
