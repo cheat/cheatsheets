@@ -1,0 +1,5 @@
+# To list all BOSH deployments by name
+bosh deps --column=name
+
+# To list a BOSH deployment's VMs, showing vital resource usage
+bosh -d <deployment> vms --vitals
