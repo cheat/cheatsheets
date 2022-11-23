@@ -21,10 +21,19 @@ git add --all
 git commit -m <message>
 ```
 
-As a guideline, it is preferred to use [docopt][] syntax when specifying
-parameter placeholders. In edge-cases where that syntax may cause confusion, it
-is permissible to use placeholder values (`foo.txt`, `example.com`, etc.) as
-necessary.
+To take a long story short here are our guidelines for cheatsheets:
+
+- If the cheatsheet contains frontmatter, it must be valid.
+- Cheatsheets should generally be scoped to a single CLI command.
+  It's not always possible. For instance pages describing shell syntax often can't avoid describing
+  multiple CLI commands as almost everything in traditional shells is a command.
+- Cheatsheets should end with a newline, but not a blank line.
+- Code blocks should be separated by a single blank line.
+- The comment line should end with a colon: `# To foo the bar:`, rather than `# To foo the bar`.
+- Text should be reduced near to the minimum necessary to do the job. Avoid commentary and context where possible.
+- Where possible, cheatsheets should be consistent both internally, and with other sheets.
+- Excluding cases where it might cause confusion, commands should generally conform to [docopt][] syntax.
+- Instead of placeholders use variable names like `caja "$path_to_directory"`.
 
 ### License ###
 Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
