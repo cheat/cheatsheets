@@ -1,5 +1,5 @@
 # Go to the given directory:
-cd <path/to/directory>
+cd "<path/to/directory>"
 
 # Go to home directory of current user:
 cd
@@ -11,7 +11,7 @@ cd ..
 cd -
 
 # Go to a [P]hysical dir instead of default `-L`:
-cd -P <path/to/directory>
+cd -P "<path/to/directory>"
 
 # Some people `alias cd="cd -P"` and `pwd="pwd -P"`
 # So that `ls ..` and `cd ..; ls .` yield the same thing.
