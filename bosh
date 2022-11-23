@@ -17,3 +17,10 @@ bosh -d <deployment> errands
 # To run a BOSH deployment errand
 bosh -d <deployment> run-errand <errand-name>
 bosh -d <deployment> run-errand <errand-name> --instance <instance-type>/<index>
+
+# To list a BOSH deployment's tasks
+bosh -d <deployment> tasks
+bosh -d <deployment> tasks --recent
+
+# To show a BOSH deployment's task status and start tracking its output
+bosh -d <deployment> task <id>
