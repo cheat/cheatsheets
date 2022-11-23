@@ -1,3 +1,6 @@
+---
+tags: [ bosh, cloud foundry ]
+---
 # To list all BOSH deployments by name
 bosh deps --column=name
 
@@ -6,3 +9,11 @@ bosh -d <deployment> vms --vitals
 
 # To SSH into a BOSH deployment VM
 bosh -d <deployment> ssh <instance-type>/<guid>
+bosh -d <deployment> ssh <instance-type>/<index>
+
+# To list a BOSH deployment's errands
+bosh -d <deployment> errands
+
+# To run a BOSH deployment errand
+bosh -d <deployment> run-errand <errand-name>
+bosh -d <deployment> run-errand <errand-name> --instance <instance-type>/<index>
