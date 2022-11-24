@@ -35,5 +35,5 @@ apt depends <package>...
 # To remove packages and delete their config files:
 apt purge <package>...
 
-# To list all packages installed
+# To list all packages installed:
 apt list --installed
