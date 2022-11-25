@@ -1,6 +1,11 @@
+---
+syntax: bash
+tags: [ file manager ]
+---
 # Ranger Cheatsheet
 # General
-ranger	Start Ranger
+ranger		Start Ranger
+
 Q		Quit Ranger
 R		Reload current directory
 ?		Ranger Manpages / Shortcuts
@@ -19,12 +24,12 @@ L		History Forward
 ~		Switch the view
 
 # File Operations
-<Enter>	Open
-r		open file with
+<Enter>		Open current file 
+r		open current file with
 z		toggle settings
 o		change sort order
-zh		view hidden files
-<backspace>	set view hidden files
+zh		toggle show_hidden_files
+<backspace>	toggle show_hidden_files 
 cw		rename current file
 yy		yank / copy
 dd		cut
