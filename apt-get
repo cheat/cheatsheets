@@ -17,7 +17,7 @@ apt-get update && apt-get dist-upgrade
 # To install a new package(s):
 apt-get install <package>...
 
-# To download a package without installing it. (The package will be downloaded in your current working dir)
+# To download a package into the current directory without installing it:
 apt-get download <package>
 
 # To change cache dir and archive dir (where .deb are stored):
