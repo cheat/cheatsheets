@@ -1,4 +1,4 @@
-# To schedule a one time task
+# To schedule a one time task:
 at <time>
 <command 0>...
 Ctrl-d
@@ -9,8 +9,8 @@ HH:MM
 now + N <minutes | hours | days | weeks>
 MM/DD/YY
 
-# To list pending jobs
+# To list pending jobs:
 atq
 
-# To remove a job (use id from atq)
+# To remove a job (use id from atq):
 atrm <id>
