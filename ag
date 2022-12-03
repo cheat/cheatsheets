@@ -1,5 +1,5 @@
 # To exclude a directory from a search:
-ag <phrase> --ignore-dir=<dir>
+ag <phrase> --ignore-dir="<path/to/directory>"
 
 # To exclude a file from a search:
 ag <phrase> --ignore="<path/to/file>"

@@ -1,8 +1,8 @@
 # To display a recursive directory tree:
 tree
 
-# To make tree output contents from <dir>:
-tree <dir>
+# To make tree output contents from "<path/to/directory>":
+tree "<path/to/directory>"
 
 # To make tree omit any empty directories from the output:
 tree --prune

@@ -7,7 +7,7 @@ patch -R "<path/to/file>" < <patch-file>
 # To patch all files in a directory, adding any missing new files:
 # -p strips leading slashes
 $ cd dir
-$ patch -p1 -i <dir> <patch-file>
+$ patch -p1 -i "<path/to/directory>" <patch-file>
 
 # To patch files in a directory, with one level (/) offset:
-patch -p1 -r <dir> < <patch-file>
+patch -p1 -r "<path/to/directory>" < <patch-file>

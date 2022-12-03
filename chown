@@ -11,7 +11,7 @@ chown <user>: "<path/to/file>"
 chown :<group> "<path/to/file>"
 
 # Change a directory's owner recursively:
-chown -R <user> <directory>
+chown -R <user> "<path/to/directory>"
 
 # Change ownership to match another file:
 chown --reference=<reference-file> "<path/to/file>"

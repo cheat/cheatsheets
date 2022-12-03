@@ -13,7 +13,7 @@ setfacl -m u::rwx,g:groupname:rX,o::- "<path/to/file>"
 getfacl file-A | setfacl -M - file-B
 
 # Apply ACL recursivelly to directory
-setfacl -R -m u:username:rX <directory>
+setfacl -R -m u:username:rX "<path/to/directory>"
 
 # Delete ACL
 setfacl -x u:username,g:groupname "<path/to/file>"
@@ -22,8 +22,8 @@ setfacl -x u:username,g:groupname "<path/to/file>"
 setfacl -b "<path/to/file>"
 
 # Same operations works for default ACLs
-setfacl -m d:u:username:rx <directory>
-setfacl -x d:u:username <directory>
+setfacl -m d:u:username:rx "<path/to/directory>"
+setfacl -x d:u:username "<path/to/directory>"
 
 # Delete only default ACLs
-setfacl -k <directory>
+setfacl -k "<path/to/directory>"

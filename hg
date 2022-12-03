@@ -7,8 +7,8 @@ hg clone
 # To add files to hg tracker:
 hg add "<path/to/file>"
 
-# To add all files in <dir> to hg tracker:
-hg add <dir>
+# To add all files in "<path/to/directory>" to hg tracker:
+hg add "<path/to/directory>"
 
 # To create a commit with all tracked changes and a message:
 hg commit -m <message>

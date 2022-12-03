@@ -2,7 +2,7 @@
 tags: [ packaging ]
 ---
 # To create a Slackware package from a structured directory and sub-tree:
-cd <dir>
+cd "<path/to/directory>"
 su - c 'makepkg --linkadd y --chown n $foo-1.0.3-x86_64-1_tag.tgz'
 
 # To install a Slackware package:

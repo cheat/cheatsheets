@@ -7,8 +7,8 @@ wget "<url>"...
 # To download "<url>" and change its name:
 wget "<url>" -O <outfile>
 
-# To download "<url>" into <dir>:
-wget -P <dir> "<url>"
+# To download "<url>" into "<path/to/directory>":
+wget -P "<path/to/directory>" "<url>"
 
 # To continue an aborted downloaded:
 wget -c "<url>"

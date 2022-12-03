@@ -2,7 +2,7 @@
 fd <search query>
 
 # Specifying the root directory for the search:
-fd <search query> <directory>
+fd <search query> "<path/to/directory>"
 
 # Searching for a particular file extension:
 fd -e <file extension> <search query>

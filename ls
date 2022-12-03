@@ -1,20 +1,20 @@
-# To display everything in <dir>, excluding hidden files:
-ls <dir>
+# To display everything in "<path/to/directory>", excluding hidden files:
+ls "<path/to/directory>"
 
-# To display everything in <dir>, including hidden files:
-ls -a <dir>
+# To display everything in "<path/to/directory>", including hidden files:
+ls -a "<path/to/directory>"
 
 # To display all files, along with the size (with unit suffixes) and timestamp:
-ls -lh <dir>
+ls -lh "<path/to/directory>"
 
 # To display files, sorted by size:
-ls -S <dir>
+ls -S "<path/to/directory>"
 
 # To display directories only:
-ls -d */ <dir>
+ls -d */ "<path/to/directory>"
 
 # To display directories only, include hidden:
-ls -d .*/ */ <dir>
+ls -d .*/ */ "<path/to/directory>"
 
 # To display all files sorted by changed date, most recent first:
 ls -ltc 

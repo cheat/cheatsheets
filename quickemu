@@ -31,7 +31,7 @@ quickemu --vm <path/to/vm.conf> --acc brl --display sdl
   --viewer <viewer>                 : Choose an alternative viewer. @Options: 'spicy' (default), 'remote-viewer', 'none'
   --ssh-port <port>                 : Set ssh-port manually
   --spice-port <port>               : Set spice-port manually
-  --public-dir <path>               : expose share directory. @Options: '' (default: xdg-user-dir PUBLICSHARE), '<directory>', 'none'
+  --public-dir <path>               : expose share directory. @Options: '' (default: xdg-user-dir PUBLICSHARE), '"<path/to/directory>"', 'none'
   --monitor <type>                  : Set monitor connection type. @Options: 'socket' (default), 'telnet', 'none'
   --monitor-telnet-host <ip/host>   : Set telnet host for monitor. (default: 'localhost')
   --monitor-telnet-port <port>      : Set telnet port for monitor. (default: '4440')

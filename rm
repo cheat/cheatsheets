@@ -1,8 +1,8 @@
-# To remove all files and subdirs in <dir>:
-rm -rf <dir>
+# To remove all files and subdirs in "<path/to/directory>":
+rm -rf "<path/to/directory>"
 
 # To ignore non-existent files:
-rm -f <dir>
+rm -f "<path/to/directory>"
 
 # To remove a file with this inode:
 find /tmp/ -inum 6666 -exec rm -i '{}' \;
