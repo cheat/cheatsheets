@@ -9,7 +9,7 @@ b, break <function>
 
 # To set a (conditional) breakpoint at a general location:
 b, break <loc> [if <condition>]
-  with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
+  with <loc> as <function>|"<path/to/file>":<line>|<line>|*<address>|-offset|+offset
 
 # To set a watchpoint, i.e., stop when expression changes its value:
 watch <expr>
@@ -21,7 +21,7 @@ info breakpoints, info watchpoints
 clear, delete
 delete <num>
 clear <loc>
-  with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
+  with <loc> as <function>|"<path/to/file>":<line>|<line>|*<address>|-offset|+offset
 
 # To disable a breakpoint:
 dis, disable <num>
@@ -47,7 +47,7 @@ ni, nexti
 
 # To run until given location is reached
 advance <loc>
-  with <loc> as <function>|<file>:<line>|<line>|*<address>|-offset|+offset
+  with <loc> as <function>|"<path/to/file>":<line>|<line>|*<address>|-offset|+offset
 
 # To run until function ends, i.e., jump out of a function:
 fin, finish

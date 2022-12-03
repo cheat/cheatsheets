@@ -16,7 +16,7 @@ dnf provides <executable>
 dnf download <package>
 
 # To install the build dependencies for a SRPM or from a .spec file:
-dnf builddep <file>
+dnf builddep "<path/to/file>"
 
 # List installed packages
 dnf list installed

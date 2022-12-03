@@ -1,8 +1,8 @@
 # To patch one file:
-patch <file> < <patch-file>
+patch "<path/to/file>" < <patch-file>
 
 # To reverse a patch:
-patch -R <file> < <patch-file>
+patch -R "<path/to/file>" < <patch-file>
 
 # To patch all files in a directory, adding any missing new files:
 # -p strips leading slashes

@@ -14,7 +14,7 @@ rpm -e <package>
 rpm -e --nodeps <package>
 
 # To find what package installs a file:
-rpm -qf <file>
+rpm -qf "<path/to/file>"
 
 # To find what files are installed by a package:
 rpm -ql <package>
@@ -22,7 +22,7 @@ rpm -qpl <rpm>
 
 # To find what packages require a package or file:
 rpm -q --whatrequires <package>
-rpm -q --whatrequires <file>
+rpm -q --whatrequires "<path/to/file>"
 
 # To list all installed packages:
 rpm -qa

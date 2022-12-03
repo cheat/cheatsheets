@@ -1,8 +1,8 @@
-# To show the first 10 lines of <file>:
-head <file>
+# To show the first 10 lines of "<path/to/file>":
+head "<path/to/file>"
 
-# To show the first <number> lines of <file>:
-head -n <number> <file>
+# To show the first <number> lines of "<path/to/file>":
+head -n <number> "<path/to/file>"
 
-# To show the first <number> bytes of <file>:
-head -c <number> <file>
+# To show the first <number> bytes of "<path/to/file>":
+head -c <number> "<path/to/file>"

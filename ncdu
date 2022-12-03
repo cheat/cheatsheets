@@ -1,11 +1,11 @@
-# To save results to <file>:
-ncdu -o <file>
+# To save results to "<path/to/file>":
+ncdu -o "<path/to/file>"
 
-# To read from <file>:
-ncdu -f <file>
+# To read from "<path/to/file>":
+ncdu -f "<path/to/file>"
 
 # To save results to a compressed file:
-ncdu -o- | gzip > <file>
+ncdu -o- | gzip > "<path/to/file>"
 
 # To read from a compressed file:
-zcat <file> | ncdu -f-
+zcat "<path/to/file>" | ncdu -f-

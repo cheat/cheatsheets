@@ -1,2 +1,2 @@
-# To show <file> beginning at line number 5:
-more +5 <file>
+# To show "<path/to/file>" beginning at line number 5:
+more +5 "<path/to/file>"

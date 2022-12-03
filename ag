@@ -2,7 +2,7 @@
 ag <phrase> --ignore-dir=<dir>
 
 # To exclude a file from a search:
-ag <phrase> --ignore=<file>
+ag <phrase> --ignore="<path/to/file>"
 
 # To force colorization:
 ag <phrase> --color | less -R

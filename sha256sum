@@ -1,8 +1,8 @@
 ---
 tags: [ cryptography, hash, checksum, verification ]
 ---
-# To compute hash (checksum) of <file>:
-sha256sum <file>
+# To compute hash (checksum) of "<path/to/file>":
+sha256sum "<path/to/file>"
 
 # To compute hash (checksum) from input text:
 # Enter text in keyboard and finish by ctrl-D at beginning of line

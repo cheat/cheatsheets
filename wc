@@ -1,14 +1,14 @@
 # To count the number of words (file or STDIN):
-wc -w <file>
-cat <file> | wc -w
+wc -w "<path/to/file>"
+cat "<path/to/file>" | wc -w
 
 # To count the number of lines (file or STDIN):
-wc -l <file>
-cat <file> | wc -l
+wc -l "<path/to/file>"
+cat "<path/to/file>" | wc -l
 
 # To count the number of bytes (file or STDIN):
-wc -c <file>
-cat <file> | wc -c
+wc -c "<path/to/file>"
+cat "<path/to/file>" | wc -c
 
 # To count files and directories at a given location:
 ls | wc -l

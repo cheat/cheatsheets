@@ -1,17 +1,17 @@
 # To sort a file:
-sort <file>
+sort "<path/to/file>"
 
 # To sort a file by keeping only unique:
-sort -u <file>
+sort -u "<path/to/file>"
 
 # To sort a file and reverse the result:
-sort -r <file>
+sort -r "<path/to/file>"
 
 # To sort a file randomly:
-sort -R <file>
+sort -R "<path/to/file>"
 
 # To sort a file and store the output in another file:
 sort <inputFile> -o <outputFile>
 
 # Sort by default uses /var/tmp to store temp files but size of /var/tmp directory is limited. In order to sort huge use a directory with adequate size:
-sort -T <tempDirectory> <file>
+sort -T <tempDirectory> "<path/to/file>"

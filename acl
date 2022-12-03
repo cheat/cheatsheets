@@ -1,13 +1,13 @@
 # Get ACL
-getfacl <file>
+getfacl "<path/to/file>"
 
 # Add or modify ACL on file
-setfacl -m u:username:rX <file>
-setfacl -m g:groupname:rw <file>
-setfacl -m o::- <file>
+setfacl -m u:username:rX "<path/to/file>"
+setfacl -m g:groupname:rw "<path/to/file>"
+setfacl -m o::- "<path/to/file>"
 
 # or provide all permissions at once
-setfacl -m u::rwx,g:groupname:rX,o::- <file>
+setfacl -m u::rwx,g:groupname:rX,o::- "<path/to/file>"
 
 # Copy ACL from file-A to file-B
 getfacl file-A | setfacl -M - file-B
@@ -16,10 +16,10 @@ getfacl file-A | setfacl -M - file-B
 setfacl -R -m u:username:rX <directory>
 
 # Delete ACL
-setfacl -x u:username,g:groupname <file>
+setfacl -x u:username,g:groupname "<path/to/file>"
 
 # Delete all ACL on file, including default
-setfacl -b <file>
+setfacl -b "<path/to/file>"
 
 # Same operations works for default ACLs
 setfacl -m d:u:username:rx <directory>

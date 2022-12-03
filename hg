@@ -5,7 +5,7 @@ tags: [ vcs ]
 hg clone
 
 # To add files to hg tracker:
-hg add <file>
+hg add "<path/to/file>"
 
 # To add all files in <dir> to hg tracker:
 hg add <dir>

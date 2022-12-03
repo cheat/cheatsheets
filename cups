@@ -2,7 +2,7 @@
 http://localhost:631 (in web browser)
 
 # To print a file:
-lp <file>
+lp "<path/to/file>"
 
 # To display the print queue:
 lpq

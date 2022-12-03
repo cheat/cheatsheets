@@ -20,7 +20,7 @@ pacman -Rcs <package>...
 pacman -Si <package>...
 
 # To install a package from builded package file (.tar.xz):
-pacman -U <file>
+pacman -U "<path/to/file>"
 
 # To list the commands provided by an installed package:
 pacman -Ql <package>... | sed -n -e 's/.*\/bin\///p' | tail -n +2

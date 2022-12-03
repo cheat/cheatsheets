@@ -1,18 +1,18 @@
 # To show all lines without duplication:
 # (`sort -u` and `uniq` have the same effect.)
-sort <file> | uniq
+sort "<path/to/file>" | uniq
 
 # To show not duplicated lines:
-sort <file> | uniq -u
+sort "<path/to/file>" | uniq -u
 
 # To show duplicated lines only:
-sort <file> | uniq -d
+sort "<path/to/file>" | uniq -d
 
 # To count all lines:
-sort <file> | uniq -c
+sort "<path/to/file>" | uniq -c
 
 # To count not duplicated lines:
-sort <file> | uniq -uc
+sort "<path/to/file>" | uniq -uc
 
 # To count only duplicated lines:
-sort <file> | uniq -dc
+sort "<path/to/file>" | uniq -dc

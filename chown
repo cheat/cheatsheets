@@ -1,17 +1,17 @@
 # Change a file's owner:
-chown <user> <file>
+chown <user> "<path/to/file>"
 
 # Change a file's owner and group:
-chown <user>:<group> <file>
+chown <user>:<group> "<path/to/file>"
 
 # Set user to match group value
-chown <user>: <file>
+chown <user>: "<path/to/file>"
 
 # Set group to match user value
-chown :<group> <file>
+chown :<group> "<path/to/file>"
 
 # Change a directory's owner recursively:
 chown -R <user> <directory>
 
 # Change ownership to match another file:
-chown --reference=<reference-file> <file>
+chown --reference=<reference-file> "<path/to/file>"

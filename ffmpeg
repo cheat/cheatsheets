@@ -1,5 +1,5 @@
 # To print file metadata:
-ffmpeg -i <file>
+ffmpeg -i "<path/to/file>"
 
 # To convert all m4a files to mp3
 for f in *.m4a; do ffmpeg -i "$f" -acodec libmp3lame -vn -b:a 320k "${f%.m4a}.mp3"; done

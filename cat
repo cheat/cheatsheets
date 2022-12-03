@@ -1,8 +1,8 @@
 # To display the contents of a file:
-cat <file>
+cat "<path/to/file>"
 
 # To display file contents with line numbers
-cat -n <file>
+cat -n "<path/to/file>"
 
 # To display file contents with line numbers (blank lines excluded)
-cat -b <file>
+cat -b "<path/to/file>"

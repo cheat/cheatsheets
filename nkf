@@ -1,26 +1,26 @@
 # To check the file's charactor code:
-nkf -g <file>
+nkf -g "<path/to/file>"
 
 # To convert charactor code to UTF-8:
-nkf -w --overwrite <file>
+nkf -w --overwrite "<path/to/file>"
 
 # To convert charactor code to EUC-JP:
-nkf -e --overwrite <file>
+nkf -e --overwrite "<path/to/file>"
 
 # To convert charactor code to Shift-JIS:
-nkf -s --overwrite <file>
+nkf -s --overwrite "<path/to/file>"
 
 # To convert charactor code to ISO-2022-JP:
-nkf -j --overwrite <file>
+nkf -j --overwrite "<path/to/file>"
 
 # To convert newline to LF:
-nkf -Lu --overwrite <file>
+nkf -Lu --overwrite "<path/to/file>"
 
 # To convert newline to CRLF:
-nkf -Lw --overwrite <file>
+nkf -Lw --overwrite "<path/to/file>"
 
 # To convert newline to CR:
-nkf -Lm --overwrite <file>
+nkf -Lm --overwrite "<path/to/file>"
 
 # To MIME encode:
 echo テスト | nkf -WwMQ
