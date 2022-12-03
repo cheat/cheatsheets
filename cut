@@ -1,2 +1,2 @@
-# To cut out the third field of text or stdoutput that is delimited by a #:
-cut -d# -f3
+# To cut out a third text field when fields are delimited by a `#`:
+cut (-d #|--delimiter #) (-f 3|--fields 3)
