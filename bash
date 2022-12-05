@@ -1,3 +1,20 @@
+# To substitute variable value:
+echo $<variable>
+
+# To substitute variable default value when it's unset or empty, otherwise use variable's value:
+echo $<variable:-default>
+
+# To assign variable default value when it's unset or empty:
+: $<variable:=default>
+
+# To substitute variable with the shortest/longest pattern match removed from the beginning:
+echo $<variable#pattern>
+echo $<variable##pattern>
+
+# To substitute variable with the shortest/longest pattern match removed from the end:
+echo $<variable%pattern>
+echo $<variable%%pattern>
+
 # To implement a for loop:
 for file in *;
 do 
