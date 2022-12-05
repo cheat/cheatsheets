@@ -12,5 +12,9 @@ tags: [ patterns ]
 [<characters>] match any mentioned character
 [^<characters>] match any not mentioned character
 
+# We don't distinguish between single char patterns below and complex patterns:
+
 ^<pattern> match the beggining of a string
 <pattern>$ match the end of a string
+
+(<pattern1>|<pattern2>) match any of two patterns (`|` must be escaped in sed BRE)
