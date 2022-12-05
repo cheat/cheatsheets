@@ -25,3 +25,8 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 
 # To create a lockfile:
 ( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
+
+# To redirect block of text with variables being substituted and other expansions performed to some command:
+<command> << DELIMITER
+  <contents>
+DELIMITER
