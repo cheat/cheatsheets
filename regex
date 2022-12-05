@@ -1,0 +1,13 @@
+---
+tags: [ patterns ]
+---
+
+<char|pattern>? match 0..1 characters or patterns (`?` must be escaped in sed BRE)
+<char|pattern>* match 0..more characters or patterns
+<char|pattern>+ match 1..more characters or patterns (`+` must be escaped in sed BRE)
+
+<char|pattern>{<count>} match `count` characters or patterns (`{` and `}` must be escaped in sed BRE)
+<char|pattern>{<from..to>} match `from`..`to` characters or patterns (`{` and `}` must be escaped in sed BRE)
+
+^<pattern> match the beggining of a string
+<pattern>$ match the end of a string
