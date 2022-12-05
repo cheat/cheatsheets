@@ -9,5 +9,8 @@ tags: [ patterns ]
 <char|pattern>{<count>} match `count` characters or patterns (`{` and `}` must be escaped in sed BRE)
 <char|pattern>{<from..to>} match `from`..`to` characters or patterns (`{` and `}` must be escaped in sed BRE)
 
+[<characters>] match any mentioned character
+[^<characters>] match any not mentioned character
+
 ^<pattern> match the beggining of a string
 <pattern>$ match the end of a string
