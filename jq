@@ -1,5 +1,5 @@
 # To pretty print the json:
-jq "." < filename.json
+jq "." < <path/to/file.json>
 
 # To access the value at key "foo":
 jq '.foo'
