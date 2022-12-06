@@ -27,5 +27,5 @@ jq '.foo[] | {field_1,field_2}' < <path/to/file.json>
 # print selected fields as text instead of json:
 jq '.foo[] | {field_1,field_2} | join(" ")' < <path/to/file.json>
 
-# only print records where given field matches a value
+# only print records where given field matches a value:
 jq '.foo[] | select(.field_1 == "value_1")' < <path/to/file.json>
