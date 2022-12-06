@@ -7,18 +7,18 @@ jq '.foo'
 # To access first list item:
 jq '.[0]'
 
-# to slice and dice:
+# To slice and dice:
 jq '.[2:4]'
 jq '.[:3]'
 jq '.[-2:]'
 
-# to extract all keys from json:
+# To extract all keys from json:
 jq keys
 
-# to sort by a key:
+# To sort by a key:
 jq '.foo | sort_by(.bar)'
 
-# to count elements:
+# To count elements:
 jq '.foo | length'
 
 # print only selected fields:
