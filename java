@@ -26,7 +26,7 @@ java -Xms256m -Xmx2g -Xss1m -jar <path/to/file.jar>
 
 # To use the classpath variable:
 java -classpath <classpath> -jar <path/to/file.jar>
-java -classpath "my/example/path/one:my/example/path/two" -jar myfile.zip
+java -classpath <my/example/path/one:my/example/path/two> -jar myfile.zip
 # It overrides the CLASSPATH of Environment variable but only for that session. 
 # If you restart the application you need to again set the classpath variable.
 # You can use either: -classpath, --classpath or -cp.
