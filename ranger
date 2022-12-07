@@ -2,7 +2,11 @@
 syntax: bash
 tags: [ file manager ]
 ---
+
 # Ranger Cheatsheet
+# A VIM-inspired filemanager for the console
+# https://github.com/ranger/ranger
+
 # General
 ranger		Start Ranger
 
@@ -24,21 +28,26 @@ L		History Forward
 ~		Switch the view
 
 # File Operations
-<Enter>		Open current file 
-r		open current file with
-z		toggle settings
+<Enter>		Open file 
+r		open file with
+i		read file
+z		open settings
+zh		set show_hidden_files
+zp		set preview_files
+zz		console filter	:filter
+zd		set sort_directories_first
 o		change sort order
-zh		toggle show_hidden_files
 <backspace>	toggle show_hidden_files 
-cw		rename current file
+cw		rename file
 yy		yank / copy
 dd		cut
 pp		paste
-/		search for files :search
+/		search for files	:search
 n		next match
 N		prev match
 <space>		mark files 
 v		mark files all=True toggle=True
+I		rename file
 <delete>	Delete
 
 # Commands
