@@ -2,8 +2,8 @@
 syntax: bash
 ---
 
-# To Find all file name ending with .pdf and remove them
-find -name *.pdf | xargs rm -rf
+# Find all files whose names end with .pdf and remove them
+find -type f -name *.pdf | xargs rm -f
 
 # if file name contains spaces you should use this instead
 find -name *.pdf | xargs -I{} rm -rf '{}'
