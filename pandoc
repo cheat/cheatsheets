@@ -1,0 +1,5 @@
+# Convert HTML file to Markdown
+pandoc -f html -t markdown  -i <HTML input file> -o  <markdown output file>
+
+# Convert Markdown file to HTML
+pandoc -f markdown -t html -i <markdown input file>  -o <HTML output file>
