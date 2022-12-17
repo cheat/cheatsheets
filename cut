@@ -1,5 +1,5 @@
 # To cut out a third text field when fields are delimited by a `#`:
-cut (-d #|--delimiter #) (-f 3|--fields 3)
+cut -d # -f 3
 
 # To cut out a third up to fifth text fields delimited by a `#`:
-cut (-d #|--delimiter #) (-f 3-5|--fields 3-5)
+cut -d # -f 3-5
