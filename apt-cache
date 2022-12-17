@@ -11,9 +11,9 @@ apt-cache show <package>...
 apt-cache rdepends <package>
 
 # To display package versions, reverse dependencies and forward dependencies of
-# a package
+# a package:
 apt-cache showpkg <package>
 
 # To display package installation status and what version is available from
-# its repository
+# its repository:
 apt-cache policy <package>
