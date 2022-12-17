@@ -38,6 +38,8 @@ To take a long story short here are our guidelines for cheatsheets:
 - Excluding cases where it might cause confusion, commands should generally conform to [docopt][] syntax.
   It's better not write complex placeholders containing `<` or `>` inside them to demonstrate for instance how comparison
   operators work in `[[`. In such cases the best option is just omit placeholders.
+  - For path placeholders use `<in-file>`, `<out-file>`.
+  - Number placeholders with the following format: `<placeholder-1>` eg. `<in-file-1>`.
 
 ### License ###
 Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
