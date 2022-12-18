@@ -27,7 +27,7 @@ yum repolist
 
 # List packages matching <phrase>:
 yum list <phrase>
- 
+
 # To download the source RPM for a package:
 yumdownloader --source <package>
 

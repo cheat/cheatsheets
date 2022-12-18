@@ -25,12 +25,12 @@ ctrl+shift+,         - Move tab backward
 ctrl+shift+alt+t     - Set tab title
 
 # Fonts and clipboard
-ctrl+shift+c         - Copy to clipboard	    
-ctrl+shift+v         - Paste from clipboard	
-ctrl+shift+s         - Paste from selection	
-ctrl+shift+equal     - Increase font size	
-ctrl+shift+minus     - Decrease font size	
-ctrl+shift+backspace - Restore font size	    
+ctrl+shift+c         - Copy to clipboard
+ctrl+shift+v         - Paste from clipboard
+ctrl+shift+s         - Paste from selection
+ctrl+shift+equal     - Increase font size
+ctrl+shift+minus     - Decrease font size
+ctrl+shift+backspace - Restore font size
 
 # Windows
 ctrl+shift+enter     - New window
@@ -44,7 +44,7 @@ ctrl+shift+`         - Move window to top
 ctrl+shift+f7        - Visually focus window
 ctrl+shift+f8        - Visually swap window
 # Focus specific window
-ctrl+shift+1, ctrl+shift+2 … ctrl+shift+0 
+ctrl+shift+1, ctrl+shift+2 … ctrl+shift+0
 
 # Open/select
 ctrl+shift+e         - Open URL

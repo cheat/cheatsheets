@@ -7,7 +7,7 @@ conda env list
 # To initialise an environment
 conda create --name <environment_name>
 
-# To initialise an environment with python3.10 
+# To initialise an environment with python3.10
 conda create --name <environment_name> python=3.10
 
 # To install from a file

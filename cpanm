@@ -32,4 +32,3 @@ cpanm --mirror <mirror-url> <Some::Module>
 
 # use only the HTTPS mirror
 cpanm --from https://some.mirror.host/ <Some::Module>
-

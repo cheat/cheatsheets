@@ -129,4 +129,3 @@ cpdf -blacktext in.pdf -o out.pdf
 # Make sure all lines in in.pdf are at least 2 pts wide, writing to
 # out.pdf.
 cpdf -thinlines 2pt in.pdf -o out.pdf
-

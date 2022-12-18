@@ -36,7 +36,7 @@
   Run command in the scratch buffer               C-x C-e
 
 # Navigation ( backward / forward )
-  
+
   Character-wise                                  C-b , C-f
   Word-wise                                       M-b  , M-f
   Line-wise                                       C-p , C-n
