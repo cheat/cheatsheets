@@ -45,5 +45,5 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 
 # To redirect block of text with variables being substituted and other expansions performed to some command:
 <command> << DELIMITER
-  <contents>
+<contents>
 DELIMITER
