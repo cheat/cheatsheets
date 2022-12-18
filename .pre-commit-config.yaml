@@ -1,0 +1,20 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: cheat-header
+        name: Cheat header
+        description: Require files to have the cheat YAML front-matter header
+        entry: '^---\n(syntax:.*\n)?(tags:.*\n)?---$'
+        args: ['--multiline', '--negate']
+        language: pygrep
+        exclude: '^\..*'
