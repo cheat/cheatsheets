@@ -6,8 +6,8 @@ syntax: bash
 find -type f -name '*.pdf' | xargs rm -f
 
 # If file names contain special characters, you should use this instead.
-# Special characters include spaces, quotes, parenthesis, unicode, etc.
-find -type f -name *.pdf -print0  | xargs --null rm -f
+# Special characters include spaces, quotes, parenthesis, unicode, etc:
+find -type f -name '*.pdf' -print0  | xargs --null rm -f
 
 # Run 4 "rm" commands in parallel
 find -name "*.pdf" | xargs --max-procs=4 rm -f
