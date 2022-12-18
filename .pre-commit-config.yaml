@@ -9,3 +9,12 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: cheat-header
+        name: Cheat header
+        description: Require files to have the cheat YAML front-matter header
+        entry: '^---\n(syntax:.*\n)?(tags:.*\n)?---$'
+        args: [ '--multiline', '--negate' ]
+        language: pygrep
+        exclude: '^\..*'
