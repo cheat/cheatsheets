@@ -1,0 +1,9 @@
+---
+syntax: bash
+tags: [ credhub ]
+---
+# To set a CredHub credential, of type 'value', using the contents of a file:
+credhub set -n <credential-path> -t value -v "$(cat <file-path>)"
+
+# To export descendant CredHub credentials to a file in JSON format:
+credhub export -p <credential-path> -f <file-name>.json -j
