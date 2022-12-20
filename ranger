@@ -39,6 +39,7 @@ zd		set sort_directories_first
 o		change sort order
 <backspace>	toggle show_hidden_files 
 cw		rename file
+I		rename file
 yy		yank / copy
 dd		cut
 pp		paste
@@ -47,7 +48,6 @@ n		next match
 N		prev match
 <space>		mark files 
 v		mark files all=True toggle=True
-I		rename file
 <delete>	Delete
 
 # Commands
