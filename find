@@ -61,7 +61,6 @@ find . -type f -samefile MY_FILE_HERE 2>/dev/null
 find . -type f -exec chmod 644 {} \;
 
 # To find all files changed in last 2 days:
-find . -type f -ctime -48h
 find . -type f -ctime -2
 # Or created in last 2 days:
 find . -type f -Btime -2
