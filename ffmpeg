@@ -26,6 +26,9 @@ ffmpeg -i input_video.mp4 -acodec copy -vcodec copy -f mov output_video.mov
 # To convert mov to mp4
 ffmpeg -i input_video.mov -vcodec copy -acodec copy output_video.mp4
 
+# Change INPUT's FPS to 30 and save as OUTPUT (https://trac.ffmpeg.org/wiki/ChangingFrameRate)
+ffmpeg -i input_video.ext -filter:v fps=fps=30 output_video.ext
+
 # Listen to 10 seconds of audio from a video file
 #
 # -ss : start time
