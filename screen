@@ -12,3 +12,10 @@ screen -ls
 
 # To quit a session:
 screen -XS <session-name> quit
+
+# Scroll a current session using copy mode:
+Press Ctrl+A then press ESC, scroll using arrows up, down, repag and avpag buttons, then press ESC
+
+# Enable mousewheel scrolling over sessions:
+Add line "termcapinfo xterm* ti@:te@" (without quotes) to ~/.screenrc file.
+    
