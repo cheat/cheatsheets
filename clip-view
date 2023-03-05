@@ -1,20 +1,20 @@
-# To render specific local pages
+# To render specific local pages:
 clip-view <path/to/page1.clip path/to/page2.clip ...>
 
-# To render specific remote pages
+# To render specific remote pages:
 clip-view <page_name1 page_name2 ...>
 
-# To render pages by a specific render
+# To render pages by a specific render:
 clip-view --render <tldr|tldr-colorful|docopt|docopt-colorful> <page_name1 page_name2 ...>
 
-# To render pages with a specific color theme
+# To render pages with a specific color theme:
 clip-view --theme <path/to/local_theme.yaml|remote_theme_name> <page_name1 page_name2 ...>
 
-# To clear a page or theme cache
+# To clear a page or theme cache:
 clip-view --clear-<page|theme>-cache
 
-# To display help
+# To display help:
 clip-view --help
 
-# To display version
+# To display version:
 clip-view --version
