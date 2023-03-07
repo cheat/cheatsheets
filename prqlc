@@ -1,7 +1,7 @@
 # PRQL is a modern language for transforming data — a simple, powerful, pipelined SQL replacement.
 
 # Run the compiler interactively:
-prql compile
+prqlc compile
 
 # Compile a .prql file standard output:
 prqlc compile file.prql
