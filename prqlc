@@ -4,7 +4,7 @@
 prqlc compile
 
 # Compile a .prql file standard output:
-prqlc compile file.prql
+prqlc compile <file.prql>
 
 # Compile a .prql file to a .sql file:
 prqlc compile source.prql target.sql
