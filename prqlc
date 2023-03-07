@@ -13,4 +13,4 @@ prqlc compile <in-file.prql> <out-file.sql>
 echo "from employees | filter has_dog | select salary" | prqlc compile
 
 # Watch a directory and compile on file modification:
-prqlc watch path/to/directory
+prqlc watch <dir>
