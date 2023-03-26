@@ -1,0 +1,11 @@
+# Fix current system image to not get deleted
+sudo ostree admin pin 0
+
+# Remove unpinned deployments (versions)
+sudo ostree admin cleanup
+
+# Short info about deployments
+sudo ostree admin status
+
+# Upgrade your system
+sudo ostree admin upgrade
