@@ -14,6 +14,9 @@ rpm-ostree update
 # Upgrade your system without reboot (not as stable)
 rpm-ostree update apply-live
 
+# Rebase your system image (new version, completely different System)
+rpm-ostree rebase <URL-to-system>:<VERSION-NUMBER>
+
 # - - - Install and remove apps - - - 
 
 # Update your system and install an app
