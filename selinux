@@ -4,7 +4,7 @@ tags: [ security ]
 
 ## SELinux standard
 
-# On manual install: activate it (enables autostart, creates /.autorelabel)
+# On manual install: activate it (Debian-based)
 selinux-activate
 
 # To get the status of selinux
