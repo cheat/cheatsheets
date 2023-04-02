@@ -35,6 +35,9 @@ rpm-ostree update remove <APPNAME>
 # Uninstall an app included in the system
 rpm-ostree update override --remove <APPNAME>
 
+# Reinstall an app (restore its original state)
+rpm-ostree install --allow-inactive <APPNAME>
+
 # - - - - Stop and reverse - - - - 
 
 # Cancel a running process
