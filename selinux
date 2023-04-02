@@ -2,7 +2,10 @@
 tags: [ security ]
 ---
 
-## selinux standard
+## SELinux standard
+
+# On manual install: activate it (enables autostart, creates /.autorelabel)
+selinux-activate
 
 # To get the status of selinux
 getenforce
@@ -11,7 +14,7 @@ sestatus
 # or from the file
 cat /etc/selinux/config
 
-# To set the status to permissive
+# To set the status to permissive (best way to deactivate)
 setenforce 0
 
 # To get the context of files/processes/ports/users
