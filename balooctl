@@ -1,0 +1,17 @@
+---
+tags: [ system ]
+---
+
+# Control the Baloo file indexer
+
+# Help: 
+balooctl -h
+
+# Deactivate it:
+balooctl disable
+
+# Clean the database
+balooctl purge
+
+# See status
+balooctl status

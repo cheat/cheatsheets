@@ -1,0 +1,34 @@
+---
+tags: [ security ]
+---
+
+# Authorization API for unprivileged programs ("Subjects") to access privileged Programs ("Mechanisms")
+# polkitd is the system daemon
+
+# see "man polkit" for details
+
+# user created rules go to /etc/polkit-1/rules.d/
+# after changing any of the directories all rules are reloaded
+
+# example rule, allowing users in group "admin" to change users
+
+polkit.addRule(function(action, subject) {
+               if (action.id == "org.freedesktop.accounts.user-administration" &&
+                   subject.isInGroup("admin")) {
+                   return polkit.Result.YES;
+               }
+           });
+
+# naming and preferences:
+1. Rules in /etc/polkit-1/rules.d/ are favored over /usr/share/polkit-1/rules.d/
+2. Lower numbers in the rule name are favored over higher numbers or no numbers
+
+# example name: 50-libvirt.rules
+
+# Polkit rule types:
+
+addRule()
+# whenever a program wants authorization, custom rules can skip that
+
+addAdminRule()
+# Whenever administrator authentification is required

@@ -1,4 +1,5 @@
 ---
+syntax: bash
 tags: [ compression ]
 ---
 7z [Args] [archive.7z] [files / folders to archive]

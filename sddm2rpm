@@ -1,0 +1,21 @@
+---
+syntax: bash
+tags: [ packaging ]
+---
+# Converting a SDDM theme into a layerable RPM for Image-based systems
+# like Fedora Silverblue/Kinoite or OpenSUSE microOS
+
+#Usage: 
+sddm2rpm [OPTIONS] <source> [dest]
+
+#Arguments:
+  <source>  path to sddm archive
+  [dest]    directory to unpack too
+
+#Options:
+      --pkg-version <VERSION>  version of package, defaults to 1.0.0
+      --license <LICENSE>      license of package, defaults to GPLv3
+  -s, --output-spec            output spec file
+      --url <URL>              upstream url for rpm
+  -h, --help                   Print help
+  -V, --version                Print version

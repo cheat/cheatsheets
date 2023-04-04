@@ -1,0 +1,20 @@
+---
+syntax: bash
+tags: [ packaging ]
+---
+# https://copr.fedorainfracloud.org
+
+# - - - Workstation - - - 
+
+sudo dnf copr enable <CREATOR>/<NAME>
+
+
+# - - - Immutable variants - - - 
+# (Silverblue, Kinoite,...)
+
+# manually:
+# go to the site and copy the link to the .repo file fitting your version
+wget https://copr.fedorainfracloud.org/coprs/<CREATOR>/<NAME>/repo/fedora-<VERSION>/reponame.repo -p /etc/yum.repos.d/
+
+# automatically:
+https://github.com/trytomakeyouprivate/COPR-command

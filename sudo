@@ -1,2 +1,10 @@
+---
+syntax: bash
+tags: [ system ]
+---
+
 # Preserve user environment when running command
 sudo -E <cmd>
+
+# Enter root shell (better method than su)
+sudo -i

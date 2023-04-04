@@ -1,0 +1,10 @@
+---
+tags: [ security ]
+syntax: bash
+---
+
+# Help
+gocryptfs -h
+
+# Long Help
+gocryptfs -hh

@@ -1,0 +1,62 @@
+---
+syntax: bash
+tags: [ packaging ]
+---
+# - - - - Infos - - - - -
+
+# View the current status
+rpm-ostree status
+
+# Short version
+ostree admin status
+
+# - - - - Updating - - - - 
+
+# Upgrade your system 
+rpm-ostree update
+
+# Upgrade your system without reboot (not as stable)
+rpm-ostree update apply-live
+
+# Rebase your system image (new version, completely different System)
+rpm-ostree rebase <URL-to-system>:<VERSION-NUMBER>
+
+# - - - Install and remove apps - - - 
+
+# Update your system and install an app
+rpm-ostree update install <APPNAME>
+
+# Install an app without reboot
+rpm-ostree install --apply-live <APPNAME>
+
+# Remove a layered app
+rpm-ostree update remove <APPNAME>
+
+# Uninstall an app included in the system
+rpm-ostree update override --remove <APPNAME>
+
+# Reinstall an app (restore its original state)
+rpm-ostree install --allow-inactive <APPNAME>
+
+# - - - - Stop and reverse - - - - 
+
+# Cancel a running process
+rpm-ostree cancel
+
+# Delete currently waiting deployment(s)
+rpm-ostree cleanup
+
+# - - - - Advanced modifications - - - -
+
+# Add a COPR repo
+sudo wget <https://site-to-repofile.repo> -p /etc/yum.repos.d/
+
+# Replace a local package example (HTTP or local file paths, COPR not yet supported)
+rpm-ostree update override --replace https://objstore.int.example.com/hotfixes/kernel.rpm
+
+# Edit Kernel arguments in an Editor
+rpm-ostree update kargs --editor
+
+# Edit kargs if missing
+rpm-ostree update kargs --append-if-missing
+
