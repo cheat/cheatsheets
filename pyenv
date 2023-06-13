@@ -14,6 +14,12 @@ pyenv local <version>
 # Create a virtual environment based on the specified Python version (requires `pyenv-virtualenv` plugin):
 pyenv virtualenv <version> <virtualenv_name>
 
+# Activate a python verison or virtualenv in the current shell (requires `pyenv-virtualenv` plugin):
+pyenv activate <virtualenv_name>
+
+# Activate a python version or virtualenv in a new shell (requires `pyenv-virtualenv` plugin):
+pyenv shell <virtualenv_name>
+
 # Uninstall the specified version of Python:
 pyenv uninstall <version>
 

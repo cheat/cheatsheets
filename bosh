@@ -1,0 +1,36 @@
+---
+tags: [ bosh ]
+---
+# To list all BOSH deployments by name:
+bosh deps --column=name
+
+# To list a BOSH deployment's VMs, showing vital resource usage
+bosh -d <deployment> vms --vitals
+
+# To SSH into a BOSH deployment VM:
+bosh -d <deployment> ssh <instance-group>/(<instance-guid>|<instance-index>)
+
+# To run a shell command, via SSH, on all BOSH deployment VMs of an instance group:
+bosh -d <deployment> ssh <instance-group> -c '<shell-command>'
+
+# To list a BOSH deployment's errands:
+bosh -d <deployment> errands
+
+# To run a BOSH deployment errand
+# .. on all VMs that have colocated errand:
+bosh -d <deployment> run-errand <errand-name>
+# .. on a specific VM:
+bosh -d <deployment> run-errand <errand-name> --instance <instance-group>/(<instance-guid> | <instance-index>)
+
+# To list a BOSH deployment's tasks:
+bosh -d <deployment> tasks
+bosh -d <deployment> tasks --recent
+
+# To show a BOSH deployment's task status and start tracking its output:
+bosh -d <deployment> task <task-id>
+
+# To recreate a BOSH deployment's VM
+# .. safely drained and to last successful deployment state:
+bosh -d <deployment> recreate <instance-group>/(<instance-guid>|<instance-index>)
+# .. aggressively removed, ignoring bad agents and to current deployment state:
+bosh -d <deployment> recreate --skip-drain --fix --no-converge <instance-group>/(<instance-guid> | <instance-index>)
