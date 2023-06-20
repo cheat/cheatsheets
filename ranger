@@ -49,6 +49,7 @@ n		next match
 N		prev match
 <space>		mark files 
 v		mark files all=True toggle=True
+dD  Delete
 <delete>	Delete
 
 # Commands
