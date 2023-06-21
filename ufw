@@ -5,7 +5,7 @@ ufw status
 ufw status verbose
 
 # To allow a port on the firewall by its name:
-ufw allow <port-name>
+ufw allow <PORT-NAME>
 ufw allow http
 ufw allow https
 ufw allow ssh
