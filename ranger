@@ -60,11 +60,10 @@ du		Disk Usage Current Directory
 S		Run the terminal in your current ranger window (exit to go back to ranger)
 
 # Tabs
-C-n		Create new tab
-C-w		Close current tab
-tab		Next tab
-shift+tab	Previous tab
-alt+[n]		goto / create [n] tab
+gn		tab_new
+gc		tab_close
+gt		tab_move 1
+gT		tab_move -1
 
 # File substituting
 %f		Substitute highlighted file
