@@ -8,11 +8,14 @@ tags: [ file manager ]
 # https://github.com/ranger/ranger
 
 # General
-ranger		Start Ranger
+ranger		start Ranger
 
-Q		Quit Ranger
-R		Reload current directory
+Q		quit Ranger
+R		reload current directory
 ?		Ranger Manpages / Shortcuts
+:		execute Range Command
+!		execute Shell Command
+S		run the terminal in your current ranger window (exit to go back to ranger)
 
 # Movement
 k		up
@@ -23,12 +26,12 @@ gg		go to top of list
 G		go t bottom of list
 J		half page down
 K		half page up
-H		History Back
-L		History Forward
-~		Switch the view
+H		history Back
+L		history Forward
+~		switch the view
 
 # File Operations
-<Enter>		Open file 
+<Enter>		open file 
 r		open file with
 i		read file
 z		open settings
@@ -47,17 +50,18 @@ pp		paste
 /		search for files	:search
 n		next match
 N		prev match
+.f		filter stack on type 'file'
+.d		filter stack on type 'directory'
+.l		filter stack on type 'link'
+.c		clear filter
 <space>		mark files 
 v		mark files all=True toggle=True
-dD  Delete
-<delete>	Delete
-
-# Commands
-:		Execute Range Command
-!		Execute Shell Command
-chmod		Change file Permissions
-du		Disk Usage Current Directory
-S		Run the terminal in your current ranger window (exit to go back to ranger)
+dD		delete
+<delete>	delete
+Mp		show file permissions
+chmod nnn	change file permissions
+nnn=		change file permissions
+dc		show cummulative size
 
 # Tabs
 gn		tab_new
@@ -66,17 +70,17 @@ gt		tab_move 1
 gT		tab_move -1
 
 # File substituting
-%f		Substitute highlighted file
-%d		Substitute current directory
-%s		Substitute currently selected files
-%t		Substitute currently tagged files
+%f		substitute highlighted file
+%d		substitute current directory
+%s		substitute currently selected files
+%t		substitute currently tagged files
 
 # Example for substitution
 :bulkrename %s
 
 # Marker
-m+<letter>	Create Marker
-um+<letter>	Delete Marker
-'+<letter>	Go to Marker
+m+<letter>	create Marker
+um+<letter>	delete Marker
+'+<letter>	go to Marker
 t		tag a file with an *
 t"<any>		tag a file with your desired mark
