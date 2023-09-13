@@ -1,0 +1,57 @@
+---
+
+tags:
+  - helix
+
+---
+
+# File management
+
+:reload         reload file
+:q              quit
+:q!             quit without saving changes
+:w              write file
+:w {file}       write new file
+:x              write file and exit
+
+# Movement
+
+    k
+  h   l         basic motion
+    j
+
+gg              go to first line in file
+G               go to end of file
+
+# Text selection
+
+v               enter selection mode
+w               to next word start
+W               to next whitespace
+e               to next word end
+E               to next whitespace-delimited word end
+b               to previous start of word
+B               to provious start of whitespace-delimited word
+x               whole line
+
+# Insertion
+
+a               append after the cursor
+A               append at the end of the line
+i               insert before the cursor
+I               insert at the beginning of the line
+o               create a new line under the cursor
+O               create a new line above the cursor
+R               enter insert mode but replace instead of inserting chars
+c               enter insert mode, removing char under cursor
+
+# Editing
+
+u               undo
+xy              yank (copy) a line
+v{motion}y      yank text that {motion} moves over
+p               paste after cursor
+P               paste before cursor
+d               delete a character
+xd              delete a line
+v{motion}d      delete text that {motion} moves over
