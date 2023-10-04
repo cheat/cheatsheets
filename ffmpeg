@@ -41,3 +41,6 @@ file '/path/to/file2'
 file '/path/to/file3'
 
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
+
+# To change INPUT's FPS to 30 and save as OUTPUT (https://trac.ffmpeg.org/wiki/ChangingFrameRate)
+ffmpeg -i <in-video.ext> -filter:v fps=fps=30 <out-video.ext>
