@@ -1,6 +1,6 @@
 ---
 syntax: bash
-tags: [networking] 
+tags: [networking]
 ---
 # To show statistics for the selected interface:
 ethtool -S <interface>

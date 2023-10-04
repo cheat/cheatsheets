@@ -53,22 +53,22 @@
 # Basic Commands
 
 	; Command chaining: x 3;s+3;pi 3;s+3;pxo 4;
-    
+
 	| Pipe with shell commands: pd | less
-    
+
 	! Run shell commands: !cat /etc/passwd
-    
+
 	!! Escapes to shell, run command and pass output to radare buffer
     		
 		Note: 	The double exclamation mark tells radare to skip the plugin list to find an IO plugin handling this
 			command to launch it directly to the shell. A single one will walk through the io plugin list.
 
     	` Radare commands: wx `!ragg2 -i exec`
-    
+
 	~ grep
-    
+
 	~! grep -v
-    
+
 	~[n] grep by columns afl~[0]
 
     	~:n grep by rows afl~:0
@@ -96,13 +96,13 @@
 	.. repeats last commands (same as enter \n)
     	
 	( Used to define and run macros
-    
+
 	$ Used to define alias
-    
+
 	$$: Resolves to current address
     	
 	Offsets (@) are absolute, we can use $$ for relative ones @ $$+4
-    
+
 	? Evaluate expression
 	+-------------------------------------------------------------------
 
@@ -113,33 +113,33 @@
 	+-------------------------------------------------------------------
 
 	?$? Help for variables used in expressions
-    
+
 	$$: Here
-    
+
 	$s: File size
-    
+
 	$b: Block size
-    
+
 	$l: Opcode length
-    
+
 	$j: When $$ is at a jmp, $j is the address where we are going to jump to
-    
+
 	$f: Same for jmp fail address
 	
 	$m: Opcode memory reference (e.g. mov eax,[0x10] => 0x10)
-    
+
 	??? Help for ? command
-    
+
 	?i Takes input from stdin. Eg ?i username
-    
+
 	?? Result from previous operations
-    
+
 	?s from to [step]: Generates sequence from to every
-    
+
 	?p: Get physical address for given virtual address
-    
+
 	?P: Get virtual address for given physical one
-    
+
 	?v Show hex value of math expr
 
 	+-------------------------------------------------------------------
@@ -150,7 +150,7 @@
 	+-------------------------------------------------------------------
 
 	?l str: Returns the length of string
-    
+
 	@@: Used for iteractions
 
 	+-------------------------------------------------------------------
@@ -307,7 +307,7 @@
     		wow 11223344 @102!10
         		write looped value from 102 to 102+10
         		0x00000066  1122 3344 1122 3344 1122 0000 0000 0000
-    
+
 	wox 0x90
         	XOR the current block with 0x90. Equivalent to wox 0x90 $$!$b (write from current position, a whole block)
     	
@@ -646,7 +646,7 @@
 
 	-S: binary to hex (for files)
 	
-	-N: pack an integer 
+	-N: pack an integer
 		rax2 -N 0x1234 # \x34\x12\x00\x00
 
 # rahash2 - Entropy, hashes and checksums
@@ -681,7 +681,7 @@
 	+-------------------------------------------------------------------
 
 # rasm2 - Assembly/Disasembly
- 
+
 	-L: Supported architectures
 
 	-a arch instruction: Sets architecture
@@ -844,7 +844,7 @@
 		https://github.com/jpenalbae/r2-scripts
 # Parsing ELF
 	
-	!!! open with r2 -nn 
+	!!! open with r2 -nn
 
 	+ Parse 9 program headers (elf_phdr) from curr. seek plus offset 0x40 with temporary block size 0x200 in less mode (~..)
 

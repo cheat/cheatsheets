@@ -12,9 +12,9 @@ socat -x tcp-listen:3180,fork -
 
 # practical examples:
 
-# complete real working http-example:  
+# complete real working http-example:
 #  (sleep is necessary to prevent socat closing socket before data received)
-(echo -e "GET / HTTP/1.1\r\nHost: butzel.info\r\n\r" && sleep 1) \ 
+(echo -e "GET / HTTP/1.1\r\nHost: butzel.info\r\n\r" && sleep 1) \
 | socat tcp4:butzel.info:80 -
 
 # http to httpS 'Proxy' (for an webserver without TLS-Support)

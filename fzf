@@ -19,7 +19,7 @@ fzf --preview "file {}"
 # Find files from find command and preview it with fzf
 find . -type f -name "*.txt" | fzf --preview "head {}"
 
-# Display border around fzf output 
+# Display border around fzf output
 fzf --border sharp
 
 # Output only selected files and pipe it to a file
