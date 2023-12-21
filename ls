@@ -31,3 +31,6 @@ ls -1
 
 # To show all the subtree files (Recursive Mode):
 ls -R
+
+# To ....
+ls -lhta

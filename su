@@ -1,2 +1,5 @@
 # To switch to another user account:
 su <user>
+
+# To switch to another user - inherit that user's bash configuration
+su - <user>
