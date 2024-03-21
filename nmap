@@ -11,7 +11,7 @@ nmap -iL [list.txt]
 nmap -6 [target]
 
 # OS detection:
-nmap -O --osscan_guess [target]
+nmap -O --osscan-guess [target]
 
 # Save output to text file:
 nmap -oN [output.txt] [target]
