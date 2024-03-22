@@ -27,6 +27,9 @@ parameter placeholders. In edge-cases where that syntax may cause confusion, it
 is permissible to use placeholder values (`foo.txt`, `example.com`, etc.) as
 necessary.
 
+### TODO ###
+See [here](../TODO.md)
+
 ### License ###
 Cheatsheets are licensed under [Creative Commons CC0 1.0][cc0]. See
 [LICENSE.txt][] for the full license text.

@@ -4,6 +4,9 @@ docker -d
 # To build a docker image:
 docker build -t <image-tag-name> <path-of-Dockerfile>
 
+# To build a docker image with specific dockerfile name:
+docker build -t <image-tag-name> -f <path-and-name-of-dockerfile> <path-of-Dockerfile>
+
 # To start a container with an interactive shell:
 docker run -ti <image-name> /bin/bash
 
@@ -12,6 +15,9 @@ docker run -d <image-name>
 
 # To "shell" into a running container (docker-1.3+):
 docker exec -ti <container-name> bash
+
+# To exec some command inside container:
+docker exec <container-name> ping 8.8.8.8
 
 # To inspect a running container:
 docker inspect <container-name> (or <container-id>)
@@ -22,14 +28,20 @@ docker inspect --format {{.State.Pid}} <container-name-or-id>
 # To list (and pretty-print) the current mounted volumes for a container:
 docker inspect --format='{{json .Volumes}}' <container-id> | python -mjson.tool
 
-# To copy files/folders between a container and your host:
-docker cp foo.txt mycontainer:/foo.txt
+# To copy a file from the running container to host mechine:
+docker cp <container-id>:<path/to/file> <host/copy/path>
+
+# To copy a file from host mechine to the running container:
+docker cp <host/copy/path> <container-id>:<path/to/file>
 
 # To list currently running containers:
 docker ps
 
 # To list all containers:
 docker ps -a
+
+# To list all container in format: Name, Image, Status, Port
+docker container ls -a --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
 
 # To remove all stopped containers:
 docker container prune
@@ -45,6 +57,9 @@ docker image ls -q
 
 # To remove all untagged images:
 docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
+
+# To remove all images:
+for image in $(docker image ls --format "table {{.Repository}}:{{.Tag}}"); do docker image rm -f $image ; done
 
 # To remove all volumes not used by at least one container:
 docker volume prune
@@ -97,8 +112,5 @@ docker run -v <volume-name>:<folder-path-in-container> <image>
 # To link current folder between host and container for development:
 docker run <image-name> -v $(pwd):<folder-path-in-container> <image>
 
-# To copy a file from the running container to host mechine:
-docker cp <container-id>:<path/to/file> <host/copy/path>
-
-# To copy a file from host mechine to the running container:
-docker cp <host/copy/path> <container-id>:<path/to/file>
+# To clean-up docker environment (remove all images, unused containers, volumes, networks)
+docker system prune -af

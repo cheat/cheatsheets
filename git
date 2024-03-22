@@ -14,6 +14,9 @@ git config --global color.ui true
 # To stage all changes for commit:
 git add --all
 
+# To unstage some changes in file/folder (Undo `git add` command):
+git reset file-name/folder-name
+
 # To stash changes locally, this will keep the changes in a separate changelist
 # called stash and the working directory is cleaned. You can apply changes
 # from the stash anytime
@@ -53,6 +56,9 @@ git filter-branch --env-filter \
 
 # To remove staged and working directory changes:
 git reset --hard
+
+# To go 1 commits back & keep staged changes:
+git reset --soft HEAD~1
 
 # To go 2 commits back:
 git reset --hard HEAD~2
