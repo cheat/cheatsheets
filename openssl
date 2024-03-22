@@ -13,7 +13,7 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 openssl req -text -noout -in server.csr
 
 # To show certificate information for generated certificate
-openssl x509 -text -noout -in server.crt 
+openssl x509 -text -noout -in server.crt
 
 # To get the sha256 fingerprint of a certificate
 openssl x509 -in server.crt -noout -sha256 -fingerprint
@@ -30,12 +30,12 @@ openssl dhparam -outform PEM -out dhparams.pem 2048
 openssl s_client -connect 10.240.2.130:433
 
 # High-quality options for openssl for symmetric (secret key) encryption
-  
-This is what knowledgable people consider a good set of options for 
+
+This is what knowledgable people consider a good set of options for
 symmetric encryption with openssl to give you a high-quality result.
 Also, always remember that the result is only as good as the password
 you use. You must use a strong password otherwise encryption is meaningless.
-  
+
 openssl enc -e -aes-256-cbc \
   -salt \
   -pbkdf2 \

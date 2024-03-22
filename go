@@ -90,7 +90,7 @@ go test -v -run=^TestFooBar$/^Baz$ .
 go test -short ./...
 
 # Handy flag - don't run further tests after a failure.
-go test -failfast ./... 
+go test -failfast ./...
 
 
 # Test all module dependencies.
@@ -104,7 +104,7 @@ go test -run=^TestFooBar$ -count=500 .
 go fix ./...
 
 # Create a new Github issue for Go's standard library
-go bug 
+go bug
 
 
 # Running and Comparing Benchmarks

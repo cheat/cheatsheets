@@ -17,7 +17,7 @@ ls -d */ <dir>
 ls -d .*/ */ <dir>
 
 # To display all files sorted by changed date, most recent first:
-ls -ltc 
+ls -ltc
 
 # To display files sorted by create time:
 ls -lt
@@ -31,3 +31,6 @@ ls -1
 
 # To show all the subtree files (Recursive Mode):
 ls -R
+
+# To ....
+ls -lhta

@@ -35,7 +35,7 @@ curl http://ifconfig.me/all.json
 curl --limit-rate 1000B -O <outfile>
 
 # To get your global IP:
-curl httpbin.org/ip 
+curl httpbin.org/ip
 
 # To get only the HTTP status code:
 curl -o /dev/null -w '%{http_code}\n' -s -I URL

@@ -1,0 +1,14 @@
+# To show one tree, starting at pid 1:
+pstree
+
+# To show descendents of <pid>:
+pstree <pid>
+
+# To show parents and descendents of <pid>:
+pstree -u <pid>
+
+# To use utf-8 'graphics' for trees when calling with [args]:
+pstree -g 2 <args>..
+
+# To show tree for processes owned by <user>:
+pstree -u <user>

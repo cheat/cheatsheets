@@ -1,0 +1,2 @@
+# To watch a command and update the output every 2 seconds:
+watch <command>

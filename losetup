@@ -1,0 +1,12 @@
+---
+tags: [ mount loop ]
+---
+
+# Output available loop device
+$ losetup -f
+
+# Attach an image file with partitioning table on available loop device
+$ losetup "$(losetup -f)" path/to/file.img
+
+# Detatch loop device
+$ losetup -d /dev/loopX

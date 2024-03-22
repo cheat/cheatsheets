@@ -1,0 +1,11 @@
+# search word in pdf file:
+pdfgrep "keyword" file-name.pdf
+
+# search work in multiple pdf files on multiple folders:
+pdfgrep -R "keyword" storage-folder/*
+
+# show page number & filename
+pdfgrep -RHn "keyword" storage-folder/*
+
+# search words with regular expression
+pdfgrep -RHnp "key...." storage-folder/*

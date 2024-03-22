@@ -32,6 +32,7 @@ find ./path/ -name '*.txt' -exec cat '{}' \;
 
 # To find files with extension '.txt' and look for a string into them:
 find ./path/ -name '*.txt' | xargs grep 'string'
+find ./path/ -name '*.txt' -exec grep -nrH 'string' {} \;
 
 # To find files with size bigger than 5 Mebibyte and sort them by size:
 find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
@@ -61,10 +62,7 @@ find . -type f -samefile MY_FILE_HERE 2>/dev/null
 find . -type f -exec chmod 644 {} \;
 
 # To find all files changed in last 2 days:
-find . -type f -ctime -48h
 find . -type f -ctime -2
-# Or created in last 2 days:
-find . -type f -Btime -2
 # Or accessed in last 2 days:
 find . -type f -atime -2
 

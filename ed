@@ -8,11 +8,11 @@ tags: [ ed ]
 :q              quit
 :Q              quit without saving changes
 :f {name}       change buffer name
-:w              write to file using current buffer name 
+:w              write to file using current buffer name
 :w {file}       write buffer to new file
 :wq             write buffer to existing file and exit
 
-# Line-oriented addressing and movement 
+# Line-oriented addressing and movement
 #   `ed' uses line addresses to move around and operate within a buffer
 #   Move to or operate on single lines by entering the line number
 #   Move to or operate on ranges of lines using comma-separated values
@@ -53,12 +53,12 @@ r !{command}    read output of {command} into buffer after current line
 e test.txt                      edit file "test.txt"
 45                              `ed' returns character count as confirmation
 1,3n                            display lines 1 through 3 with line numbers
-1    This is line 1           
+1    This is line 1
 2    This is line 2
 3    This is line 3
 2c                              change line 2
 I am typing a new line 2
-.                               end active edit 
+.                               end active edit
 1,3n                            display lines 1 thorugh 3 with line numbers
 1    This is line 1
 2    I am typing a new line 2
@@ -71,7 +71,7 @@ wq                              write file "test.txt" and exit
 g/foo/          search all lines for `foo' and display matching lines
 g/foo/n         search all lines for `foo'; display with line numbers
 
-4,9/foo/        search lines 1 through 5 for `foo' and display matches 
+4,9/foo/        search lines 1 through 5 for `foo' and display matches
 4,9/foo/n       search lines 1 through 5 for `foo'; display with line numbers
 
 # Replace

@@ -3,7 +3,7 @@ tags: [ packaging ]
 ---
 # All pacman commands are working the same way with yaourt.
 # Just check the pacman cheatsheet.
-# For instance, to install a package: 
+# For instance, to install a package:
 pacman -S <package>
 yaourt -S <package>
 # The difference is that yaourt will also query the Arch User Repository,
@@ -19,7 +19,7 @@ yaourt <package>
 # svn, hg...)
 yaourt -Suya --devel
 
-# For all of the above commands, if you want yaourt to stop asking constantly for confirmations, 
+# For all of the above commands, if you want yaourt to stop asking constantly for confirmations,
 use the option --noconfirm
 
 # To build <package> from source:
