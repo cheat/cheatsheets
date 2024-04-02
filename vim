@@ -54,6 +54,12 @@ P               paste before cursor
 dd              delete a line
 d{motion}       delete text that {motion} moves over
 
+# Searching
+
+/foo            search for 'foo' (`n`/`N` to go to next/previous match)
+?foo            search backwards for 'foo'
+/foo\c          search for 'foo' ignoring case
+
 # Search and replace with the `:substitute` (aka `:s`) command
 
 :s/foo/bar/	replace the first match of 'foo' with 'bar' on the current line only
