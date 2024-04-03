@@ -11,6 +11,9 @@ Args
 # show all listening tcp sockets including the corresponding process
 ss -tlp
 
+# show all listening tcp sockets including the corresponding process, netid
+ss -tulp
+
 # show all sockets connecting to 192.168.2.1 on port 80
 ss -t dst 192.168.2.1:80
 

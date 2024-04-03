@@ -1,6 +1,6 @@
 # To implement a for loop:
 for file in *;
-do 
+do
     echo $file found;
 done
 

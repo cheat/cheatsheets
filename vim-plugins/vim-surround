@@ -1,0 +1,44 @@
+---
+tags: [ vim,vim-plugins ]
+---
+
+# https://github.com/tpope/vim-surround
+
+# To surround with the specified character:
+`ys{motion}{character}`
+ex: ysiw)		foo => (foo)
+	ysiw(		foo => ( foo )
+	ysiw]		foo => [foo]
+	ysiw[		foo => [ foo ]
+	ysiw<p>		foo => <p>foo</p>
+	yss}		foo => {foo}	# surround the whole line with {} (ignores leading whitespace)
+	ySS}		foo => {
+							foo # indent the line and place it on a new line
+					   }
+
+# To change the current surrounding character:
+`cs{old}{new}`
+ex: cs([		(foo) => [foo]
+	cs[(		[foo] => (foo)
+	cs"<q>		"foo" => <q>foo</q>
+
+# To delete the current surrounding:
+`ds{character}` # delete the surrounding character
+`dst` # delete the surrounding HTML tag
+ex: ds(		(foo) => foo
+	ds[		[foo] => foo
+	dst		<p>foo</p> => foo
+
+# To surround with function:
+`ysWf{function_name}<CR>`
+ex: ysWfprint<CR>	"foo" => print("foo")
+	ysWFprint<CR>	"foo" => print( "foo" )
+
+# Legend
+
+ys = "you surround"
+b = ()
+B = {}
+r = []
+a = <>
+t = HTML tag

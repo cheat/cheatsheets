@@ -1,5 +1,5 @@
 # List all options
-multipass 
+multipass
 
 # List existing VMs on your device
 multiplass list

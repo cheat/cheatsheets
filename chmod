@@ -2,7 +2,7 @@
 chmod a+x myscript.sh
 
 # Set user to read/write/execute, group/global to read only (myscript.sh), symbolic mode
-chmod u=rwx, go=r myscript.sh 
+chmod u=rwx, go=r myscript.sh
 
 # Remove write from user/group/global (myscript.sh), symbolic mode
 chmod a-w myscript.sh

@@ -14,4 +14,4 @@ mv -i <src> <dest>
 mv -n <src> <dest>
 
 # To move listed file(s) to a directory
-mv -t <dest> <file>...
+mv -t <dest> <file1> <file2>

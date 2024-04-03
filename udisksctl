@@ -8,4 +8,4 @@ udisksctl mount --block-device <device>
 udisksctl unmount --block-device <device>
 
 # To get help:
-udisksctl help 
+udisksctl help

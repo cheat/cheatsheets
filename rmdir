@@ -1,5 +1,5 @@
 # Command syntax:
-rmdir [option] directory_name 
+rmdir [option] directory_name
 
 # Outputs a message that the directory is being removed:
 rmdir -v directory_name

@@ -159,11 +159,11 @@
     gpg -K
 
   Should show sec# instead of just sec.
-  
+
 # High-quality options for gpg for symmetric (secret key) encryption
-  This is what knowledgable people consider a good set of options for 
+  This is what knowledgable people consider a good set of options for
   symmetric encryption with gpg to give you a high-quality result.
-  
+
   gpg \
     --symmetric \
     --cipher-algo aes256 \
@@ -179,7 +179,7 @@
     --no-symkey-cache \
     --output somefile.gpg \
     somefile # to encrypt
-    
+
   gpg \
     --decrypt \
     --pinentry-mode loopback \

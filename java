@@ -25,7 +25,7 @@ OpenJDK 64-Bit Server VM (build 11.0.8+10-post-Ubuntu-0ubuntu120.04, mixed mode,
 java -Xms256m -Xmx2g -Xss1m -jar <filename.jar>
 
 # To use the classpath variable
-# It overrides the CLASSPATH of Environment variable but only for that session. 
+# It overrides the CLASSPATH of Environment variable but only for that session.
 # If you restart the application you need to again set the classpath variable.
 # You can use either: -classpath, --classpath or -cp
 java -classpath <classpath> -jar <filename.jar>

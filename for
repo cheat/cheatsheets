@@ -1,38 +1,36 @@
 # basic loop
-for i in 1 2 3 4 5 6 7 8 9 10
-do
+for i in 1 2 3 4 5 6 7 8 9 10; do
   echo $i
 done
 
 # loop ls command results
-for var in `ls -alF`
-do
+for var in $(ls -alF); do
   echo $var
 done
 
 # loop over all the JPG files in the current directory
-for jpg_file in *.jpg
-do
+for jpg_file in *.jpg; do
   echo $jpg_file
 done
 
 # loop specified number of times
-for i in `seq 1 10`
-do
+for i in $(seq 1 10); do
   echo $i
 done
 
 # same as above, but as one-liner
-for i in `seq 1 10`; do echo $i; done
+for i in $(seq 1 10); do echo $i; done
 
 # loop specified number of times: the C/C++ style
-for ((i=1;i<=10;++i))
-do
+for ((i = 1; i <= 10; ++i)); do
   echo $i
 done
 
 # loop specified number of times: the brace expansion
-for i in {1..10}
-do
+for i in {1..10}; do
   echo $i
 done
+
+# loop array of strings
+string=("a" "b")
+for char in "${string[@]}"; do echo "$char"; done

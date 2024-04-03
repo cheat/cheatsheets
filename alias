@@ -6,3 +6,8 @@ alias ll='ls -l'
 
 # To remove alias:
 unalias ll
+
+# Add permanent aliasses
+# bash: ~/.bashrc
+# fish: ~/.config/fish/config.fish
+# zsh: ~/.zshrc

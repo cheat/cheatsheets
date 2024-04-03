@@ -37,7 +37,7 @@ Sub-bullets can be done with 2+ spaces or 1 tab
   a. Lettered  <-- there is mixed support for this format
 4. Fourth
   i. using roman numerals  <-- there is mixed support for this format
-  ii. more stuff 
+  ii. more stuff
 
 ## check list
 There is limited support for rendering check lists:
@@ -86,7 +86,7 @@ Assuming you have a heading called `# My First Heading` then link is the case-in
 Italic:
 *em* _em_
 
-Bold: 
+Bold:
 **strong** __strong__
 
 ~~strikethrough~~
@@ -98,8 +98,8 @@ The alignment applies to the table data, not the header.
 
 Left-aligned Stuff | Right-aligned Stuff | Center-aligned Stuff
 | :--- | ---: | :---:
-Some left stuff   | Some right stuff  | Some center stuff 
-Some left stuff   | Some right stuff  | Some center stuff 
+Some left stuff   | Some right stuff  | Some center stuff
+Some left stuff   | Some right stuff  | Some center stuff
 
 ## Special Characters in Tables
 First Header  | Second Header
