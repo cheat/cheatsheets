@@ -25,5 +25,5 @@ ZEROCONF='+zeroconf' make -j4 CXX='distcc g++'
 # Note: for gcc, Replace CXX by CC and g++ by gcc
 DISTCC_HOSTS='127.0.0.1 192.168.1.69' make -j4 CXX='distcc g++'
 
-# Show hosts aviables
+# Show hosts availables
 ZEROCONF='+zeroconf' distcc --show-hosts
