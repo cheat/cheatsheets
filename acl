@@ -12,7 +12,7 @@ setfacl -m u::rwx,g:groupname:rX,o::- <file>
 # Copy ACL from file-A to file-B
 getfacl file-A | setfacl -M - file-B
 
-# Apply ACL recursivelly to directory
+# Apply ACL recursively to directory
 setfacl -R -m u:username:rX <directory>
 
 # Delete ACL
