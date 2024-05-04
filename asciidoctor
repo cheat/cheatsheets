@@ -82,7 +82,7 @@ literal block
 // with the markup substitution (+quotes)
 // no wrapping long lines (nowrap)
 ----
-<1> Asciidoctor sytax for the table of content
+<1> Asciidoctor syntax for the table of content
 
 # include source code, stripping indentation
 [source,asciidoc,indent=0]
