@@ -7,7 +7,7 @@ SHELL=/bin/bash
 # set a PATH
 PATH=/usr/bin:/usr/sbin:/usr/local/bin
 
-# incorrect way of seeting PATH
+# incorrect way of setting PATH
 PATH=$PATH:/do/not/do/this
 
 # crontab format
