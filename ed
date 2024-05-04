@@ -59,7 +59,7 @@ e test.txt                      edit file "test.txt"
 2c                              change line 2
 I am typing a new line 2
 .                               end active edit 
-1,3n                            display lines 1 thorugh 3 with line numbers
+1,3n                            display lines 1 through 3 with line numbers
 1    This is line 1
 2    I am typing a new line 2
 3    This is line 3
