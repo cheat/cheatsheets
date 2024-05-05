@@ -33,7 +33,7 @@ find ./path/ -name '*.txt' -exec cat '{}' \;
 # To find files with extension '.txt' and look for a string into them:
 find ./path/ -name '*.txt' | xargs grep 'string'
 
-# To find files with size bigger than 5 Mebibyte and sort them by size:
+# To find files with size bigger than 5 Megabyte and sort them by size:
 find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
 
 # To find files bigger than 2 Megabyte and list them:
