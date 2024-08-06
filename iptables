@@ -20,6 +20,9 @@ iptables -A INPUT -i eth0 -p tcp --dport 902 -j REJECT --reject-with icmp-port-u
 #	icmp-admin-prohibited
 #	tcp-reset
 
+# To only allow ssh on the server and block all other ports:
+iptables --append <INPUT> --protocol tcp --dport 22 --jump <ACCEPT> 
+
 # To add a comment to a rule:
 iptables ... -m comment --comment "This rule is here for this reason"
 

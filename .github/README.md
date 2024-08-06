@@ -1,8 +1,30 @@
-cheatsheets
+cheatsheets still alive !
 ===========
 This repository contains community-sourced cheatsheets to be used with
 [cheat][] and similar applications.
+the old repository is not maintained anymore, I am working on this myself
+and I would be very happy if anyone wanted to contribute
 
+### How to use this ? ###
+> cheat -d
+```sh
+community: /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/community
+personal:  /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/personal
+```
+go to either the community or personal folder and add this repository as your remote
+
+#### To change community repo
+```sh
+cd /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/community
+git remote set-url origin git@github.com:ThirdScript/better_cheatsheets.git
+```
+
+#### To change community repo
+```sh
+cd /home/sepehr/snap/cheat/common/.config/cheat/cheatsheets/personal
+git init .
+git remote set-url origin git@github.com:ThirdScript/better_cheatsheets.git
+```
 ### Format ###
 Cheatsheets are plain-text files that begin with an optional "front matter"
 header in YAML format. The header may be used to assign "tags" to a sheet, and
