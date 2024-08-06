@@ -1,7 +1,9 @@
-cheatsheets
+cheatsheets still alive !
 ===========
 This repository contains community-sourced cheatsheets to be used with
 [cheat][] and similar applications.
+the old repository is not maintained anymore, I am working on this myself
+and I would be very happy if anyone wanted to contribute
 
 ### Format ###
 Cheatsheets are plain-text files that begin with an optional "front matter"
