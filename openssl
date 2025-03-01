@@ -27,7 +27,7 @@ openssl x509 -noout -enddate
 openssl dhparam -outform PEM -out dhparams.pem 2048
 
 # To test an https server:
-openssl s_client -connect 10.240.2.130:433
+openssl s_client -connect 10.240.2.130:443
 
 # High-quality options for openssl for symmetric (secret key) encryption
   
