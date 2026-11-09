@@ -1,0 +1,70 @@
+---
+syntax: bash
+tags: [ python, package-manager ]
+---
+
+# To create a new project in the current directory:
+uv init
+
+# To create a new packaged project with a specific name:
+uv init --package <name>
+
+# To add a dependency to the project:
+uv add <package>
+
+# To add a development dependency:
+uv add --dev <package>
+
+# To remove a dependency from the project:
+uv remove <package>
+
+# To create the virtual environment and install locked dependencies:
+uv sync
+
+# To sync without re-resolving the lockfile (fail if out of date):
+uv sync --locked
+
+# To update the lockfile:
+uv lock
+
+# To upgrade all dependencies and update the lockfile:
+uv lock --upgrade
+
+# To run a command in the project environment:
+uv run <command>
+
+# To run a command with an additional package available temporarily:
+uv run --with <package> <command>
+
+# To display the project's dependency tree:
+uv tree
+
+# To create a virtual environment in .venv:
+uv venv
+
+# To install a package into the active environment (pip interface):
+uv pip install <package>
+
+# To run a tool provided by a package without installing it:
+uvx <tool>
+
+# To install a tool globally:
+uv tool install <package>
+
+# To list installed tools:
+uv tool list
+
+# To upgrade an installed tool:
+uv tool upgrade <package>
+
+# To list available and installed Python versions:
+uv python list
+
+# To download and install a Python version:
+uv python install <version>
+
+# To pin the project to a specific Python version:
+uv python pin <version>
+
+# To upgrade uv itself:
+uv self update
