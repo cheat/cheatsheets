@@ -1,0 +1,34 @@
+---
+syntax: bash
+tags: [ benchmark, performance ]
+---
+
+# To benchmark a command:
+hyperfine '<command>'
+
+# To compare two or more commands:
+hyperfine '<command1>' '<command2>'
+
+# To run a number of warmup runs before the benchmark:
+hyperfine --warmup <num> '<command>'
+
+# To set the exact number of benchmark runs:
+hyperfine --runs <num> '<command>'
+
+# To run a setup command before each timing run (e.g., clean builds):
+hyperfine --prepare '<setup-command>' '<command>'
+
+# To benchmark a command without a shell (no shell expansion):
+hyperfine --shell=none '<command>'
+
+# To continue the benchmark even if the command fails:
+hyperfine --ignore-failure '<command>'
+
+# To benchmark a command for a range of parameter values:
+hyperfine --parameter-scan <variable> <min> <max> '<command with {<variable>}>'
+
+# To export results to JSON:
+hyperfine --export-json <results.json> '<command>'
+
+# To export results to a Markdown table:
+hyperfine --export-markdown <results.md> '<command>'
