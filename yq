@@ -1,0 +1,40 @@
+---
+syntax: bash
+tags: [ yaml, json ]
+---
+
+# To read a value from a YAML file:
+yq '.a.b' <file.yaml>
+
+# To read a value from standard input:
+cat <file.yaml> | yq '.a.b'
+
+# To update a value in place:
+yq -i '.a.b = "value"' <file.yaml>
+
+# To convert YAML to JSON:
+yq -o=json '.' <file.yaml>
+
+# To convert JSON to YAML:
+yq -p=json -o=yaml '.' <file.json>
+
+# To iterate over the elements of a list:
+yq '.[]' <file.yaml>
+
+# To select list elements matching a condition:
+yq '.[] | select(.name == "<name>")' <file.yaml>
+
+# To merge two YAML files (later files override earlier ones):
+yq eval-all '. as $item ireduce ({}; . * $item)' <file1.yaml> <file2.yaml>
+
+# To evaluate an expression across all documents of all files at once:
+yq eval-all '<expression>' <file1.yaml> <file2.yaml>
+
+# To get the length of a list:
+yq '.list | length' <file.yaml>
+
+# To list the keys of a map:
+yq 'keys' <file.yaml>
+
+# To extract YAML front-matter from a markdown file:
+yq --front-matter=extract '.' <file.md>
